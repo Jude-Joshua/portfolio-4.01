@@ -1,0 +1,9 @@
+@use "../../assets/styles/tokens/spacings";
+@use "../../assets/styles/tokens/colors";
+@use "../../assets/styles/mixins/spacings" as *;
+
+.button{
+	&.tertiary{
+		color: var(--main-secondary);
+	}
+}

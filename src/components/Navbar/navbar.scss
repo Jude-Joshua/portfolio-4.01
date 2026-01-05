@@ -1,0 +1,40 @@
+@use "../../assets/styles/tokens/spacings";
+@use "../../assets/styles/tokens/colors";
+@use "../../assets/styles/mixins/spacings" as *;
+
+.navbar {
+	@include px(var(--padding-2xl));
+	@include py(var(--padding-sm));
+	position: sticky;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	border-bottom: var(--border) solid var(--main-light-grey);
+	background: var(--overlay-white);
+	backdrop-filter: blur(8px);
+
+	&-logo {
+		width: 48px;
+
+		& svg{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&-links {
+		gap: var(--gap-md);
+
+		&-navigation {
+			text-transform: capitalize;
+
+			&-divider {
+				width: 32px;
+			}
+
+		}
+
+
+	}
+}

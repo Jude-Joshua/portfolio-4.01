@@ -1,0 +1,168 @@
+@use '../mixins/media' as *;
+
+:root {
+	// =======================
+	// RESPONSIVENESS / CONTAINERS
+	// =======================
+	--responsiveness-container-height: 1117px;
+	--responsiveness-container-width: 1728px;
+
+	// =======================
+	// BORDER WEIGHT
+	// =======================
+	--border: 1.2px;
+
+	// =======================
+	// GAPS / SPACING
+	// =======================
+	--gap-xxs: 8px;
+	--gap-xs: 16px;
+	--gap-sm: 24px;
+	--gap-md: 32px;
+	--gap-lg: 48px;
+	--gap-xl: 64px;
+	--gap-2xl: 88px;
+	--gap-3xl: 104px;
+	--gap-4xl: 120px;
+	--gap-5xl: 160px;
+
+	// =======================
+	// PADDINGS
+	// =======================
+	--padding-xxs: 8px;
+	--padding-xs: 16px;
+	--padding-sm: 24px;
+	--padding-md: 32px;
+	--padding-lg: 48px;
+	--padding-xl: 64px;
+	--padding-2xl: 72px;
+	--padding-3xl: 96px;
+	--padding-4xl: 104px;
+	--padding-5xl: 128px;
+	--padding-6xl: 200px;
+
+	// =======================
+	// BORDER RADII
+	// =======================
+	--radius-xs: 8px;
+	--radius-sm: 16px;
+	--radius-md: 32px;
+	--radius-lg: 48px;
+	--radius-xl: 128px;
+	--radius-xxl: 256px;
+}
+
+
+// =======================
+// TABLET (768px – 1023px)
+// =======================
+@include respond-to("tablet") {
+	:root {
+		// =======================
+		// RESPONSIVENESS / CONTAINERS
+		// =======================
+		--responsiveness-container-width: 834px;
+		--responsiveness-container-height: 1194px;
+
+		// =======================
+		// BORDER WEIGHT
+		// =======================
+		--border: 1.2px;
+
+		// =======================
+		// GAPS / SPACING
+		// =======================
+		--gap-xxs: 8px;
+		--gap-xs: 16px;
+		--gap-sm: 24px;
+		--gap-md: 32px;
+		--gap-lg: 48px;
+		--gap-xl: 56px;
+		--gap-2xl: 72px;
+		--gap-3xl: 96px;
+		--gap-4xl: 104px;
+		--gap-5xl: 120px;
+
+		// =======================
+		// PADDINGS
+		// =======================
+		--padding-xxs: 8px;
+		--padding-xs: 12px;
+		--padding-sm: 16px;
+		--padding-md: 24px;
+		--padding-lg: 32px;
+		--padding-xl: 48px;
+		--padding-2xl: 72px;
+		--padding-3xl: 96px;
+		--padding-4xl: 96px;
+		--padding-5xl: 104px;
+		--padding-6xl: 160px;
+
+		// =======================
+		// BORDER RADII
+		// =======================
+		--radius-xs: 8px;
+		--radius-sm: 16px;
+		--radius-md: 24px;
+		--radius-lg: 48px;
+		--radius-xl: 96px;
+		--radius-xxl: 160px;
+	}
+}
+
+// =======================
+// MOBILE (<= 767px)
+// =======================
+@include respond-to("mobile") {
+	:root {
+		// =======================
+		// RESPONSIVENESS / CONTAINERS
+		// =======================
+		--responsiveness-container-width: 430px;
+		--responsiveness-container-height: 932px;
+
+		// =======================
+		// BORDER WEIGHT
+		// =======================
+		--border: 1px;    // ~1px thin border, responsive
+
+		// =======================
+		// GAPS / SPACING
+		// =======================
+		--gap-xxs: 4px;
+		--gap-xs: 12px;
+		--gap-sm: 16px;
+		--gap-md: 24px;
+		--gap-lg: 32px;
+		--gap-xl: 48px;
+		--gap-2xl: 64px;
+		--gap-3xl: 72px;
+		--gap-4xl: 88px;
+		--gap-5xl: 104px;
+
+		// =======================
+		// PADDINGS
+		// =======================
+		--padding-xxs: 4px;
+		--padding-xs: 8px;
+		--padding-sm: 12px;
+		--padding-md: 24px;
+		--padding-lg: 28px;
+		--padding-xl: 32px;
+		--padding-2xl: 36px;
+		--padding-3xl: 40px;
+		--padding-4xl: 44px;
+		--padding-5xl: 48px;
+		--padding-6xl: 56px;
+
+		// =======================
+		// BORDER RADII
+		// =======================
+		--radius-xs: 6px;
+		--radius-sm: 8px;
+		--radius-md: 16px;
+		--radius-lg: 40px;
+		--radius-xl: 64px;
+		--radius-xxl: 96px;
+	}
+}

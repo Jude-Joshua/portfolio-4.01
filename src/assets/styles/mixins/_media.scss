@@ -1,0 +1,45 @@
+@use "../tokens/breakpoints" as *;
+
+// -----------------------
+// Media Query Mixin
+// -----------------------
+
+@mixin respond-to($type) {
+	@if $type == mobile {
+		@media (max-width: map-get($breakpoints, mobile-max)) {
+			@content;
+		}
+	}
+
+	@else if $type == tablet {
+		@media (
+			min-width: map-get($breakpoints, tablet-min)
+		) and (
+			max-width: map-get($breakpoints, tablet-max)
+		) {
+			@content;
+		}
+	}
+
+	@else if $type == tablet-up {
+		@media (min-width: map-get($breakpoints, tablet-min)) {
+			@content;
+		}
+	}
+
+	@else if $type == desktop {
+		@media (min-width: map-get($breakpoints, desktop-min)) {
+			@content;
+		}
+	}
+
+	@else if $type == desktop-lg {
+		@media (min-width: map-get($breakpoints, desktop-lg-min)) {
+			@content;
+		}
+	}
+
+	@else {
+		@warn "Breakpoint `#{$type}` not found.";
+	}
+}

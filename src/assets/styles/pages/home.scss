@@ -1,0 +1,115 @@
+.hero{
+	&-title{
+		width: 84%;
+		gap: var(--gap-xxs);
+
+		&-role{
+			background-color: var(--main-accent);
+			color: var(--main-primary);
+			font-weight: var(--font-weight-headings);
+			padding: var(--padding-xs) var(--padding-lg);
+			border-radius: var(--radius-xl);
+			gap: var(--gap-xxs);
+		}
+
+		&-icons{
+			display: inline-flex;
+			top: 16px;
+			padding: 0 var(--padding-xs);
+
+			& span{
+				padding: var(--padding-xxs);
+				border-radius: var(--radius-xs);
+				box-shadow: -4px 5px 8px var(--bx-shadows);
+				cursor: pointer;
+				top: 0;
+				transition: 0.2s linear;
+
+				&:hover{
+					top: -16px;
+				}
+
+				&.arrow {
+					background-color: var(--accents-highlight);
+					color: var(--main-white);
+					transform: rotate(-16.78deg);
+					left: 14px;
+				}
+
+				&.clock {
+					background-color: var(--main-complimentary);
+					color: var(--main-black);
+					z-index: 2;
+					transform: rotate(4.94deg);
+					left: -3px;
+				}
+
+				&.calendar {
+					background-color: var(--accents-secondary);
+					color: var(--main-black);
+					z-index: 3;
+					transform: rotate(-6.86deg);
+					left: -12px;
+				}
+
+				& svg{
+					width: 48px;
+					height: 48px;
+				}
+			}
+		}
+	}
+}
+
+.hello{
+	&-card{
+		width: 48%;
+		padding: var(--padding-lg) var(--padding-lg) var(--padding-xl);
+		background-color: var(--main-light-grey);
+		border-radius: var(--radius-md);
+		gap: var(--gap-3xl);
+		box-shadow: 8px 15px 16px var(--bx-shadows);
+		z-index: 3;
+		left: 5%;
+		transform: rotate(-1.81deg);
+
+		&-title{
+			&-content{
+				gap: var(--gap-xxs);
+			}
+
+			&-image{
+				width: 56px;
+				height: 56px;
+				border-radius: var(--radius-xl);
+			}
+		}
+
+		&-content{
+			gap: var(--gap-lg);
+
+			&-text{
+				gap: var(--gap-xs);
+			}
+		}
+	}
+
+	&-showcase{
+		width: 45%;
+		height: 552px;
+		background-color: var(--main-primary);
+		padding: var(--padding-lg);
+		border-radius: var(--radius-md);
+		overflow: hidden;
+		box-shadow: 8px 15px 16px var(--bx-shadows);
+		left: -5%;
+		top: -32px;
+		transform: rotate(8.75deg);
+
+		& img{
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+@use 'breakpoints' as *;
+
+// Base font-size (for rem conversion)
+$base-font-size: 16px !default;
+
+// Headings
+$font-sizes: (
+		//s0: 125.89px,
+		s0: 103.19px,
+		s1: 85.99px,
+		s2: 71.66px,
+		h1: 59.717px,
+		h2: 49.76px,
+		h3: 41.47px,
+		h4: 34.56px,
+		h5: 28.8px,
+		h6: 24px,
+
+	// Body / Copy
+		t-copy: 20px,
+		t-copy-small: 16.67px,
+		t-caption: 13.89px,
+		t-highlights: 20px,
+		t-buttons: 16.67px,
+		t-links: 16.67px
+);
+
+// Helper to convert px → rem
+@function rem($px) {
+	@return calc($px / $base-font-size) * 1rem;
+}
