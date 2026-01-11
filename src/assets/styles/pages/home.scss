@@ -114,52 +114,40 @@
 	}
 }
 
-.profile {
+
+
+.black {
 	&-card {
-          background-color: var(--main-black);
-		  padding: var(--padding-xl);
-		  border-radius: var(--radius-md);
-		  width: 100%;
-		  max-width: auto-fit;
-		  height: 100%;
-		  
-	}
-	&-name {
-		font-weight: var(--font-weight-headings);
-		color: var(--main-secondary);
-		top: -80px;
+		background-color: var(--main-black);
+		padding: var(--padding-xl);
+		width: auto;
+		height: 100%;
+	} 
+
+	&-content {
+		color: var(--main-white);
 	}
 
-	&-text {
-         color: var(--main-white);
-		 font-size: 30px;
-
-		 &-p1{
-            bottom: 30px;
-		 }
+	&-p6{
+		font-size:var(h1);
 	}
 }
 
-.project {
-	&-title {
-		color: var(--main-black);
-		top:-50px
-		
-	}
+.archetype {
+    gap: var(--gap-lg);
+    padding: var(--padding-xl) 0;
 
-	&-icon4 {
-		width:24px;
-		height:24px;
-		padding:var(--padding-sm);
-	}
+    &-content {
+        background-color: var(--main-light-grey);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+    }
 
-	&-column{
-		gap: var(--gap-xs);
-	}
+    &-text {
+        padding: var(--padding-xl);
+    }
 
-	&-span {
-		background-color: var(--main-complimentary);
-		color:var(--main-black);
-		padding:var(--padding-xxs)
-	}
+    &-image {
+        background-color: var(--main-accent);
+    }
 }
