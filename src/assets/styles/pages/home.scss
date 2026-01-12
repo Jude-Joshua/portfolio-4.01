@@ -113,3 +113,41 @@
 		}
 	}
 }
+
+
+
+.black {
+	&-card {
+		background-color: var(--main-black);
+		padding: var(--padding-xl);
+		width: auto;
+		height: 100%;
+	} 
+
+	&-content {
+		color: var(--main-white);
+	}
+
+	&-p6{
+		font-size:var(h1);
+	}
+}
+
+.archetype {
+    gap: var(--gap-lg);
+    padding: var(--padding-xl) 0;
+
+    &-content {
+        background-color: var(--main-light-grey);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+    }
+
+    &-text {
+        padding: var(--padding-xl);
+    }
+
+    &-image {
+        background-color: var(--main-accent);
+    }
+}
