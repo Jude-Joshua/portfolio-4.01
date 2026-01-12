@@ -118,9 +118,9 @@ const Home = () => {
 
 
 {/*black card*/}
-   <section className='black-card'>
+   <section className='black-card w-screen'>
 	<div className='black-content'>
-		<p> It’s not about the tool being used, but about the designer using the tool.
+		<p> It’s not about the tool being used, but about the designer using the tool........
 </p>
 		<p>You’ve probably heard about the popular</p>
 	</div>
