@@ -114,6 +114,24 @@
 	}
 }
 
+.profile{
+	&-card{
+		background-color: var(--main-white);
+		padding: var(--padding-xl);
+		width: auto;
+		height: 100%;
+		box-shadow: 8px 15px 16px var(--bx-shadows);
+	} 
+
+	&-content {
+		color: var(--main-black);
+	}
+
+	&-p6{
+		font-size:var(h1);
+	}
+}
+
 
 
 .black {
