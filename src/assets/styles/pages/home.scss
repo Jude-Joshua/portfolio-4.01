@@ -121,31 +121,47 @@
 		width: auto;
 		height: 100%;
 		box-shadow: 8px 15px 16px var(--bx-shadows);
+		border-radius: var(--radius-md);
 	} 
 
-	&-content {
-		color: var(--main-white);
+	&-name {
+		color: var(--main-highlight);
+		top: -50px;
+		padding-top: var(--padding-xs);
+		padding-bottom: var(--padding-xl);
 	}
 
-	&-p6{
-		font-size:var(h1);
-	
+	&-text {
+		color: var(--main-white);
+		padding-top: var(--padding-xl);
+
+
+		&-p1 {
+		bottom:50px;
+	}
+
+	}
 }
 
+	
+	
 .black {
 	&-card {
 		background-color: var(--main-black);
-		padding: var(--padding-xl);
-		width: 100%;
-		height: 80%};
-	} 
+		height: 100%;
+	}
 
 	&-content {
 		color: var(--main-white);
-	}
 
-	&-p6{
-		font-size:var(h1);
+		&-p2{
+			padding-top: var(--padding-xl);
+			padding-bottom: var(--padding-xl);
+		}
+
+		&-p3 {
+			padding-bottom: var(--padding-xl);
+		}
 	}
 }
 

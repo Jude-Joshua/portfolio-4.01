@@ -68,11 +68,14 @@ const Home = () => {
 			
 			{/*Profile Card*/}
 			<section className=' profile flex items-center justify-center mt-30'>
-				<div className=' profile-card flex flex-row items-center justify-center'>
-					<div className='profile-card'>
-						<h2 className='profile-name'>MY DESIGN PHILOSOPHY 💡</h2>
+				<div className=' profile-card relative p-12 overflow-hidden flex flex-row items-center justify-center'>
 
-						<div className='t-captions profile-text'>
+					<div className="absolute inset-y-0 left-20 w-24 bg-emerald-800/40 backdrop-blur-md border-x border-white/5"></div>
+
+					<div className='profile-card relative z-10 '>
+						<h2 className='profile-name h4'>MY DESIGN PHILOSOPHY 💡</h2>
+
+						<div className=' profile-text h5 tracking-wide'>
 							<p className='profile-text-p1'>At the heart of every great brand and product is a clear and cohesive identity.</p>
 
 							<p>Whether it is a mobile app design, website design or just a branding project, I partner with clients to craft an identity that’s both meaningful and aligned with their goals, ensuring consistency and purpose across every touchpoint.</p>
@@ -120,9 +123,8 @@ const Home = () => {
 {/*black card*/}
    <section className='black-card w-screen'>
 	<div className='black-content'>
-		<p> It’s not about the tool being used, but about the designer using the tool........
-</p>
-		<p>You’ve probably heard about the popular</p>
+		<p className='h6 black-content-p2'> It’s not about the tool being <br></br> used, but about the designer <br></br> using the tool.</p>
+		<p className='black-content-p3'>You’ve probably heard about the popular</p>
 	</div>
    </section>
 			
