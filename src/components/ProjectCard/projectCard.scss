@@ -1,0 +1,43 @@
+@use "../../assets/styles/tokens/spacings";
+@use "../../assets/styles/tokens/colors";
+@use "../../assets/styles/mixins/spacings" as *;
+
+.project{
+    gap: var(--gap-xxs);
+
+    &-image{
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        height: 100%;
+
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &-details{
+        background-color: var(--main-light-grey);
+        padding: var(--padding-lg) var(--padding-md);
+        border-radius: var(--radius-md);
+        gap: var(--gap-3xl);
+
+        &-label{
+            background-color: var(--lights-main-complimentary);
+            padding: var(--padding-xxs) var(--padding-xs);
+            border-radius: var(--radius-xs);
+            display: inline-block;
+            width: fit-content;
+        }
+
+        &-text{
+            gap: var(--gap-md);
+
+            &-holder{
+                gap: var(--gap-xxs);
+            }
+        }
+    }
+}

@@ -1,19 +1,17 @@
-import { useEffect, useRef, useState } from "react";
-
-import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, ArrowRightIcon} from '@phosphor-icons/react';
-
+import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon} from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
+import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 
 import HelloImage from '../assets/images/Greeting.svg?react';
-import ProfileLight from '../assets/images/bulb.svg?react';
+import Bulb from '../assets/images/bulb.svg?react';
 import Animark from '../assets/images/animark.svg?react';
+import BriefCase from '../assets/images/briefcase.svg?react';
+import ProjectsDown from '../assets/images/projects-down.svg?react';
 
 import ProfileImage from '../assets/images/profile-image.webp'
 import ShowImage from '../assets/images/showcase.png'
-import CatImage from '../assets/images/cat-image.png'
-import ProjectScreenshot from '../assets/images/project-screenshot.png'
 
 const BARS = 12;
 
@@ -67,24 +65,24 @@ const Home = () => {
 				</article>
 			</section>
 			
-			<section className="profile flex items-center justify-center">
-				<article className='profile-card overflow-hidden flex flex-row items-center justify-center'>
-					<div className="profile-card-glass flex flex-row items-center justify-center">
+			<section className="philosophy flex items-center justify-center">
+				<article className='philosophy-card overflow-hidden flex flex-row items-center justify-center'>
+					<div className="philosophy-card-glass flex flex-row items-center justify-center">
 						<Animark/>
-						<div className="profile-card-glass-rect flex flex-row items-center justify-center">
+						<div className="philosophy-card-glass-rect flex flex-row items-center justify-center">
 							{Array.from({ length: BARS }).map((_, i) => (
-								<div key={i} className="profile-card-glass-rect-bar" />
+								<div key={i} className="philosophy-card-glass-rect-bar" />
 							))}
 						</div>
 					</div>
 
-					<div className="profile-card-data flex flex-col items-start justify-start">
-						<div className="profile-card-data-title flex flex-row items-center justify-start">
+					<div className="philosophy-card-data flex flex-col items-start justify-start">
+						<div className="philosophy-card-data-title flex flex-row items-center justify-start">
 							<h2 className='t-highlights'>MY DESIGN PHILOSOPHY</h2>
-							<span><ProfileLight/></span>
+							<span><Bulb/></span>
 						</div>
 
-						<div className="profile-card-data-text flex flex-col items-start justify-start">
+						<div className="philosophy-card-data-text flex flex-col items-start justify-start">
 							<p className="h3">At the heart of every great brand and product is a clear and cohesive identity.</p>
 							<p className="h3">Whether it is a mobile app design, website design or just a branding project, I partner with clients to craft an identity that’s both meaningful and aligned with their goals, ensuring consistency and purpose across every touchpoint.</p>
 						</div>
@@ -92,149 +90,18 @@ const Home = () => {
 				</article>
 			</section>
 
-             {/*project*/}
- <section className="project w-full flex flex-col">
-
-  {/* PROJECT 1 */}
-  <article className=" project flex items-center w-full">
-    <div className="project-first flex-1 bg-gradient-to-br from-orange-200 via-red-300 to-red-500">
-      <img
-        src={ProjectScreenshot}
-        alt="Healthcare App"
-        className="w-full h-full object-cover rounded-2xl"
-      />
-    </div>
-
-    <div className="project-second flex-1 flex flex-col justify-center">
-      <span className=" project-second-span w-fit">
-        UI/UX
-      </span>
-
-      <h3 className="project-second-text1 h6 leading-snug">
-        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
-      </h3>
-
-      <p className="text-gray-600">
-        How might we simplify the process of getting medical supplies for healthcare seekers and providers?
-      </p>
-
-      <div className="project-second-arrow flex items-center t-buttons">
-        View case study
-        <ArrowRightIcon size={18} weight='bold'  />
-      </div>
-    </div>
-  </article>
-</section>
-
-<section className="project w-full flex flex-col mt-5">
-
-  {/* PROJECT 2 */}
-  <article className=" project flex items-center w-full">
-    <div className="project-first flex-1 bg-gradient-to-br from-orange-200 via-red-300 to-red-500">
-      <img
-        src={ProjectScreenshot}
-        alt="Healthcare App"
-        className="w-full h-full object-cover rounded-2xl"
-      />
-    </div>
-
-    <div className="project-second flex-1 flex flex-col justify-center">
-      <span className=" project-second-span w-fit">
-        UI/UX
-      </span>
-
-      <h3 className="project-second-text1 h6 leading-snug">
-        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
-      </h3>
-
-      <p className="text-gray-600">
-        How might we simplify the process of getting medical supplies for healthcare seekers and providers?
-      </p>
-
-      <div className="project-second-arrow flex items-center t-buttons">
-        View case study
-        <ArrowRightIcon size={18} weight='bold'  />
-      </div>
-    </div>
-  </article>
-</section>
-
-<section className="project w-full flex flex-col">
-
-  {/* PROJECT 3 */}
-  <article className=" project flex items-center w-full">
-    <div className="project-first flex-1 bg-gradient-to-br from-orange-200 via-red-300 to-red-500">
-      <img
-        src={ProjectScreenshot}
-        alt="Healthcare App"
-        className="w-full h-full object-cover rounded-2xl"
-      />
-    </div>
-
-    <div className="project-second flex-1 flex flex-col justify-center">
-      <span className=" project-second-span w-fit">
-        UI/UX
-      </span>
-
-      <h3 className="project-second-text1 h6 leading-snug">
-        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
-      </h3>
-
-      <p className="text-gray-600">
-        How might we simplify the process of getting medical supplies for healthcare seekers and providers?
-      </p>
-
-      <div className="project-second-arrow flex items-center t-buttons">
-        View case study
-        <ArrowRightIcon size={18} weight='bold'  />
-      </div>
-    </div>
-  </article>
-</section> 
-
-
-
-{/*black card*/}
-   <section className='black-card w-screen'>
-	<div className='black-content'>
-		<p className='h6 black-content-p2'> It’s not about the tool being <br></br> used, but about the designer <br></br> using the tool.</p>
-		<p className='black-content-p3'>You’ve probably heard about the popular</p>
-	</div>
-   </section>
-			
-			{/*About*/}
-			<section className="archetype flex flex-col items-start w-full">
-  
-
-  <div className="archetype-content flex flex-row items-stretch w-full">
-    
-    <div className="archetype-text flex flex-col justify-between">
-       {/* ... content here ... */}
-    </div>
-
-    {/* Image Side: Relative lets us put the "sticker" icons on top */}
-    <div className="archetype-image relative flex">
-       <img src={CatImage} alt="Me" className="w-full h-full object-cover" />
-    </div>
-
-  </div>
-</section>
-
-			{/*<Projects />*/}
-			{/*<Archives />*/}
-			
-			{/* CTA */}
-		  {/*<section className="px-6 md:px-12 lg:px-20">
-				CTA
+			<section className="projects w-full flex flex-col">
+				<article className="projects-inner flex flex-col items-center w-full">
+					<div className={'projects-inner-title flex flex-row justify-start items-start w-full'}>
+						<p className="t-highlights">SELECTED PAST PROJECTS</p>
+						<BriefCase/>
+						<div className={'projects-inner-title-down flex flex-row'}>
+							<ProjectsDown/>
+						</div>
+					</div>
+					<ProjectCard/>
+				</article>
 			</section>
-			
-			<section className="px-6 md:px-12 lg:px-20">
-				CTA
-			</section>
-			
-			<section className="px-6 md:px-12 lg:px-20">
-				CTA
-			</section>*/}
 		</main>
 	);
 };

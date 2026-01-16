@@ -1,0 +1,16 @@
+@keyframes bounce {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    50% {
+        top: 40%;
+        left: 40%;
+    }
+
+    100% {
+        top: 1%;
+        left: 120%;
+    }
+}
