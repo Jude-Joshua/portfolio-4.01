@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon} from '@phosphor-icons/react';
+import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, ArrowRightIcon} from '@phosphor-icons/react';
+
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
@@ -92,24 +93,24 @@ const Home = () => {
 			</section>
 
              {/*project*/}
- <section className="w-full flex flex-col gap-10 py-20">
+ <section className="project w-full flex flex-col">
 
   {/* PROJECT 1 */}
-  <article className="flex w-full overflow-hidden rounded-3xl bg-gray-100">
-    <div className="w-1/2 bg-gradient-to-br from-orange-200 via-red-300 to-red-500 p-6">
+  <article className=" project flex items-center w-full">
+    <div className="project-first flex-1 bg-gradient-to-br from-orange-200 via-red-300 to-red-500">
       <img
         src={ProjectScreenshot}
         alt="Healthcare App"
-        className="w-full h-full object-cover rounded-2xl shadow-xl"
+        className="w-full h-full object-cover rounded-2xl"
       />
     </div>
 
-    <div className="w-1/2 flex flex-col justify-center gap-4 p-10">
-      <span className="w-fit rounded-full bg-green-100 px-4 py-1 text-sm font-medium text-green-700">
+    <div className="project-second flex-1 flex flex-col justify-center">
+      <span className=" project-second-span w-fit">
         UI/UX
       </span>
 
-      <h3 className="text-2xl font-semibold text-gray-900 leading-snug">
+      <h3 className="project-second-text1 h6 leading-snug">
         Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
       </h3>
 
@@ -117,13 +118,80 @@ const Home = () => {
         How might we simplify the process of getting medical supplies for healthcare seekers and providers?
       </p>
 
-      <div className="flex items-center gap-2 font-semibold text-green-600">
+      <div className="project-second-arrow flex items-center t-buttons">
         View case study
-        <ArrowUpRightIcon size={18} />
+        <ArrowRightIcon size={18} weight='bold'  />
       </div>
     </div>
   </article>
 </section>
+
+<section className="project w-full flex flex-col mt-5">
+
+  {/* PROJECT 2 */}
+  <article className=" project flex items-center w-full">
+    <div className="project-first flex-1 bg-gradient-to-br from-orange-200 via-red-300 to-red-500">
+      <img
+        src={ProjectScreenshot}
+        alt="Healthcare App"
+        className="w-full h-full object-cover rounded-2xl"
+      />
+    </div>
+
+    <div className="project-second flex-1 flex flex-col justify-center">
+      <span className=" project-second-span w-fit">
+        UI/UX
+      </span>
+
+      <h3 className="project-second-text1 h6 leading-snug">
+        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+      </h3>
+
+      <p className="text-gray-600">
+        How might we simplify the process of getting medical supplies for healthcare seekers and providers?
+      </p>
+
+      <div className="project-second-arrow flex items-center t-buttons">
+        View case study
+        <ArrowRightIcon size={18} weight='bold'  />
+      </div>
+    </div>
+  </article>
+</section>
+
+<section className="project w-full flex flex-col">
+
+  {/* PROJECT 3 */}
+  <article className=" project flex items-center w-full">
+    <div className="project-first flex-1 bg-gradient-to-br from-orange-200 via-red-300 to-red-500">
+      <img
+        src={ProjectScreenshot}
+        alt="Healthcare App"
+        className="w-full h-full object-cover rounded-2xl"
+      />
+    </div>
+
+    <div className="project-second flex-1 flex flex-col justify-center">
+      <span className=" project-second-span w-fit">
+        UI/UX
+      </span>
+
+      <h3 className="project-second-text1 h6 leading-snug">
+        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+      </h3>
+
+      <p className="text-gray-600">
+        How might we simplify the process of getting medical supplies for healthcare seekers and providers?
+      </p>
+
+      <div className="project-second-arrow flex items-center t-buttons">
+        View case study
+        <ArrowRightIcon size={18} weight='bold'  />
+      </div>
+    </div>
+  </article>
+</section> 
+
 
 
 {/*black card*/}

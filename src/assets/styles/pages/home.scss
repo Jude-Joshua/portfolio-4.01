@@ -214,6 +214,51 @@
 }
 
 
+
+.project {
+	gap:var(--gap-xs) ;
+
+	&-first {
+		padding: var(--padding-lg);
+		border-radius: var(--radius-md);
+	}
+
+	&-second {
+		background-color:var(--main-light-grey) ;
+		padding: var(--padding-lg);
+		border-radius: var(--radius-md);
+		padding-top: var(--padding-xl);
+		padding-bottom: var(--padding-xl);
+
+		&-span {
+		background-color: var(--lights-main-complimentary);
+		padding: var(--radius-xs);
+		border-radius: var(--radius-xs);
+		width:70px ;
+		text-align: center;
+		bottom:50px ;
+		}
+
+		&-text1 {
+			color: var(--main-black);
+			bottom: 10px;
+		}
+
+		&-arrow {
+			top: 20px;
+			color: var(--main-primary);
+			gap:var(--gap-xs) ;
+		}
+	}
+
+	&-space {
+		margin-top: var(--gap-xs);
+	}
+
+	
+}
+
+
 @keyframes bounce {
   0% {
     top: 0;
