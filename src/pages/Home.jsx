@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useRef, useState } from "react";
 
 import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon} from '@phosphor-icons/react';
 
@@ -6,17 +6,18 @@ import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
 
 import HelloImage from '../assets/images/Greeting.svg?react';
+import ProfileLight from '../assets/images/bulb.svg?react';
+import Animark from '../assets/images/animark.svg?react';
+
 import ProfileImage from '../assets/images/profile-image.webp'
 import ShowImage from '../assets/images/showcase.png'
 import CatImage from '../assets/images/cat-image.png'
 import ProjectScreenshot from '../assets/images/project-screenshot.png'
 
-// import About from './About';
-// import Projects from './Projects';
-// import Archives from './Archives';
-
+const BARS = 12;
 
 const Home = () => {
+
 	return (
 		<main className={'flex flex-col items-start justify-start'}>
 			
@@ -65,24 +66,29 @@ const Home = () => {
 				</article>
 			</section>
 			
-			
-			{/*Profile Card*/}
-			<section className=' profile flex items-center justify-center mt-30'>
-				<div className=' profile-card relative p-12 overflow-hidden flex flex-row items-center justify-center'>
+			<section className="profile flex items-center justify-center">
+				<article className='profile-card overflow-hidden flex flex-row items-center justify-center'>
+					<div className="profile-card-glass flex flex-row items-center justify-center">
+						<Animark/>
+						<div className="profile-card-glass-rect flex flex-row items-center justify-center">
+							{Array.from({ length: BARS }).map((_, i) => (
+								<div key={i} className="profile-card-glass-rect-bar" />
+							))}
+						</div>
+					</div>
 
-					<div className="absolute inset-y-0 left-20 w-24 bg-emerald-800/40 backdrop-blur-md border-x border-white/5"></div>
-
-					<div className='profile-card relative z-10 '>
-						<h2 className='profile-name h4'>MY DESIGN PHILOSOPHY 💡</h2>
-
-						<div className=' profile-text h5 tracking-wide'>
-							<p className='profile-text-p1'>At the heart of every great brand and product is a clear and cohesive identity.</p>
-
-							<p>Whether it is a mobile app design, website design or just a branding project, I partner with clients to craft an identity that’s both meaningful and aligned with their goals, ensuring consistency and purpose across every touchpoint.</p>
+					<div className="profile-card-data flex flex-col items-start justify-start">
+						<div className="profile-card-data-title flex flex-row items-center justify-start">
+							<h2 className='t-highlights'>MY DESIGN PHILOSOPHY</h2>
+							<span><ProfileLight/></span>
 						</div>
 
+						<div className="profile-card-data-text flex flex-col items-start justify-start">
+							<p className="h3">At the heart of every great brand and product is a clear and cohesive identity.</p>
+							<p className="h3">Whether it is a mobile app design, website design or just a branding project, I partner with clients to craft an identity that’s both meaningful and aligned with their goals, ensuring consistency and purpose across every touchpoint.</p>
+						</div>
 					</div>
-				</div>
+				</article>
 			</section>
 
              {/*project*/}
