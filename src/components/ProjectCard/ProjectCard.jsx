@@ -15,12 +15,15 @@ const ProjectCard = () => {
                 <ImageComponent src={SampleImage} className={''} alt={'sample project image'}/>
             </div>
             <div className="project-details col-span-2 flex flex-col justify-center">
-                <span className="project-details-label t-caption">UI/UX</span>
+                <div className="project-details-labels flex flex-row">
+                    <span className="t-caption">UI/UX</span>
+                    <span className="t-caption">Firstmedtrade</span>
+                </div>
 
                 <div className="project-details-text flex flex-col items-start justify-start">
                     <div className="project-details-text-holder flex flex-col items-start justify-start">
                         <h6 className="h6">
-                            Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+                            B2B and B2C web app for healthcare providers and seekers needing streamlined access to medical supplies.
                         </h6>
                         <p className="t-copy">
                             How might we simplify the process of getting medical supplies for healthcare seekers and providers?
