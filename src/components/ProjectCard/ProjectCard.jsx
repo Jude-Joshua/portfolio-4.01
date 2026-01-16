@@ -1,4 +1,4 @@
-import './ProjectCard.scss';
+import './projectCard.scss';
 
 import {ArrowRightIcon} from '@phosphor-icons/react';
 
