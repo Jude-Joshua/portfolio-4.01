@@ -1,4 +1,5 @@
 import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon} from '@phosphor-icons/react';
+import { CameraIcon,SneakerMoveIcon,PaletteIcon,BracketsAngleIcon, PawPrintIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
@@ -9,6 +10,7 @@ import Bulb from '../assets/images/bulb.svg?react';
 import Animark from '../assets/images/animark.svg?react';
 import BriefCase from '../assets/images/briefcase.svg?react';
 import ProjectsDown from '../assets/images/projects-down.svg?react';
+import CatImage from '../assets/images/cat-image.png';
 
 import ProfileImage from '../assets/images/profile-image.webp'
 import ShowImage from '../assets/images/showcase.png'
@@ -102,6 +104,124 @@ const Home = () => {
 					<ProjectCard/>
 				</article>
 			</section>
+
+			<section className='black'> 
+				<div className='black'>
+				<div className='black-text'>
+					<p className='h6 black-text-1 tracking-wide'>It's not about the tool being <br /> used, It's about the designer <br/> using the tool.</p>
+
+					<p className='black-text-2'>You have probably heard of the popular</p>
+				</div>
+				</div>
+			</section>
+
+			{/*About*/}
+			<section className="archetype">
+      {/* Header */}
+      <div className="archetype-div">
+        <p className="t-highlights archetype-head-text tracking-wide">
+          My brand archetype would be…
+        </p>
+
+        <h1 className="archetype-heading h1 leading-tight">
+          Sometimes, a{" "}
+          <span className="archetype-heading-span">Rebel</span>, often, an{" "}
+          <span className="archetype-heading-span">Explorer</span>, but always a{" "}
+          <span className="archetype-heading-span">Caregiver</span>.
+        </h1>
+      </div>
+
+      {/*  grid */}
+      <div className="grid grid-cols-2 gap-8">
+        {/* Left card */}
+        <div className="archetype-left-card">
+          <p className="archetype-left-card-par leading-relaxed mb-4">
+            I excel by finding new ways to make stuff work. This has always been
+            my MO for my career, school and life in general.
+          </p>
+
+          <p className="archetype-left-card-par  leading-relaxed mb-4">
+            From fixing bad radios, to inventing games, to playing with words
+            and camera angles; my approach to life sits between structure and
+            empathy. I always try to connect how things work with how they make
+            people feel.
+          </p>
+
+          <p className="archetype-left-card-par  leading-relaxed mb-8">
+            I'm drawn to storytelling through words, visuals, and conversations
+            that help show possibility in the everyday.
+          </p>
+
+          <h4 className="t-copy mb-4">I LOVE…</h4>
+
+          <div className="archetype-left-card-flex flex flex-wrap gap-3">
+            {[
+              "Books",
+              "Black & White",
+              "Photography",
+              "Art",
+              "Nature",
+              "Mentoring",
+              "Music",
+              "Poetry",
+            ].map((item) => (
+              <span
+                key={item}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Right image card */}
+        <div className=" archetype-right-card relative overflow-hidden">
+          <div className='archetype-right-card-img-'>
+            <ImageComponent src={CatImage} className={''} alt={''}/>
+          </div>
+          
+
+          {/* Floating actions */}
+           <div className=" archetype-float flex items-center justify-between ">
+    
+        <div className=" archetype-float-paw flex items-center justify-center">
+          <PawPrintIcon size={24} />
+    </div>
+
+    <div className=" archetype-float-camera flex flex-1 justify-around">
+      <button><CameraIcon size={24} /></button>
+      <button><SneakerMoveIcon size={24} /></button>
+      <button><PaletteIcon size={24} /></button>
+      <button><BracketsAngleIcon size={24} /></button>
+    </div>
+    </div>
+    </div>
+      </div>
+         
+      
+      {/* Footer */}
+      <div className="archetype-footer grid grid-cols-2 gap-6">
+        <div className="flex items-center gap-3">
+          <span className="text-sm font-semibold">Currently watching…</span>
+          <a
+            href="#"
+            className="text-emerald-600 font-medium text-sm flex items-center gap-1"
+          >
+            Stranger Things S05 ↗
+          </a>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <span className="text-sm font-semibold">Currently reading…</span>
+          <a
+            href="#"
+            className="text-emerald-600 font-medium text-sm flex items-center gap-1"
+          >
+            When Sorry Isn't Enough ↗
+          </a>
+        </div>
+      </div>
+    </section>
 		</main>
 	);
 };
