@@ -210,10 +210,10 @@
 	max-width: 72rem;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: var(--padding-lg);
-	padding-right:var(--padding-lg) ;
-	padding-top:var(--padding-xl) ;
-	padding-bottom: var(--padding-xl);
+	padding-left: var(--padding-xl);
+	padding-right:var(--padding-xl) ;
+	padding-top:var(--padding-lg) ;
+	padding-bottom: var(--padding-lg);
 
 	&-div {
 		margin-bottom: 48px;
@@ -240,7 +240,7 @@
 			color: var(--main-black);
 		}
 
-		&-flex {
+		&-love {
 		background-color: var(--main-white);
 		color: var(--main-black);
 		padding: var(--padding-xxs);
@@ -290,5 +290,13 @@
 		border-radius: var(--radius-3xl);
 		padding: var(--padding-3xl);
 		height: auto;
+		gap: var(--gap-sm);
+
+		&-divider {
+			height: 24px;
+			width: 1px;
+			background-color: var(--main-black);
+			
+		}
 	}
 }

@@ -1,5 +1,6 @@
 import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon} from '@phosphor-icons/react';
 import { CameraIcon,SneakerMoveIcon,PaletteIcon,BracketsAngleIcon, PawPrintIcon } from '@phosphor-icons/react';
+import { FilmSlateIcon, BookOpenTextIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
@@ -49,10 +50,12 @@ const Home = () => {
 					<div className={'hello-card-content flex flex-col items-start justify-start'}>
 						<div className={'hello-card-content-text flex flex-col items-start justify-start'}>
 							<p className="t-copy">
-								I am a digital designer and design educator with over a decade's worth of experience in the design industry.
-							</p>
+								I am a digital designer with over a decade of experience collaboarting with content and design teams, and start up founders,
+                to deliver clear, scalable, digital experiences.
+							</p> 
 							<p className="t-copy">
-								Till date, I have helped startup founders and creative business owners ship by delivering work across brand, product, and content experiences that aligns with their roadmap goals and target audiences.
+								From product interfaces to brand and web platforms, I work closely with teams to connect user needs, content strategy, and design execution
+                in ways that support long-term growth.
 							</p>
 						</div>
 						<Button hierarchy={'tertiary'} type={'link'} link={'#experience'}>
@@ -135,26 +138,26 @@ const Home = () => {
       <div className="grid grid-cols-2 gap-8">
         {/* Left card */}
         <div className="archetype-left-card">
-          <p className="archetype-left-card-par leading-relaxed mb-4">
-            I excel by finding new ways to make stuff work. This has always been
+          <p className="archetype-left-card-par t-copy leading-relaxed ">
+            I enjoy finding new ways to make stuff work. This has always been
             my MO for my career, school and life in general.
-          </p>
+          </p> <br/>
 
-          <p className="archetype-left-card-par  leading-relaxed mb-4">
-            From fixing bad radios, to inventing games, to playing with words
+          <p className="archetype-left-card-par t-copy leading-relaxed ">
+            From shaping digital products and brands to tinkering with bad electronics,to playing with words
             and camera angles; my approach to life sits between structure and
             empathy. I always try to connect how things work with how they make
             people feel.
-          </p>
+          </p> <br />
 
-          <p className="archetype-left-card-par  leading-relaxed mb-8">
-            I'm drawn to storytelling through words, visuals, and conversations
-            that help show possibility in the everyday.
-          </p>
+          <p className="archetype-left-card-par t-copy leading-relaxed ">
+            I am interested in how things work, why people use them, and how small decisions 
+            shape everyday experiences.
+          </p> <br /> <br />
 
-          <h4 className="t-copy mb-4">I LOVE…</h4>
+          <h4 className=" archetype-left-card-love-h4 t-highlights ">I LOVE…</h4> <br />
 
-          <div className="archetype-left-card-flex flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3">
             {[
               "Books",
               "Black & White",
@@ -167,6 +170,7 @@ const Home = () => {
             ].map((item) => (
               <span
                 key={item}
+                className="archetype-left-card-love "
               >
                 {item}
               </span>
@@ -200,17 +204,17 @@ const Home = () => {
          
       
       {/* Footer */}
-      <div className="archetype-footer grid grid-cols-2 gap-6">
+      <div className="archetype-footer grid grid-cols-2">
         <div className="flex items-center gap-3">
-          <span className="text-sm font-semibold">Currently watching…</span>
-          <a
+          <p><span className="text-sm font-semibold">Currently watching…</span></p>
+         <p><a  
             href="#"
             className="text-emerald-600 font-medium text-sm flex items-center gap-1"
           >
             Stranger Things S05 ↗
-          </a>
+          </a></p>
         </div>
-
+          
         <div className="flex items-center gap-3">
           <span className="text-sm font-semibold">Currently reading…</span>
           <a
