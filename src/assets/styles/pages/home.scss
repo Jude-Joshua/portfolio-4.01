@@ -1,21 +1,23 @@
 .hero{
+	padding-bottom: var(--padding-lg);
+
 	&-title{
-		width: 84%;
+		width: 80%;
 		gap: var(--gap-xxs);
 
 		&-role{
 			background-color: var(--main-accent);
 			color: var(--main-primary);
-			font-weight: var(--font-weight-headings);
+			font-weight: Bold;
 			padding: var(--padding-xs) var(--padding-lg);
 			border-radius: var(--radius-xl);
-			gap: var(--gap-xxs);
+			gap: var(--gap-3xs);
 		}
 
 		&-icons{
 			display: inline-flex;
 			top: 16px;
-			padding: 0 var(--padding-xs);
+			padding: 0 var(--padding-xxs);
 
 			& span{
 				padding: var(--padding-xxs);
@@ -63,7 +65,7 @@
 
 .hello{
 	&-card{
-		width: 48%;
+		width: 49%;
 		padding: var(--padding-lg) var(--padding-lg) var(--padding-xl);
 		background-color: var(--main-light-grey);
 		border-radius: var(--radius-md);
@@ -71,7 +73,21 @@
 		box-shadow: 8px 15px 16px var(--bx-shadows);
 		z-index: 3;
 		left: 5%;
+		top: 16px;
 		transform: rotate(-1.81deg);
+		transition: 0.2s ease-in-out;
+		will-change: transform;
+
+		&:hover{
+			transform: rotate(0);
+			top: -24px;
+			left: 8%;
+
+			& ~ .hello-showcase{
+				transform: rotate(3.75deg) scale(0.7);
+				z-index: 1;
+			}
+		}
 
 		&-title{
 			&-content{
@@ -95,22 +111,41 @@
 	}
 
 	&-showcase{
-		width: 45%;
-		height: 552px;
+		width: 46%;
+		height: 600px;
 		background-color: var(--main-primary);
 		padding: var(--padding-lg);
 		border-radius: var(--radius-md);
-		overflow: hidden;
 		box-shadow: 8px 15px 16px var(--bx-shadows);
-		left: -5%;
-		top: -32px;
-		transform: rotate(8.75deg);
+		left: -56px;
+		top: -44px;
+		transform: rotate(7.75deg) scale(1);
+		transition: 0.2s ease-in-out;
+		will-change: transform;
 
-		& img{
-			width: 100%;
-			object-fit: cover;
-			object-position: center;
+		&:hover{
+			transform: rotate(0);
+			z-index: 3;
+			left: -80px;
+
+			& ~ .hello-card{
+				transform: rotate(3.75deg) scale(0.7);
+				z-index: 1;
+			}
 		}
+
+		&-image{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			overflow: hidden;
+
+			& img{
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}		
 	}
 }
 
@@ -118,7 +153,7 @@
 	&-card{
 		background-color: var(--main-black);
 		padding: var(--padding-4xl) var(--padding-3xl);
-		border-radius: var(--radius-md);
+		border-radius: var(--radius-lg);
 
 		&-glass{
 			position: absolute;
@@ -131,11 +166,11 @@
 			& svg{
 				position: absolute;
 				top: 0;
-				left: 0;
+				left: -32%;
 				transform: rotate(-36.46deg);
-				animation: bounce 28s linear infinite;
-				filter: blur(24px);
-				opacity: 0.9;
+				animation: bounce 28s ease-out infinite;
+				animation-delay: 0s;
+				filter: blur(16px);
 			}
 
 			&-rect{
@@ -148,7 +183,7 @@
 					width: 20%;
 					height: 140%;
 					background: var(--overlay-black);
-					backdrop-filter: blur(32px);
+					backdrop-filter: blur(24px);
 				}
 			}
 		}

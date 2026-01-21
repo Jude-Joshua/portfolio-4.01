@@ -12,7 +12,8 @@
 :root {
 	--font-size: fs.rem(map-get(fs.$font-sizes, t-copy));
 	--font-family: "Primary";
-	--font-weight-headings: Bold;
+	--font-weight-headings: 600;
+	--font-weight-semi-headings: 500;
 	--font-weight-highlights: Bold;
 	--font-weight-paragraphs: Regular;
 }
@@ -49,8 +50,8 @@
 }
 
 @mixin h3 {
-	font-weight: var(--font-weight-headings);
-	line-height: 130%;
+	font-weight: var(--font-weight-semi-headings);
+	line-height: 150%;
 	font-size: fs.rem(map-get(fs.$font-sizes, h3));
 }
 
@@ -78,7 +79,7 @@
 
 @mixin t-copy {
 	font-weight: var(--font-weight-paragraphs);
-	line-height: 180%;
+	line-height: 190%;
 	font-size: fs.rem(map-get(fs.$font-sizes, t-copy));
 }
 
