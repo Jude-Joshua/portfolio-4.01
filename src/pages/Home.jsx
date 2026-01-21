@@ -66,7 +66,7 @@ const Home = () => {
 					}
 				>
 					<div className="hello-showcase-image">
-						<ImageComponent src={ShowImage} className={''} alt={'A playground design I made in 2024 to show what digital card-holder would look like.'} />
+						<ImageComponent src={ShowImage} className={''} alt={'A playground design I made in 2024 to show what a digital card-holder would look like.'} />
 					</div>
 					<Tooltip
 						x={tooltip.x}
