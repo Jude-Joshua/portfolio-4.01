@@ -81,7 +81,7 @@
 		&:hover{
 			transform: rotate(0);
 			top: -24px;
-			left: 8%;
+			// left: 8%;
 
 			& ~ .hello-showcase{
 				transform: rotate(3.75deg) scale(0.7);
@@ -126,7 +126,7 @@
 		&:hover{
 			transform: rotate(0);
 			z-index: 3;
-			left: -80px;
+			// left: -80px;
 
 			& ~ .hello-card{
 				transform: rotate(3.75deg) scale(0.7);
