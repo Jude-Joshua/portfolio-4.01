@@ -1,6 +1,6 @@
-import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon} from '@phosphor-icons/react';
+import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenIcon} from '@phosphor-icons/react';
 import { CameraIcon,SneakerMoveIcon,PaletteIcon,BracketsAngleIcon, PawPrintIcon } from '@phosphor-icons/react';
-import { FilmSlateIcon, BookOpenTextIcon } from '@phosphor-icons/react';
+import { FilmSlateIcon, BookOpenTextIcon, LineVerticalIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
@@ -179,13 +179,11 @@ const Home = () => {
         </div>
 
         {/* Right image card */}
-        <div className=" archetype-right-card relative overflow-hidden">
-          <div className='archetype-right-card-img-'>
-            <ImageComponent src={CatImage} className={''} alt={''}/>
-          </div>
-          
+        <div className=" archetype-right-card">
+          <div className='archetype-right-card-img'>
+            <ImageComponent src={CatImage} className={'archetype-img'} alt={''}/>
 
-          {/* Floating actions */}
+            {/* Floating actions */}
            <div className=" archetype-float flex items-center justify-between ">
     
         <div className=" archetype-float-paw flex items-center justify-center">
@@ -200,29 +198,49 @@ const Home = () => {
     </div>
     </div>
     </div>
+          </div>
+          
+
+          
       </div>
          
       
       {/* Footer */}
-      <div className="archetype-footer grid grid-cols-2">
-        <div className="flex items-center gap-3">
-          <p><span className="text-sm font-semibold">Currently watching…</span></p>
+      <div className="archetype-footer flex  justify-evenly  ">
+        <div className='archetype-footer-div flex justify-between'> 
+        <div className=" flex items-center gap-1">
+          <p><span className="t-buttons">Currently watching…</span></p>
+          <div  className='archetype-footer-phor'>
+            <FilmSlateIcon  size={24} weight='bold'/>
+          </div>
+
          <p><a  
             href="#"
-            className="text-emerald-600 font-medium text-sm flex items-center gap-1"
+            className=" archetype-footer-link t-buttons flex items-center gap-1"
           >
             Stranger Things S05 ↗
           </a></p>
+          
+        </div>
+
+  {/* divider */}
+        <div>
+          <LineVerticalIcon size={40}  className='archetype-footer-divider'/>
         </div>
           
-        <div className="flex items-center gap-3">
-          <span className="text-sm font-semibold">Currently reading…</span>
+          <span className="t-buttons">Currently reading…</span>
+           <div className="flex items-center gap-1">
+           <div className='archetype-footer-phor'>
+            <BookOpenIcon   size={24} weight='bold'/>
+            </div>
           <a
             href="#"
-            className="text-emerald-600 font-medium text-sm flex items-center gap-1"
+            className="archetype-footer-link t-buttons  flex items-center gap-1"
           >
             When Sorry Isn't Enough ↗
           </a>
+         
+        </div>
         </div>
       </div>
     </section>
