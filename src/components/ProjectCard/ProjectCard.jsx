@@ -25,7 +25,7 @@ const ProjectCard = () => {
                         <h6 className="h6">
                             B2B and B2C web app for healthcare providers and seekers needing streamlined access to medical supplies.
                         </h6>
-                        <p className="t-copy">
+                        <p className="t-copy-small">
                             How might we simplify the process of getting medical supplies for healthcare seekers and providers?
                         </p>
                     </div>

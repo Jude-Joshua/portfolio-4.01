@@ -69,7 +69,7 @@
 
 @mixin h6 {
 	font-weight: var(--font-weight-headings);
-	line-height: 140%;
+	line-height: 150%;
 	font-size: fs.rem(map-get(fs.$font-sizes, h6));
 }
 

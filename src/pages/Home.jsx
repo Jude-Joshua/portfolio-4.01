@@ -49,9 +49,9 @@ const Home = () => {
 					</div>
 					<h1 className="h1 text-center">Designing digital experiences that align with
 						<span className={'hero-title-icons flex flex-row items-center justify-center'}>
-							<span className={'arrow'}><ArrowUpRightIcon /></span>
-							<span className={'clock'}><ClockCountdownIcon /></span>
-							<span className={'calendar'}><CalendarDotsIcon /></span>
+							<span className={'arrow'} data-cursor='hover'><ArrowUpRightIcon /></span>
+							<span className={'clock'} data-cursor='hover'><ClockCountdownIcon /></span>
+							<span className={'calendar'} data-cursor='hover'><CalendarDotsIcon /></span>
 						</span>roadmap goals for teams and founders.</h1>
 				</article>
 			</section>

@@ -1,0 +1,40 @@
+// * {
+//     cursor: none !important;
+// }
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--main-primary);
+    pointer-events: none;
+    z-index: 999999999;
+    transform: translate3d(0, 0, 0);
+    transition:
+        width 0.15s ease,
+        height 0.15s ease,
+        background 0.15s ease,
+        transform 0.15s linear;
+}
+
+.custom-cursor.is-active {
+    width: 20px;
+    height: 20px;
+    background: rgba(1, 1, 1, 0.4);
+}
+
+.cursor-hover {
+    width: 32px;
+    height: 32px;
+    background: var(--main-light-grey);
+}
+
+.cursor-link {
+    width: 40px;
+    height: 40px;
+    background: var(--overlay-white);
+    border: var(--border) solid var(--main-light-grey);
+}
