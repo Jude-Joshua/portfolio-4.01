@@ -29,6 +29,39 @@
 		&-navigation {
 			text-transform: capitalize;
 
+			&::after{
+				content: '';
+				width: 0;
+				height: 3px;
+				border-radius: 2px;
+				position: absolute;
+				top: 84%;
+				left: 0%;
+				transition: 0.4s ease-out;
+			}
+
+			&.active{
+				color: var(--main-highlight) !important;
+				cursor: default !important;
+
+				&::after{
+					background-color: var(--main-highlight) !important;
+					width: 4px !important;
+					height: 4px !important;
+					border-radius: 50% !important;
+					left: 50% !important;				
+				}
+			}
+
+			&:hover{
+				color: var(--main-primary);
+
+				&::after{
+					background-color: var(--main-primary);
+					width: 50%;
+				}
+			}
+
 			&-divider {
 				width: 32px;
 			}

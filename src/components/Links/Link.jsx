@@ -6,6 +6,7 @@ export default function Url({isNavigationLink, href, className ='', children}) {
 	
 	return (
 		<Link
+			data-cursor='link'
 			to={href}
 			className={`t-links flex flex-row ${className} ${
 				isNavigationLink

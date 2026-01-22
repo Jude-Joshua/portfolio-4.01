@@ -1,5 +1,6 @@
 .body{
 	&-link{
 		gap: var(--gap-xxs);
+		display: inline-flex;
 	}
 }

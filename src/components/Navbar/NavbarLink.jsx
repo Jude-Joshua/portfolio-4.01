@@ -10,6 +10,7 @@ export default function NavbarLink ({navLinks}) {
 				
 				return(
 					<Link
+						data-cursor='link'
 						to={`/${link === 'home' ? '' : link}`}
 						key={index}
 						className={`t-links navbar-links-navigation ${isActive ? 'active' : ''}`}

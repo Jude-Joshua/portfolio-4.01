@@ -1,0 +1,45 @@
+.tooltip {
+    position: relative;
+    left: 40px;
+    padding: var(--padding-xs);
+    width: 248px;
+    max-width: 85%;
+    min-width: 85%;
+    background: var(--overlay-black-blur);
+    backdrop-filter: blur(24px);
+    color: var(--main-white);
+    border-radius: var(--radius-sm);
+    box-shadow: 8px 15px 16px var(--bx-shadows);
+
+    &-dot{
+        width: 8px;
+        height: 8px;
+        background: var(--main-black);
+        border-radius: 50%;
+        position: relative;
+        top: 64px;
+        left: -3.3px;
+    }
+
+    &-wrapper {
+        position: absolute;
+        z-index: 50;
+        left: unset;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: -48px;
+        top: 92%;
+        width: 48px;
+        height: 24px;
+        border-left: 1.5px solid var(--main-black);
+        border-top: 1.5px solid var(--main-black);
+        transform: translateY(-50%) skewY(-16deg);
+        border-top-left-radius: 6px;
+    }
+
+}
