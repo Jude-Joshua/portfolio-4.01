@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon } from '@phosphor-icons/react';
+import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon } from '@phosphor-icons/react';
 import { CameraIcon, SneakerMoveIcon, PaletteIcon, BracketsAngleIcon, PawPrintIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
@@ -22,7 +22,7 @@ const BARS = 10;
 
 const Home = () => {
 
-	 const [tooltip, setTooltip] = useState({
+	const [tooltip, setTooltip] = useState({
 		visible: false,
 		x: 0,
 		y: 0,
@@ -59,6 +59,7 @@ const Home = () => {
 			<section className="hello flex flex-row-reverse justify-center items-center">
 				<article
 					className="hello-showcase flex flex-col justify-center items-center"
+					data-cursor='none'
 					onMouseEnter={handleMouseMove}
 					onMouseMove={handleMouseMove}
 					onMouseLeave={() =>
@@ -141,122 +142,105 @@ const Home = () => {
 			</section>
 
 			<section className='black' id='process'>
-				<div className='black'>
+				<article className='black-box'>
 					<div className='black-text'>
 						<p className='h6 black-text-1 tracking-wide'>It's not about the tool being <br /> used, It's about the designer <br /> using the tool.</p>
 
 						<p className='black-text-2'>You have probably heard of the popular</p>
 					</div>
-				</div>
+				</article>
 			</section>
 
-			{/*About*/}
-			<section className="archetype">
-				{/* Header */}
-				<div className="archetype-div">
-					<p className="t-highlights archetype-head-text tracking-wide">
+			<section className="archetype flex flex-col items-start justify-start">
+				<article className="archetype-title flex flex-col items-start justify-start">
+					<p className="t-highlights">
 						My brand archetype would be…
 					</p>
-
-					<h1 className="archetype-heading h1 leading-tight">
-						Sometimes, a{" "}
-						<span className="archetype-heading-span">Rebel</span>, often, an{" "}
-						<span className="archetype-heading-span">Explorer</span>, but always a{" "}
-						<span className="archetype-heading-span">Caregiver</span>.
-					</h1>
-				</div>
+					<h2 className="h2">
+						Sometimes, a <span className="archetype-title-highlights">Rebel</span>, often, an <span className="archetype-title-highlights">Explorer</span>, but always a <span className="archetype-title-highlights">Caregiver</span>.
+					</h2>
+				</article>
 
 				{/*  grid */}
-				<div className="grid grid-cols-2 gap-8">
-					{/* Left card */}
-					<div className="archetype-left-card">
-						<p className="archetype-left-card-par t-copy leading-relaxed ">
-							I enjoy finding new ways to make stuff work. This has always been
-							my MO for my career, school and life in general.
-						</p> <br />
-
-						<p className="archetype-left-card-par t-copy leading-relaxed ">
-							From shaping digital products and brands to tinkering with bad electronics,to playing with words
-							and camera angles; my approach to life sits between structure and
-							empathy. I always try to connect how things work with how they make
-							people feel.
-						</p> <br />
-
-						<p className="archetype-left-card-par t-copy leading-relaxed ">
-							I am interested in how things work, why people use them, and how small decisions
-							shape everyday experiences.
-						</p> <br /> <br />
-
-						<h4 className=" archetype-left-card-love-h4 t-highlights ">I LOVE…</h4> <br />
-
-						<div className="flex flex-wrap gap-3">
-							{[
-								"Books",
-								"Black & White",
-								"Photography",
-								"Art",
-								"Nature",
-								"Mentoring",
-								"Music",
-								"Poetry",
-							].map((item) => (
-								<span
-									key={item}
-									className="archetype-left-card-love "
-								>
-									{item}
-								</span>
-							))}
+				<article className="archetype-body flex flex-col items-start justify-start w-full">
+					<div className="archetype-body-info grid grid-cols-7 justify-start items-start">
+						<div className="archetype-body-info-left col-span-4 flex flex-col items-start justify-start">
+							<div className="archetype-body-info-left-paragraphs flex flex-col items-start justify-start">
+								<p className="t-copy">
+									I enjoy finding new ways to make stuff work. This has always been my MO for my career, school and life in general.
+								</p>
+								<p className="t-copy">
+									Whether it’s figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
+								</p>
+								<p className="t-copy">
+									You could say that I’m interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
+								</p>
+							</div>
+							{/* <div className="archetype-body-info-left-label flex flex-col items-start justify-start">
+								<p className="t-highlights">I LOVE…</p>
+								<div className="archetype-body-info-left-label-list flex flex-row flex-wrap items-start justify-start">
+									{[
+										"Books",
+										"Photography",
+										"Poetry",
+										"Art",
+										"Music",
+										"Nature",
+										"Mentoring",
+										"Black & White",
+									].map((item) => (
+										<span
+											key={item}
+											className="archetype-body-info-left-label-list-item t-copy-small"
+										>
+											{item}
+										</span>
+									))}
+								</div>
+							</div> */}
 						</div>
-					</div>
-
-					{/* Right image card */}
-					<div className=" archetype-right-card relative overflow-hidden">
-						<div className='archetype-right-card-img-'>
-							<ImageComponent src={CatImage} className={''} alt={''} />
-						</div>
-
-
-						{/* Floating actions */}
-						<div className=" archetype-float flex items-center justify-between ">
-
-							<div className=" archetype-float-paw flex items-center justify-center">
-								<PawPrintIcon size={24} />
+						<div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
+							<div className='archetype-body-info-right-img'>
+								<ImageComponent src={CatImage} className={''} alt={''} />
 							</div>
 
-							<div className=" archetype-float-camera flex flex-1 justify-around">
-								<button><CameraIcon size={24} /></button>
-								<button><SneakerMoveIcon size={24} /></button>
-								<button><PaletteIcon size={24} /></button>
-								<button><BracketsAngleIcon size={24} /></button>
+
+							{/* Floating actions */}
+							<div className=" archetype-float flex items-center justify-between ">
+
+								<div className=" archetype-float-paw flex items-center justify-center">
+									<PawPrintIcon size={24} />
+								</div>
+
+								<div className=" archetype-float-camera flex flex-1 justify-around">
+									<button><CameraIcon size={24} /></button>
+									<button><SneakerMoveIcon size={24} /></button>
+									<button><PaletteIcon size={24} /></button>
+									<button><BracketsAngleIcon size={24} /></button>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
-
-				{/* Footer */}
-				<div className="archetype-footer grid grid-cols-2">
-					<div className="flex items-center gap-3">
-						<p><span className="text-sm font-semibold">Currently watching…</span></p>
-						<p><a
-							href="#"
-							className="text-emerald-600 font-medium text-sm flex items-center gap-1"
-						>
-							Stranger Things S05 ↗
-						</a></p>
+					<div className="archetype-body-footer flex flex-row items-start justify-center w-full">
+						<div className="archetype-body-footer-card flex flex-col items-center">
+							<p className="t-highlights">Currently watching…</p>
+							<Button hierarchy={'tertiary'} type={'link'} link={''}>
+								<FilmSlateIcon weight={'bold'} fontSize={'24'} />
+								<span>Stranger Things S05</span>
+								<ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
+							</Button>
+						</div>
+						<div className="divider vertical"/>
+						<div className="archetype-body-footer-card flex flex-col items-center">
+							<p className="t-highlights">Currently reading…</p>
+							<Button hierarchy={'tertiary'} type={'link'} link={''}>
+								<BookOpenTextIcon weight={'bold'} fontSize={'24'} />
+								<span>When Sorry Isn't Enough</span>
+								<ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
+							</Button>
+						</div>
 					</div>
-
-					<div className="flex items-center gap-3">
-						<span className="text-sm font-semibold">Currently reading…</span>
-						<a
-							href="#"
-							className="text-emerald-600 font-medium text-sm flex items-center gap-1"
-						>
-							When Sorry Isn't Enough ↗
-						</a>
-					</div>
-				</div>
+				</article>
 			</section>
 		</main>
 	);

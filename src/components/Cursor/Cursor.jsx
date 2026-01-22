@@ -20,8 +20,8 @@ const Cursor = () => {
     useEffect(() => {
         const move = (e) => {
             setPosition({
-                x: e.clientX - 16,
-                y: e.clientY - 16,
+                x: e.clientX - 3.5,
+                y: e.clientY - 3.5,
             });
         };
 
@@ -41,7 +41,7 @@ const Cursor = () => {
 
     return (
         <div
-            className={`custom-cursor cursor-${mode} ${active ? "is-active" : ""}`}
+            className={`cursor cursor-${mode} ${active ? "is-active" : ""}`}
             style={{
                 transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
             }}
