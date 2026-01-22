@@ -173,7 +173,7 @@ const Home = () => {
 									Whether it’s figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
 								</p>
 								<p className="t-copy">
-									You could say that I’m interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
+									I’m interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
 								</p>
 							</div>
 							{/* <div className="archetype-body-info-left-label flex flex-col items-start justify-start">
