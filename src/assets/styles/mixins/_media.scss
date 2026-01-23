@@ -6,35 +6,35 @@
 
 @mixin respond-to($type) {
 	@if $type == mobile {
-		@media (max-width: map-get($breakpoints, mobile-max)) {
+		@media (max-width: $mobile-max) {
 			@content;
 		}
 	}
 
 	@else if $type == tablet {
 		@media (
-			min-width: map-get($breakpoints, tablet-min)
+			min-width: $tablet-min
 		) and (
-			max-width: map-get($breakpoints, tablet-max)
+			max-width: $tablet-max
 		) {
 			@content;
 		}
 	}
 
 	@else if $type == tablet-up {
-		@media (min-width: map-get($breakpoints, tablet-min)) {
+		@media (min-width: $tablet-min) {
 			@content;
 		}
 	}
 
 	@else if $type == desktop {
-		@media (min-width: map-get($breakpoints, desktop-min)) {
+		@media (min-width: $desktop-min) {
 			@content;
 		}
 	}
 
 	@else if $type == desktop-lg {
-		@media (min-width: map-get($breakpoints, desktop-lg-min)) {
+		@media (min-width: $desktop-lg-min) {
 			@content;
 		}
 	}
