@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenIcon} from '@phosphor-icons/react';
-import { CameraIcon,SneakerMoveIcon,PaletteIcon,BracketsAngleIcon, PawPrintIcon } from '@phosphor-icons/react';
-import { FilmSlateIcon, BookOpenTextIcon, LineVerticalIcon } from '@phosphor-icons/react';
-=======
 import { useState } from "react";
 
-import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon } from '@phosphor-icons/react';
-import { CameraIcon, SneakerMoveIcon, PaletteIcon, BracketsAngleIcon, PawPrintIcon } from '@phosphor-icons/react';
->>>>>>> 86354705fd5a33e0d2059e5e19d50dff2ca76dc1
+import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
@@ -182,7 +175,7 @@ const Home = () => {
 									I’m interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
 								</p>
 							</div>
-							{/* <div className="archetype-body-info-left-label flex flex-col items-start justify-start">
+							<div className="archetype-body-info-left-label flex flex-col items-start justify-start">
 								<p className="t-highlights">I LOVE…</p>
 								<div className="archetype-body-info-left-label-list flex flex-row flex-wrap items-start justify-start">
 									{[
@@ -203,118 +196,19 @@ const Home = () => {
 										</span>
 									))}
 								</div>
-							</div> */}
+							</div>
 						</div>
 						<div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
 							<div className='archetype-body-info-right-img'>
 								<ImageComponent src={CatImage} className={''} alt={''} />
 							</div>
 
-
-							{/* Floating actions */}
-							<div className=" archetype-float flex items-center justify-between ">
-
-								<div className=" archetype-float-paw flex items-center justify-center">
-									<PawPrintIcon size={24} />
-								</div>
-
-<<<<<<< HEAD
-          <h4 className=" archetype-left-card-love-h4 t-highlights ">I LOVE…</h4> <br />
-
-          <div className="flex flex-wrap gap-3">
-            {[
-              "Books",
-              "Black & White",
-              "Photography",
-              "Art",
-              "Nature",
-              "Mentoring",
-              "Music",
-              "Poetry",
-            ].map((item) => (
-              <span
-                key={item}
-                className="archetype-left-card-love "
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Right image card */}
-        <div className=" archetype-right-card">
-          <div className='archetype-right-card-img'>
-            <ImageComponent src={CatImage} className={'archetype-img'} alt={''}/>
-
-            {/* Floating actions */}
-           <div className=" archetype-float flex items-center justify-between ">
-    
-        <div className=" archetype-float-paw flex items-center justify-center">
-          <PawPrintIcon size={24} />
-    </div>
-
-    <div className=" archetype-float-camera flex flex-1 justify-around">
-      <button><CameraIcon size={24} /></button>
-      <button><SneakerMoveIcon size={24} /></button>
-      <button><PaletteIcon size={24} /></button>
-      <button><BracketsAngleIcon size={24} /></button>
-    </div>
-    </div>
-    </div>
-          </div>
-          
-
-          
-      </div>
-         
-      
-      {/* Footer */}
-      <div className="archetype-footer flex  justify-evenly  ">
-        <div className='archetype-footer-div flex justify-between'> 
-        <div className=" flex items-center gap-1">
-          <p><span className="t-buttons">Currently watching…</span></p>
-          <div  className='archetype-footer-phor'>
-            <FilmSlateIcon  size={24} weight='bold'/>
-          </div>
-
-         <p><a  
-            href="#"
-            className=" archetype-footer-link t-buttons flex items-center gap-1"
-          >
-            Stranger Things S05 ↗
-          </a></p>
-          
-        </div>
-
-  {/* divider */}
-        <div>
-          <LineVerticalIcon size={40}  className='archetype-footer-divider'/>
-        </div>
-          
-          <span className="t-buttons">Currently reading…</span>
-           <div className="flex items-center gap-1">
-           <div className='archetype-footer-phor'>
-            <BookOpenIcon   size={24} weight='bold'/>
-            </div>
-          <a
-            href="#"
-            className="archetype-footer-link t-buttons  flex items-center gap-1"
-          >
-            When Sorry Isn't Enough ↗
-          </a>
-         
-        </div>
-        </div>
-      </div>
-    </section>
-=======
-								<div className=" archetype-float-camera flex flex-1 justify-around">
-									<button><CameraIcon size={24} /></button>
-									<button><SneakerMoveIcon size={24} /></button>
-									<button><PaletteIcon size={24} /></button>
-									<button><BracketsAngleIcon size={24} /></button>
-								</div>
+							<div className="archetype-body-info-right-navigation flex items-center justify-between ">
+								<span className="archetype-body-info-right-navigation-icon active"><PawPrintIcon weight={'regular'} size={32} /></span>
+								<span className="archetype-body-info-right-navigation-icon"><CameraIcon weight={'regular'} size={32} /></span>
+								<span className="archetype-body-info-right-navigation-icon"><SneakerMoveIcon weight={'regular'} size={32} /></span>
+								<span className="archetype-body-info-right-navigation-icon"><RainbowCloudIcon weight={'regular'} size={32} /></span>
+								<span className="archetype-body-info-right-navigation-icon"><MicrophoneStageIcon weight={'regular'}size={32} /></span>
 							</div>
 						</div>
 					</div>
@@ -339,7 +233,6 @@ const Home = () => {
 					</div>
 				</article>
 			</section>
->>>>>>> 86354705fd5a33e0d2059e5e19d50dff2ca76dc1
 		</main>
 	);
 };

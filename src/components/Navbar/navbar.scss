@@ -5,7 +5,7 @@
 .navbar {
 	@include px(var(--padding-2xl));
 	@include py(var(--padding-sm));
-	position: sticky;
+	// position: sticky;
 	width: 100%;
 	top: 0;
 	left: 0;
