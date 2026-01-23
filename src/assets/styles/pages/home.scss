@@ -8,10 +8,13 @@
 		&-role {
 			background-color: var(--main-accent);
 			color: var(--main-primary);
-			font-weight: Bold;
 			padding: var(--padding-xs) var(--padding-lg);
 			border-radius: var(--radius-xl);
 			gap: var(--gap-3xs);
+
+			& .t-caption{
+				font-weight: Bold;
+			}
 		}
 
 		&-icons {
