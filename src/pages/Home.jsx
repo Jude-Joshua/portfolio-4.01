@@ -1,13 +1,9 @@
-<<<<<<< HEAD
+import React from 'react';
 import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenIcon} from '@phosphor-icons/react';
 import { CameraIcon,SneakerMoveIcon,PaletteIcon,BracketsAngleIcon, PawPrintIcon } from '@phosphor-icons/react';
 import { FilmSlateIcon, BookOpenTextIcon, LineVerticalIcon } from '@phosphor-icons/react';
-=======
 import { useState } from "react";
 
-import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon } from '@phosphor-icons/react';
-import { CameraIcon, SneakerMoveIcon, PaletteIcon, BracketsAngleIcon, PawPrintIcon } from '@phosphor-icons/react';
->>>>>>> 86354705fd5a33e0d2059e5e19d50dff2ca76dc1
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
@@ -205,6 +201,7 @@ const Home = () => {
 								</div>
 							</div> */}
 						</div>
+
 						<div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
 							<div className='archetype-body-info-right-img'>
 								<ImageComponent src={CatImage} className={''} alt={''} />
@@ -218,7 +215,6 @@ const Home = () => {
 									<PawPrintIcon size={24} />
 								</div>
 
-<<<<<<< HEAD
           <h4 className=" archetype-left-card-love-h4 t-highlights ">I LOVE…</h4> <br />
 
           <div className="flex flex-wrap gap-3">
@@ -303,43 +299,149 @@ const Home = () => {
           >
             When Sorry Isn't Enough ↗
           </a>
-         
+		  </div>
         </div>
         </div>
       </div>
+	  </article>
     </section>
-=======
-								<div className=" archetype-float-camera flex flex-1 justify-around">
-									<button><CameraIcon size={24} /></button>
-									<button><SneakerMoveIcon size={24} /></button>
-									<button><PaletteIcon size={24} /></button>
-									<button><BracketsAngleIcon size={24} /></button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="archetype-body-footer flex flex-row items-start justify-center w-full">
-						<div className="archetype-body-footer-card flex flex-col items-center">
-							<p className="t-highlights">Currently watching…</p>
-							<Button hierarchy={'tertiary'} type={'link'} link={''}>
-								<FilmSlateIcon weight={'bold'} fontSize={'24'} />
-								<span>Stranger Things S05</span>
-								<ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
-							</Button>
-						</div>
-						<div className="divider vertical"/>
-						<div className="archetype-body-footer-card flex flex-col items-center">
-							<p className="t-highlights">Currently reading…</p>
-							<Button hierarchy={'tertiary'} type={'link'} link={''}>
-								<BookOpenTextIcon weight={'bold'} fontSize={'24'} />
-								<span>When Sorry Isn't Enough</span>
-								<ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
-							</Button>
-						</div>
-					</div>
-				</article>
-			</section>
->>>>>>> 86354705fd5a33e0d2059e5e19d50dff2ca76dc1
+
+	<section className="work">
+  {/* Header */}
+  <div className="work-header">
+    <h2 className="work-header-title h3">
+      Recent Work
+    </h2>
+    <p className="work-header-subtitle t-copy-small">
+      Branding and Website design projects from 2024 till date.
+    </p>
+  </div>
+
+  {/* Project List */}
+  <div className="work-list">
+    
+    {/* Item */}
+    <div className="work-item flex items-center justify-between group">
+      <div className="work-item-info">
+        <h3 className="work-header-title h6">
+          Project Name
+        </h3>
+        <p className="work-header-subtitle t-copy-small leading-relaxed">
+          Designing a unified B2B and B2C web app for healthcare providers and
+          seekers in need of a streamlined access to online medical supplies.
+        </p>
+      </div>
+
+      <span className="work-item-link t-copy-small child">
+        →
+      </span>
+    </div>
+
+    {/* Repeat */}
+
+    <div className="work-item flex items-center justify-between ">
+      <div className="work-item-info">
+        <h3 className="work-header-title h6">
+          Project Name
+        </h3>
+        <p className="work-header-subtitle t-copy-small leading-relaxed">
+          Designing a unified B2B and B2C web app for healthcare providers and
+          seekers in need of a streamlined access to online medical supplies.
+        </p>
+      </div>
+      <span className="work-item-link t-copy-small ">
+        →
+      </span>
+    </div>
+
+    <div className="work-item flex items-center justify-between ">
+      <div className="work-item-info">
+        <h3 className="work-header-title h6">
+          Project Name
+        </h3>
+        <p className="work-header-subtitle t-copy-small leading-relaxed">
+          Designing a unified B2B and B2C web app for healthcare providers and
+          seekers in need of a streamlined access to online medical supplies.
+        </p>
+      </div>
+      <span className="work-item-link t-copy-small">
+        →
+      </span>
+    </div>
+
+    <div className="work-item flex items-center justify-between ">
+      <div className="work-item-info">
+        <h3 className="work-header-title h6">
+          Project Name
+        </h3>
+        <p className="work-header-subtitle t-copy-small leading-relaxed">
+          Designing a unified B2B and B2C web app for healthcare providers and
+          seekers in need of a streamlined access to online medical supplies.
+        </p>
+      </div>
+      <span className="work-item-link t-copy-small ">
+        →
+      </span>
+    </div>
+
+  </div>
+</section>
+
+
+<section className="archieve">
+  {/* Section Title */}
+  <h2 className="archieve-title h5">
+    Work Archives.
+  </h2>
+
+  {/* Top Cards */}
+  <div className="grid grid-cols-2 archieve-top-card">
+    {/* Card */}
+    <div className="archieve-card relative flex items-end">
+      <p className="archieve-card-text t-copy-small ">
+        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+      </p>
+    </div>
+
+    {/* Card */}
+    <div className="archieve-card relative flex items-end">
+      <p className="archieve-card-text t-copy-small ">
+        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+      </p>
+    </div>
+  </div>
+
+  {/* Archive List */}
+  <div className="archieve-list">
+    {/* Archive Item */}
+    <div className="archieve-list-item flex items-start justify-between">
+      <h3 className="h6 archieve-list-subitem">
+        Project Name
+      </h3>
+
+      <p className="archieve-list-subitem-par">
+        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+      </p>
+
+      <span className="t-copy">→</span>
+    </div>
+
+    {/* Item */}
+    <div className="archieve-list-item flex items-start justify-between">
+      <h3 className="h6 archieve-list-subitem">
+        Project Name
+      </h3>
+
+      <p className="archieve-list-subitem-par">
+        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+      </p>
+
+      <span className="t-copy">→</span>
+    </div>
+  </div>
+</section>
+
+
 		</main>
 	);
 };
