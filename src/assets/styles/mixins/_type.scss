@@ -1,4 +1,4 @@
-@use '../tokens/breakpoints' as *;
+@use '../mixins/media' as *;
 @use '../tokens/font-sizes' as fs;
 
 @font-face {
@@ -10,110 +10,224 @@
 }
 
 :root {
-	--font-size: fs.rem(map-get(fs.$font-sizes, t-copy));
+	--font-size: fs.rem(fs.$t-copy);
 	--font-family: "Primary";
 	--font-weight-headings: 600;
 	--font-weight-semi-headings: 500;
-	--font-weight-highlights: Bold;
-	--font-weight-paragraphs: Regular;
+	--font-weight-highlights: 700;
+	--font-weight-paragraphs: 400;
 }
 
 // Headings
 @mixin s0 {
 	font-weight: var(--font-weight-headings);
 	line-height: 100%;
-	font-size: fs.rem(map-get(fs.$font-sizes, s0));
+	font-size: fs.rem(fs.$s0);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-s0);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-s0);
+	}
 }
 
 @mixin s1 {
 	font-weight: var(--font-weight-headings);
 	line-height: 100%;
-	font-size: fs.rem(map-get(fs.$font-sizes, s1));
+	font-size: fs.rem(fs.$s1);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-s1);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-s1);
+	}
 }
 
 @mixin s2 {
 	font-weight: var(--font-weight-headings);
 	line-height: 140%;
-	font-size: fs.rem(map-get(fs.$font-sizes, s2));
+	font-size: fs.rem(fs.$s2);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-s2);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-s2);
+	}
 }
 
 @mixin h1 {
 	font-weight: var(--font-weight-headings);
 	line-height: 130%;
-	font-size: fs.rem(map-get(fs.$font-sizes, h1));
+	font-size: fs.rem(fs.$h1);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-h1);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-h1);
+	}
 }
 
 @mixin h2 {
 	font-weight: var(--font-weight-headings);
 	line-height: 130%;
-	font-size: fs.rem(map-get(fs.$font-sizes, h2));
+	font-size: fs.rem(fs.$h2);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-h2);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-h2);
+	}
 }
 
 @mixin h3 {
 	font-weight: var(--font-weight-semi-headings);
 	line-height: 150%;
-	font-size: fs.rem(map-get(fs.$font-sizes, h3));
+	font-size: fs.rem(fs.$h3);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-h3);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-h3);
+	}
 }
 
 @mixin h4 {
 	font-weight: var(--font-weight-headings);
 	line-height: 110%;
-	font-size: fs.rem(map-get(fs.$font-sizes, h4));
+	font-size: fs.rem(fs.$h4);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-h4);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-h4);
+	}
 }
 
 @mixin h5 {
 	font-weight: var(--font-weight-headings);
 	line-height: 120%;
-	font-size: fs.rem(map-get(fs.$font-sizes, h5));
+	font-size: fs.rem(fs.$h5);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-h5);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-h5);
+	}
 }
 
 @mixin h6 {
 	font-weight: var(--font-weight-headings);
 	line-height: 150%;
-	font-size: fs.rem(map-get(fs.$font-sizes, h6));
+	font-size: fs.rem(fs.$h6);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-h6);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-h6);
+	}
 }
 
-// -----------------------
 // Copy / Body Text
-// -----------------------
-
 @mixin t-copy {
 	font-weight: var(--font-weight-paragraphs);
 	line-height: 190%;
-	font-size: fs.rem(map-get(fs.$font-sizes, t-copy));
+	font-size: fs.rem(fs.$t-copy);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-t-copy);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-t-copy);
+	}
 }
 
 @mixin t-copy-small {
 	font-weight: var(--font-weight-paragraphs);
 	line-height: 170%;
-	font-size: fs.rem(map-get(fs.$font-sizes, t-copy-small));
+	font-size: fs.rem(fs.$t-copy-small);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-t-copy-small);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-t-copy-small);
+	}
 }
 
 @mixin t-caption {
 	font-weight: var(--font-weight-paragraphs);
 	line-height: 160%;
-	font-size: fs.rem(map-get(fs.$font-sizes, t-caption));
+	font-size: fs.rem(fs.$t-caption);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-t-caption);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-t-caption);
+	}
 }
 
 @mixin t-highlights {
 	font-weight: var(--font-weight-highlights);
 	line-height: 130%;
-	font-size: fs.rem(map-get(fs.$font-sizes, t-highlights));
+	font-size: fs.rem(fs.$t-highlights);
 	text-transform: uppercase;
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-t-highlights);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-t-highlights);
+	}
 }
 
-// -----------------------
 // Buttons / Links
-// -----------------------
-
 @mixin t-buttons {
-	font-weight: var(--font-weight-highlights) !important;
+	font-weight: var(--font-weight-highlights);
 	line-height: 180%;
-	font-size: fs.rem(map-get(fs.$font-sizes, t-buttons));
+	font-size: fs.rem(fs.$t-buttons);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-t-buttons);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-t-buttons);
+	}
 }
 
 @mixin t-links {
 	font-weight: 500;
 	line-height: 180%;
-	font-size: fs.rem(map-get(fs.$font-sizes, t-links));
+	font-size: fs.rem(fs.$t-links);
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-t-links);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-t-links);
+	}
 }

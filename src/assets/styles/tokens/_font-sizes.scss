@@ -1,31 +1,58 @@
-@use 'breakpoints' as *;
+@use '../mixins/media' as *;
 
 // Base font-size (for rem conversion)
 $base-font-size: 16px !default;
-
-// Headings
-$font-sizes: (
-		//s0: 125.89px,
-		s0: 103.19px,
-		s1: 85.99px,
-		s2: 71.66px,
-		h1: 59.717px,
-		h2: 49.76px,
-		h3: 41.47px,
-		h4: 34.56px,
-		h5: 28.8px,
-		h6: 24px,
-
-	// Body / Copy
-		t-copy: 20px,
-		t-copy-small: 16.67px,
-		t-caption: 13.89px,
-		t-highlights: 20px,
-		t-buttons: 16.67px,
-		t-links: 16.67px
-);
 
 // Helper to convert px → rem
 @function rem($px) {
 	@return calc($px / $base-font-size) * 1rem;
 }
+
+$s0: 103.19px;
+$s1: 85.99px;
+$s2: 71.66px;
+$h1: 59.717px;
+$h2: 49.76px;
+$h3: 41.47px;
+$h4: 34.56px;
+$h5: 28.8px;
+$h6: 24px;
+$t-copy: 20px;
+$t-copy-small: 16.67px;
+$t-caption: 13.89px;
+$t-highlights: 20px;
+$t-buttons: 16.67px;
+$t-links: 16.67px;
+
+$tablet-s0: 89.71px;
+$tablet-s1: 74.76px;
+$tablet-s2: 62.3px;
+$tablet-h1: 51.92px;
+$tablet-h2: 43.26px;
+$tablet-h3: 36.05px;
+$tablet-h4: 30.04px;
+$tablet-h5: 25.04px;
+$tablet-h6: 20.86px;
+$tablet-t-copy: 17.39px;
+$tablet-t-copy-small: 14.49px;
+$tablet-t-caption: 12.07px;
+$tablet-t-highlights: 17.39px;
+$tablet-t-buttons: 14.49px;
+$tablet-t-links: 14.49px;
+
+
+$mobile-s0: 77.4px;
+$mobile-s1: 64.5px;
+$mobile-s2: 53.75px;
+$mobile-h1: 44.79px;
+$mobile-h2: 37.32px;
+$mobile-h3: 31.1px;
+$mobile-h4: 25.92px;
+$mobile-h5: 21.6px;
+$mobile-h6: 18px;
+$mobile-t-copy: 15px;
+$mobile-t-copy-small: 12.5px;
+$mobile-t-caption: 10.42px;
+$mobile-t-highlights: 15px;
+$mobile-t-buttons: 12.5px;
+$mobile-t-links: 12.5px;

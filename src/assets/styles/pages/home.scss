@@ -8,10 +8,13 @@
 		&-role {
 			background-color: var(--main-accent);
 			color: var(--main-primary);
-			font-weight: Bold;
 			padding: var(--padding-xs) var(--padding-lg);
 			border-radius: var(--radius-xl);
 			gap: var(--gap-3xs);
+
+			& .t-caption{
+				font-weight: Bold;
+			}
 		}
 
 		&-icons {
@@ -80,13 +83,7 @@
 
 		&:hover {
 			transform: rotate(0);
-			top: -24px;
-			// left: 8%;
-
-			&~.hello-showcase {
-				transform: rotate(3.75deg) scale(0.7);
-				z-index: 1;
-			}
+			top: -104px;
 		}
 
 		&-title {
@@ -132,6 +129,11 @@
 				transform: rotate(3.75deg) scale(0.7);
 				z-index: 1;
 			}
+		}
+
+		&:has(+ .hello-card:hover) {
+			transform: rotate(-7.75deg) scale(0.7);
+			z-index: 1;
 		}
 
 		&-image {
@@ -304,6 +306,52 @@
 						object-fit: cover;
 					}
 				}
+
+				&-navigation {
+					position: absolute;
+					top: unset;
+					bottom: 5%;
+					left: 7%;
+					background-color: var(--overlay-white);
+					padding: var(--padding-xs);
+					border-radius: var(--radius-md);
+					backdrop-filter: blur(4px);
+
+					&-icon {
+						padding: var(--padding-sm);
+						background-color: var(--main-white);
+
+						&:has(~ .archetype-body-info-right-navigation-icon.active) {
+							&:first-child {
+								border-top-left-radius: var(--radius-sm);
+								border-bottom-left-radius: var(--radius-sm);
+							}
+						}
+
+						&:has(+ .archetype-body-info-right-navigation-icon.active) {
+							border-top-right-radius: var(--radius-sm);
+							border-bottom-right-radius: var(--radius-sm);
+							margin-right: var(--gap-xxs);
+						}
+
+						&:last-child {
+							border-top-right-radius: var(--radius-sm);
+							border-bottom-right-radius: var(--radius-sm);
+						}
+
+						&.active {
+							background-color: var(--main-primary);
+							color: var(--main-white);
+							border-radius: var(--radius-sm);
+
+							&+* {
+								border-top-left-radius: var(--radius-sm);
+								border-bottom-left-radius: var(--radius-sm);
+								margin-left: var(--gap-xxs);
+							}
+						}
+					}
+				}
 			}
 		}
 
@@ -313,6 +361,7 @@
 			padding: var(--padding-xl) var(--padding-2xl);
 			gap: var(--gap-lg);
 
+<<<<<<< HEAD
 	}
 	
 	&-right-card{
@@ -419,4 +468,21 @@
 			}
 		}
 	}
+=======
+			&-card {
+				gap: var(--gap-xs);
+
+				& .t-highlights {
+					text-transform: capitalize;
+				}
+			}
+
+			& .divider {
+				height: 80px;
+				width: var(--border);
+			}
+		}
+	}
+
+>>>>>>> 9ee9f91efbdfea55e826c811ec8f1eef955d2768
 }
