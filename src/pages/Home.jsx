@@ -1,12 +1,8 @@
 
 import React from 'react';
-import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenIcon} from '@phosphor-icons/react';
-import { CameraIcon,SneakerMoveIcon,PaletteIcon,BracketsAngleIcon, PawPrintIcon } from '@phosphor-icons/react';
-import { FilmSlateIcon, BookOpenTextIcon, LineVerticalIcon } from '@phosphor-icons/react';
-import { useState } from "react";
+import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon,BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon,AsteriskIcon } from '@phosphor-icons/react';
 import { useState } from "react";
 
-import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
@@ -167,6 +163,7 @@ const Home = () => {
 				</article>
 
 				{/*  grid */}
+				<article className="archetype-grid grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
 				<article className="archetype-body flex flex-col items-start justify-start w-full">
 					<div className="archetype-body-info grid grid-cols-7 justify-start items-start">
 						<div className="archetype-body-info-left col-span-4 flex flex-col items-start justify-start">
@@ -204,71 +201,16 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
+						</div>
+						</article>
 
-						<div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
-							<div className='archetype-body-info-right-img'>
-								<ImageComponent src={CatImage} className={''} alt={''} />
-							</div>
-
-
-							{/* Floating actions */}
-							<div className=" archetype-float flex items-center justify-between ">
-
-								<div className=" archetype-float-paw flex items-center justify-center">
-									<PawPrintIcon size={24} />
-								</div>
-
-          <h4 className=" archetype-left-card-love-h4 t-highlights ">I LOVE…</h4> <br />
-
-          <div className="flex flex-wrap gap-3">
-            {[
-              "Books",
-              "Black & White",
-              "Photography",
-              "Art",
-              "Nature",
-              "Mentoring",
-              "Music",
-              "Poetry",
-            ].map((item) => (
-              <span
-                key={item}
-                className="archetype-left-card-love "
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-
+                  <article>
         {/* Right image card */}
         <div className=" archetype-right-card">
           <div className='archetype-right-card-img'>
             <ImageComponent src={CatImage} className={'archetype-img'} alt={''}/>
 
             {/* Floating actions */}
-           <div className=" archetype-float flex items-center justify-between ">
-    
-        <div className=" archetype-float-paw flex items-center justify-center">
-          <PawPrintIcon size={24} />
-    </div>
-
-    <div className=" archetype-float-camera flex flex-1 justify-around">
-      <button><CameraIcon size={24} /></button>
-      <button><SneakerMoveIcon size={24} /></button>
-      <button><PaletteIcon size={24} /></button>
-      <button><BracketsAngleIcon size={24} /></button>
-    </div>
-    </div>
-    </div>
-          </div>
-          
-
-          
-      </div>
-         
-      
-      {/* Footer */}
       <div className="archetype-footer flex  justify-evenly  ">
         <div className='archetype-footer-div flex justify-between'> 
         
@@ -281,6 +223,7 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
+					{/* Bottom footer */}
 					<div className="archetype-body-footer flex flex-row items-start justify-center w-full">
 						<div className="archetype-body-footer-card flex flex-col items-center">
 							<p className="t-highlights">Currently watching…</p>
@@ -301,6 +244,8 @@ const Home = () => {
 						</div>
 					</div>
 					</div>
+					</div>
+					</article>
 				</article>
 			</section>
 
@@ -442,7 +387,66 @@ const Home = () => {
 </section>
 
 
-							
+{/*footer section*/}
+<section className="footer">
+  <div className="footer-section">
+
+    {/* Green Header Strip */}
+    <div className="footer-start flex justify-center ">
+      {/* Decorative Icon */}
+	  <AsteriskIcon  weight='bold' className="footer-start-decor h1" />
+      <span className="footer-start-decor h1">✦</span>
+
+      <h2 className="footer-start-decor h1 tracking-wide">
+        LET’S BUILD SOMETHING
+      </h2>
+    </div>
+
+    {/* Content Grid */}
+    <div className="footer-content grid grid-cols-2">
+      {/*Text*/}
+      <p className="footer-content-par t-copy leading-tight">
+        Get exposed the right way. While AI calls it “no fluff”, I call it
+        “brilliance”. Identity is critical for your product (or you),
+        and you don’t want to miss out by going for something mediocre.
+      </p>
+
+      {/*links*/}
+      <div className="footer-links t-copy">
+        <a
+          href="#"
+          className="footer-links-anchor flex items-center justify-between "
+        >
+          Talk Project Collaborations
+          <span>→</span>
+        </a>
+
+        <a
+          href="#"
+          className="footer-links-anchor flex items-center justify-between"
+        >
+          Discuss Mentorship
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+
+    {/*Ending*/}
+    <div className="footer-end t-copy-small flex flex-row items-center justify-between">
+      <span>© Jude Joshua, 2025. All rights reserved.</span>
+
+      <div className="footer-end-ref flex">
+        <a href="#" className="t-copy-small">LinkedIn</a>
+        <span>|</span>
+        <a href="#" className="t-copy-small">X</a>
+        <span>|</span>
+        <a href="#" className="t-copy-smalls">Instagram</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 		</main>
 	);
 };
