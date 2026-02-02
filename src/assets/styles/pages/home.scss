@@ -537,3 +537,45 @@
 		}
 	}
 }
+
+cta {
+	padding-left: var(--padding-sm);
+	padding-right: var(--padding-sm);
+	min-height: 70vh;
+
+	&-main {
+		color: var(--main-black);
+
+		&-span {
+			color: var(--main-complimentary);
+			margin-left: var(--padding-xxs);
+		}
+
+		&-effect {
+			border-bottom: 3px solid var(--main-black);
+			border-width: 20px;
+			color: var(--main-complimentary);
+		}
+	}
+
+	&-subtext {
+		margin-top: var(--padding-xxs);
+		max-width: 500px;
+		color: var(--main-black);
+	}
+
+	&-last {
+		margin-top: var(--padding-sm);
+		padding: var(--padding-xs) var(--padding-sm);
+		background-color: var(--main-primary);
+		max-width: 1152px;
+		width: 90%;
+		border-radius: var(--radius-xs);
+
+		&-link {
+			color: var(--main-black);
+			gap: var(--gap-xxs);
+		}
+
+	}
+}
