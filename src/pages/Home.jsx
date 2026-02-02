@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon,BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon,AsteriskIcon } from '@phosphor-icons/react';
+import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon, AsteriskIcon } from '@phosphor-icons/react';
 import { useState } from "react";
 
 
@@ -162,8 +162,6 @@ const Home = () => {
 					</h2>
 				</article>
 
-				{/*  grid */}
-				<article className="archetype-grid grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
 				<article className="archetype-body flex flex-col items-start justify-start w-full">
 					<div className="archetype-body-info grid grid-cols-7 justify-start items-start">
 						<div className="archetype-body-info-left col-span-4 flex flex-col items-start justify-start">
@@ -201,20 +199,12 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-						</div>
-						</article>
+						<div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
+							<div className='archetype-body-info-right-img'>
+								<ImageComponent src={CatImage} className={''} alt={''} />
+							</div>
 
-                  <article>
-        {/* Right image card */}
-        <div className=" archetype-right-card">
-          <div className='archetype-right-card-img'>
-            <ImageComponent src={CatImage} className={'archetype-img'} alt={''}/>
-
-            {/* Floating actions */}
-      <div className="archetype-footer flex  justify-evenly  ">
-        <div className='archetype-footer-div flex justify-between'> 
-        
-			<div className="archetype-body-info-right-navigation flex items-center justify-between ">
+							<div className="archetype-body-info-right-navigation flex items-center justify-between ">
 								<span className="archetype-body-info-right-navigation-icon active"><PawPrintIcon weight={'regular'} size={32} /></span>
 								<span className="archetype-body-info-right-navigation-icon"><CameraIcon weight={'regular'} size={32} /></span>
 								<span className="archetype-body-info-right-navigation-icon"><SneakerMoveIcon weight={'regular'} size={32} /></span>
@@ -223,7 +213,6 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
-					{/* Bottom footer */}
 					<div className="archetype-body-footer flex flex-row items-start justify-center w-full">
 						<div className="archetype-body-footer-card flex flex-col items-center">
 							<p className="t-highlights">Currently watching…</p>
@@ -243,209 +232,206 @@ const Home = () => {
 							</Button>
 						</div>
 					</div>
-					</div>
-					</div>
-					</article>
 				</article>
 			</section>
 
 
 
-	<section className="work">
-  {/* Header */}
-  <div className="work-header">
-    <h2 className="work-header-title h3">
-      Recent Work
-    </h2>
-    <p className="work-header-subtitle t-copy-small">
-      Branding and Website design projects from 2024 till date.
-    </p>
-  </div>
+			<section className="work">
+				{/* Header */}
+				<div className="work-header">
+					<h2 className="work-header-title h3">
+						Recent Work
+					</h2>
+					<p className="work-header-subtitle t-copy-small">
+						Branding and Website design projects from 2024 till date.
+					</p>
+				</div>
 
-  {/* Project List */}
-  <div className="work-list">
-    
-    {/* Item */}
-    <div className="work-item flex items-center justify-between group">
-      <div className="work-item-info">
-        <h3 className="work-header-title h6">
-          Project Name
-        </h3>
-        <p className="work-header-subtitle t-copy-small leading-relaxed">
-          Designing a unified B2B and B2C web app for healthcare providers and
-          seekers in need of a streamlined access to online medical supplies.
-        </p>
-      </div>
+				{/* Project List */}
+				<div className="work-list">
 
-      <span className="work-item-link t-copy-small child">
-        →
-      </span>
-    </div>
+					{/* Item */}
+					<div className="work-item flex items-center justify-between group">
+						<div className="work-item-info">
+							<h3 className="work-header-title h6">
+								Project Name
+							</h3>
+							<p className="work-header-subtitle t-copy-small leading-relaxed">
+								Designing a unified B2B and B2C web app for healthcare providers and
+								seekers in need of a streamlined access to online medical supplies.
+							</p>
+						</div>
 
-    {/* Repeat */}
+						<span className="work-item-link t-copy-small child">
+							→
+						</span>
+					</div>
 
-    <div className="work-item flex items-center justify-between ">
-      <div className="work-item-info">
-        <h3 className="work-header-title h6">
-          Project Name
-        </h3>
-        <p className="work-header-subtitle t-copy-small leading-relaxed">
-          Designing a unified B2B and B2C web app for healthcare providers and
-          seekers in need of a streamlined access to online medical supplies.
-        </p>
-      </div>
-      <span className="work-item-link t-copy-small ">
-        →
-      </span>
-    </div>
+					{/* Repeat */}
 
-    <div className="work-item flex items-center justify-between ">
-      <div className="work-item-info">
-        <h3 className="work-header-title h6">
-          Project Name
-        </h3>
-        <p className="work-header-subtitle t-copy-small leading-relaxed">
-          Designing a unified B2B and B2C web app for healthcare providers and
-          seekers in need of a streamlined access to online medical supplies.
-        </p>
-      </div>
-      <span className="work-item-link t-copy-small">
-        →
-      </span>
-    </div>
+					<div className="work-item flex items-center justify-between ">
+						<div className="work-item-info">
+							<h3 className="work-header-title h6">
+								Project Name
+							</h3>
+							<p className="work-header-subtitle t-copy-small leading-relaxed">
+								Designing a unified B2B and B2C web app for healthcare providers and
+								seekers in need of a streamlined access to online medical supplies.
+							</p>
+						</div>
+						<span className="work-item-link t-copy-small ">
+							→
+						</span>
+					</div>
 
-    <div className="work-item flex items-center justify-between ">
-      <div className="work-item-info">
-        <h3 className="work-header-title h6">
-          Project Name
-        </h3>
-        <p className="work-header-subtitle t-copy-small leading-relaxed">
-          Designing a unified B2B and B2C web app for healthcare providers and
-          seekers in need of a streamlined access to online medical supplies.
-        </p>
-      </div>
-      <span className="work-item-link t-copy-small ">
-        →
-      </span>
-    </div>
+					<div className="work-item flex items-center justify-between ">
+						<div className="work-item-info">
+							<h3 className="work-header-title h6">
+								Project Name
+							</h3>
+							<p className="work-header-subtitle t-copy-small leading-relaxed">
+								Designing a unified B2B and B2C web app for healthcare providers and
+								seekers in need of a streamlined access to online medical supplies.
+							</p>
+						</div>
+						<span className="work-item-link t-copy-small">
+							→
+						</span>
+					</div>
 
-  </div>
-</section>
+					<div className="work-item flex items-center justify-between ">
+						<div className="work-item-info">
+							<h3 className="work-header-title h6">
+								Project Name
+							</h3>
+							<p className="work-header-subtitle t-copy-small leading-relaxed">
+								Designing a unified B2B and B2C web app for healthcare providers and
+								seekers in need of a streamlined access to online medical supplies.
+							</p>
+						</div>
+						<span className="work-item-link t-copy-small ">
+							→
+						</span>
+					</div>
 
-
-<section className="archieve">
-  {/* Section Title */}
-  <h2 className="archieve-title h5">
-    Work Archives.
-  </h2>
-
-  {/* Top Cards */}
-  <div className="grid grid-cols-2 archieve-top-card">
-    {/* Card */}
-    <div className="archieve-card relative flex items-end">
-      <p className="archieve-card-text t-copy-small ">
-        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
-      </p>
-    </div>
-
-    {/* Card */}
-    <div className="archieve-card relative flex items-end">
-      <p className="archieve-card-text t-copy-small ">
-        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
-      </p>
-    </div>
-  </div>
-
-  {/* Archive List */}
-  <div className="archieve-list">
-    {/* Archive Item */}
-    <div className="archieve-list-item flex items-start justify-between">
-      <h3 className="h6 archieve-list-subitem">
-        Project Name
-      </h3>
-
-      <p className="archieve-list-subitem-par">
-        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
-      </p>
-
-      <span className="t-copy">→</span>
-    </div>
-
-    {/* Item */}
-    <div className="archieve-list-item flex items-start justify-between">
-      <h3 className="h6 archieve-list-subitem">
-        Project Name
-      </h3>
-
-      <p className="archieve-list-subitem-par">
-        Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
-      </p>
-
-      <span className="t-copy">→</span>
-    </div>
-  </div>
-</section>
+				</div>
+			</section>
 
 
-{/*footer section*/}
-<section className="footer">
-  <div className="footer-section">
+			<section className="archieve">
+				{/* Section Title */}
+				<h2 className="archieve-title h5">
+					Work Archives.
+				</h2>
 
-    {/* Green Header Strip */}
-    <div className="footer-start flex justify-center ">
-      {/* Decorative Icon */}
-	  <AsteriskIcon  weight='bold' className="footer-start-decor h1" />
-      <span className="footer-start-decor h1">✦</span>
+				{/* Top Cards */}
+				<div className="grid grid-cols-2 archieve-top-card">
+					{/* Card */}
+					<div className="archieve-card relative flex items-end">
+						<p className="archieve-card-text t-copy-small ">
+							Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+						</p>
+					</div>
 
-      <h2 className="footer-start-decor h1 tracking-wide">
-        LET’S BUILD SOMETHING
-      </h2>
-    </div>
+					{/* Card */}
+					<div className="archieve-card relative flex items-end">
+						<p className="archieve-card-text t-copy-small ">
+							Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+						</p>
+					</div>
+				</div>
 
-    {/* Content Grid */}
-    <div className="footer-content grid grid-cols-2">
-      {/*Text*/}
-      <p className="footer-content-par t-copy leading-tight">
-        Get exposed the right way. While AI calls it “no fluff”, I call it
-        “brilliance”. Identity is critical for your product (or you),
-        and you don’t want to miss out by going for something mediocre.
-      </p>
+				{/* Archive List */}
+				<div className="archieve-list">
+					{/* Archive Item */}
+					<div className="archieve-list-item flex items-start justify-between">
+						<h3 className="h6 archieve-list-subitem">
+							Project Name
+						</h3>
 
-      {/*links*/}
-      <div className="footer-links t-copy">
-        <a
-          href="#"
-          className="footer-links-anchor flex items-center justify-between "
-        >
-          Talk Project Collaborations
-          <span>→</span>
-        </a>
+						<p className="archieve-list-subitem-par">
+							Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+						</p>
 
-        <a
-          href="#"
-          className="footer-links-anchor flex items-center justify-between"
-        >
-          Discuss Mentorship
-          <span>→</span>
-        </a>
-      </div>
-    </div>
+						<span className="t-copy">→</span>
+					</div>
 
-    {/*Ending*/}
-    <div className="footer-end t-copy-small flex flex-row items-center justify-between">
-      <span>© Jude Joshua, 2025. All rights reserved.</span>
+					{/* Item */}
+					<div className="archieve-list-item flex items-start justify-between">
+						<h3 className="h6 archieve-list-subitem">
+							Project Name
+						</h3>
 
-      <div className="footer-end-ref flex">
-        <a href="#" className="t-copy-small">LinkedIn</a>
-        <span>|</span>
-        <a href="#" className="t-copy-small">X</a>
-        <span>|</span>
-        <a href="#" className="t-copy-smalls">Instagram</a>
-      </div>
-    </div>
+						<p className="archieve-list-subitem-par">
+							Designing a unified B2B and B2C web app for healthcare providers and seekers in need of a streamlined access to online medical supplies.
+						</p>
 
-  </div>
-</section>
+						<span className="t-copy">→</span>
+					</div>
+				</div>
+			</section>
+
+
+			{/*footer section*/}
+			<section className="footer">
+				<div className="footer-section">
+
+					{/* Green Header Strip */}
+					<div className="footer-start flex justify-center ">
+						{/* Decorative Icon */}
+						<AsteriskIcon weight='bold' className="footer-start-decor h1" />
+						<span className="footer-start-decor h1">✦</span>
+
+						<h2 className="footer-start-decor h1 tracking-wide">
+							LET’S BUILD SOMETHING
+						</h2>
+					</div>
+
+					{/* Content Grid */}
+					<div className="footer-content grid grid-cols-2">
+						{/*Text*/}
+						<p className="footer-content-par t-copy leading-tight">
+							Get exposed the right way. While AI calls it “no fluff”, I call it
+							“brilliance”. Identity is critical for your product (or you),
+							and you don’t want to miss out by going for something mediocre.
+						</p>
+
+						{/*links*/}
+						<div className="footer-links t-copy">
+							<a
+								href="#"
+								className="footer-links-anchor flex items-center justify-between "
+							>
+								Talk Project Collaborations
+								<span>→</span>
+							</a>
+
+							<a
+								href="#"
+								className="footer-links-anchor flex items-center justify-between"
+							>
+								Discuss Mentorship
+								<span>→</span>
+							</a>
+						</div>
+					</div>
+
+					{/*Ending*/}
+					<div className="footer-end t-copy-small flex flex-row items-center justify-between">
+						<span>© Jude Joshua, 2025. All rights reserved.</span>
+
+						<div className="footer-end-ref flex">
+							<a href="#" className="t-copy-small">LinkedIn</a>
+							<span>|</span>
+							<a href="#" className="t-copy-small">X</a>
+							<span>|</span>
+							<a href="#" className="t-copy-smalls">Instagram</a>
+						</div>
+					</div>
+
+				</div>
+			</section>
 
 		</main>
 	);
