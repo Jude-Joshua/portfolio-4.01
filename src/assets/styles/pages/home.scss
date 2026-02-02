@@ -567,7 +567,7 @@ cta {
 	&-last {
 		margin-top: var(--padding-sm);
 		padding: var(--padding-xs) var(--padding-sm);
-		background-color: var(--main-primary);
+		background-color: var(--main-black);
 		max-width: 1152px;
 		width: 90%;
 		border-radius: var(--radius-xs);
@@ -577,5 +577,20 @@ cta {
 			gap: var(--gap-xxs);
 		}
 
+	}
+
+	&-button {
+		margin-top: var(--padding-xxs);
+		background-color: var(--main-black);
+		color: var(--main-white);
+		padding: var(--padding-xs) var(--padding-sm);
+		border-radius: var(--radius-sm);
+		gap: var(--gap-xxs);
+
+		&-span {
+			width: 16px;
+			height: 16px;
+			border-radius: var(--radius-md);
+		}
 	}
 }

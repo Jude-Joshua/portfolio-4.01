@@ -1,7 +1,8 @@
 
 import React from 'react';
-import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon,BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon,AsteriskIcon } from '@phosphor-icons/react';
+import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon,BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon,AsteriskIcon, EnvelopeIcon } from '@phosphor-icons/react';
 import { useState } from "react";
+
 
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
@@ -163,91 +164,93 @@ const Home = () => {
 				</article>
 
 				{/*  grid */}
-				<article className="archetype-grid grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
-				<article className="archetype-body flex flex-col items-start justify-start w-full">
-					<div className="archetype-body-info grid grid-cols-7 justify-start items-start">
-						<div className="archetype-body-info-left col-span-4 flex flex-col items-start justify-start">
-							<div className="archetype-body-info-left-paragraphs flex flex-col items-start justify-start">
-								<p className="t-copy">
-									I enjoy finding new ways to make stuff work. This has always been my MO for my career, school and life in general.
-								</p>
-								<p className="t-copy">
-									Whether it’s figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
-								</p>
-								<p className="t-copy">
-									I’m interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
-								</p>
+		<article className="archetype-grid grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+			<article className="archetype-body flex flex-col items-start justify-start w-full">
+				<div className="archetype-body-info grid grid-cols-7 justify-start items-start">
+					<div className="archetype-body-info-left col-span-4 flex flex-col items-start justify-start">
+						<div className="archetype-body-info-left-paragraphs flex flex-col items-start justify-start">
+							<p className="t-copy">
+								I enjoy finding new ways to make stuff work. This has always been my MO for my career, school and life in general.
+							</p>
+							<p className="t-copy">
+								Whether it’s figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
+							</p>
+							<p className="t-copy">
+								I’m interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
+							</p>
+						</div>
+						<div className="archetype-body-info-left-label flex flex-col items-start justify-start">
+							<p className="t-highlights">I LOVE…</p>
+							<div className="archetype-body-info-left-label-list flex flex-row flex-wrap items-start justify-start">
+								{[
+									"Books",
+									"Photography",
+									"Poetry",
+									"Art",
+									"Music",
+									"Nature",
+									"Mentoring",
+									"Black & White",
+								].map((item) => (
+									<span
+										key={item}
+										className="archetype-body-info-left-label-list-item t-copy-small"
+									>
+										{item}
+									</span>
+								))}
 							</div>
-							<div className="archetype-body-info-left-label flex flex-col items-start justify-start">
-								<p className="t-highlights">I LOVE…</p>
-								<div className="archetype-body-info-left-label-list flex flex-row flex-wrap items-start justify-start">
-									{[
-										"Books",
-										"Photography",
-										"Poetry",
-										"Art",
-										"Music",
-										"Nature",
-										"Mentoring",
-										"Black & White",
-									].map((item) => (
-										<span
-											key={item}
-											className="archetype-body-info-left-label-list-item t-copy-small"
-										>
-											{item}
-										</span>
-									))}
+						</div>
+					</div>
+				</div>
+			</article>
+		 
+			<article className="archetype-body-right flex flex-col items-start justify-start w-full">
+				{/* Right image card */}
+				<div className=" archetype-right-card">
+					<div className='archetype-right-card-img'>
+						<ImageComponent src={CatImage} className={'archetype-img'} alt={''}/>
+
+						{/* Floating actions */}
+						<div className="archetype-footer flex  justify-evenly  ">
+							<div className='archetype-footer-div flex justify-between'> 
+								<div className="archetype-body-info-right-navigation flex items-center justify-between ">
+									<span className="archetype-body-info-right-navigation-icon active"><PawPrintIcon weight={'regular'} size={32} /></span>
+									<span className="archetype-body-info-right-navigation-icon"><CameraIcon weight={'regular'} size={32} /></span>
+									<span className="archetype-body-info-right-navigation-icon"><SneakerMoveIcon weight={'regular'} size={32} /></span>
+									<span className="archetype-body-info-right-navigation-icon"><RainbowCloudIcon weight={'regular'} size={32} /></span>
+									<span className="archetype-body-info-right-navigation-icon"><MicrophoneStageIcon weight={'regular'}size={32} /></span>
 								</div>
 							</div>
 						</div>
-						</div>
-						</article>
+					</div>
+				</div>
+			</article>
 
-                  <article>
-        {/* Right image card */}
-        <div className=" archetype-right-card">
-          <div className='archetype-right-card-img'>
-            <ImageComponent src={CatImage} className={'archetype-img'} alt={''}/>
-
-            {/* Floating actions */}
-      <div className="archetype-footer flex  justify-evenly  ">
-        <div className='archetype-footer-div flex justify-between'> 
-        
-			<div className="archetype-body-info-right-navigation flex items-center justify-between ">
-								<span className="archetype-body-info-right-navigation-icon active"><PawPrintIcon weight={'regular'} size={32} /></span>
-								<span className="archetype-body-info-right-navigation-icon"><CameraIcon weight={'regular'} size={32} /></span>
-								<span className="archetype-body-info-right-navigation-icon"><SneakerMoveIcon weight={'regular'} size={32} /></span>
-								<span className="archetype-body-info-right-navigation-icon"><RainbowCloudIcon weight={'regular'} size={32} /></span>
-								<span className="archetype-body-info-right-navigation-icon"><MicrophoneStageIcon weight={'regular'}size={32} /></span>
-							</div>
-						</div>
+			{/* Bottom footer */}
+			<article className="md:col-span-2">
+				<div className="archetype-body-footer flex flex-row items-start justify-center w-full">
+					<div className="archetype-body-footer-card flex flex-col items-center">
+						<p className="t-highlights">Currently watching…</p>
+						<Button hierarchy={'tertiary'} type={'link'} link={''}>
+							<FilmSlateIcon weight={'bold'} fontSize={'24'} />
+							<span>Stranger Things S05</span>
+							<ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
+						</Button>
 					</div>
-					{/* Bottom footer */}
-					<div className="archetype-body-footer flex flex-row items-start justify-center w-full">
-						<div className="archetype-body-footer-card flex flex-col items-center">
-							<p className="t-highlights">Currently watching…</p>
-							<Button hierarchy={'tertiary'} type={'link'} link={''}>
-								<FilmSlateIcon weight={'bold'} fontSize={'24'} />
-								<span>Stranger Things S05</span>
-								<ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
-							</Button>
-						</div>
-						<div className="divider vertical"/>
-						<div className="archetype-body-footer-card flex flex-col items-center">
-							<p className="t-highlights">Currently reading…</p>
-							<Button hierarchy={'tertiary'} type={'link'} link={''}>
-								<BookOpenTextIcon weight={'bold'} fontSize={'24'} />
-								<span>When Sorry Isn't Enough</span>
-								<ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
-							</Button>
-						</div>
+					<div className="divider vertical"/>
+					<div className="archetype-body-footer-card flex flex-col items-center">
+						<p className="t-highlights">Currently reading…</p>
+						<Button hierarchy={'tertiary'} type={'link'} link={''}>
+							<BookOpenTextIcon weight={'bold'} fontSize={'24'} />
+							<span>When Sorry Isn't Enough</span>
+							<ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
+						</Button>
 					</div>
-					</div>
-					</div>
-					</article>
-				</article>
-			</section>
+				</div>
+			</article>
+		</article>
+	</section>
 
 
 
@@ -394,6 +397,7 @@ const Home = () => {
     {/* Green Header Strip */}
     <div className="footer-start flex justify-center ">
       {/* Decorative Icon */}
+
 	  <AsteriskIcon  weight='bold' className="footer-start-decor h1" />
       <span className="footer-start-decor h1">✦</span>
 
@@ -446,6 +450,56 @@ const Home = () => {
 
   </div>
 </section>
+
+<section className="cta relative flex flex-col items-center justify-center text-center ">
+
+  {/* Main Heading */}
+  <h1 className="cta-main h6 tracking-tight  leading-tight">
+    Add me to your <br />
+    Dream Team
+    <span className="cta-main-span h6 relative inline-block">
+      Shortlist*
+      {/* Underline effect */}
+      <span className="cta-main-effect absolute "></span>
+    </span>
+  </h1>
+
+  {/* Subtext */}
+  <p className="cta-subtext t-copy">
+    If your team needs a thoughtful builder who values <br />
+    time like they do ideas, we might click.
+  </p>
+
+  {/* Call-to-Action Button */}
+  <button
+    className="cta-button flex items-center justify-center"
+  >
+    Send a note
+    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-800">
+      {/* Envelope Icon */}
+     <EnvelopeIcon weight='regular' size={20} />
+    </span>
+  </button>
+
+  {/* Footer */}
+  <footer className="cta-last absolute ">
+    <div className="cta-last-link flex flex-wrap items-center justify-center t-copy">
+      <a href="#" >LinkedIn</a>
+      <span>•</span>
+      <a href="#">X</a>
+      <span>•</span>
+      <a href="#">Instagram</a>
+      <span>•</span>
+      <a href="#">YouTube</a>
+      <span>—</span>
+      <span>© Jude Joshua, 2025. All rights reserved.</span>
+    </div>
+  </footer>
+
+</section>
+
+
+
 
 		</main>
 	);
