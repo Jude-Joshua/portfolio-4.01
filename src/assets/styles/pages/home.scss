@@ -12,7 +12,7 @@
 			border-radius: var(--radius-xl);
 			gap: var(--gap-3xs);
 
-			& .t-caption{
+			& .t-caption {
 				font-weight: Bold;
 			}
 		}
@@ -246,7 +246,6 @@
 }
 
 .archetype {
-
 	gap: var(--gap-2xl);
 
 	&-title {
@@ -359,16 +358,22 @@
 			background-color: var(--main-light-grey);
 			border-radius: var(--radius-md);
 			padding: var(--padding-xl) var(--padding-2xl);
-			gap: var(--gap-lg);
+			gap: var(--gap-2xl);
+
+			&-card {
+				gap: var(--gap-xs);
+
+				& .t-highlights {
+					text-transform: capitalize;
+				}
+			}
+
+			& .divider {
+				height: 80px;
+				width: var(--border);
+			}
+		}
 	}
-	
-	&-right-card{
-		background-color: var(--main-light-grey);
-		position: relative;
-		border-radius: var(--radius-md);
-		overflow: hidden;
-}
-}
 }
 
 .work {
@@ -378,7 +383,7 @@
 
 	&-header {
 		max-width: 1152px;
-		margin: 0 auto ;
+		margin: 0 auto;
 		margin-bottom: 48px;
 
 		&-title {
@@ -396,9 +401,10 @@
 
 	&-list {
 		max-width: 1152px;
-		margin: 0 auto ;
+		margin: 0 auto;
 		padding: var(--padding-md);
-		> * + * {
+
+		>*+* {
 			border-top: 1px solid var(--main-black);
 		}
 	}
@@ -419,7 +425,7 @@
 
 .archieve {
 	max-width: 1152px;
-	margin: 0 auto ;
+	margin: 0 auto;
 	padding: var(--padding-4xl) var(--padding-sm);
 
 	&-title {
@@ -439,7 +445,7 @@
 		overflow: hidden;
 		height: 400px;
 
-		&-text{
+		&-text {
 			background-color: var(--main-white);
 			padding: var(--padding-xxs);
 			border-radius: var(--radius-xs);
@@ -448,7 +454,7 @@
 	}
 
 	&-list {
-		> * + * {
+		>*+* {
 			margin-top: var(--padding-md);
 		}
 
@@ -467,23 +473,23 @@
 		}
 	}
 
-			&-card {
-				gap: var(--gap-xs);
+	&-card {
+		gap: var(--gap-xs);
 
-				& .t-highlights {
-					text-transform: capitalize;
-				}
-			}
-
-			& .divider {
-				height: 80px;
-				width: var(--border);
-			}
+		& .t-highlights {
+			text-transform: capitalize;
 		}
+	}
+
+	& .divider {
+		height: 80px;
+		width: var(--border);
+	}
+}
 
 .footer {
 	max-width: 1152px;
-	margin: 0 auto ;
+	margin: 0 auto;
 	padding: var(--padding-2xl) var(--padding-sm);
 
 	&-section {
@@ -516,7 +522,7 @@
 	}
 
 	&-links {
-		> * + * {
+		>*+* {
 			margin-top: var(--padding-xxs);
 		}
 
@@ -538,59 +544,45 @@
 	}
 }
 
-cta {
-	padding-left: var(--padding-sm);
-	padding-right: var(--padding-sm);
-	min-height: 70vh;
+.cta {
+	max-width: 1152px;
+	margin:0 auto;
+	padding: var(--padding-4xl) var(--padding-md);
+	overflow: hidden;
 
 	&-main {
-		color: var(--main-black);
+	     color: var(--main-black);
 
-		&-span {
-			color: var(--main-complimentary);
-			margin-left: var(--padding-xxs);
-		}
+		 &-span {
+			color: var(--main-highlight);
+		 }
 
-		&-effect {
-			border-bottom: 3px solid var(--main-black);
-			border-width: 20px;
-			color: var(--main-complimentary);
-		}
+		 &-effect {
+			border-bottom: 1px solid var(--main-highlight);
+			height: 5px;
+		 }
 	}
 
 	&-subtext {
-		margin-top: var(--padding-xxs);
-		max-width: 500px;
 		color: var(--main-black);
-	}
-
-	&-last {
-		margin-top: var(--padding-sm);
-		padding: var(--padding-xs) var(--padding-sm);
-		background-color: var(--main-black);
-		max-width: 1152px;
-		width: 90%;
-		border-radius: var(--radius-xs);
-
-		&-link {
-			color: var(--main-black);
-			gap: var(--gap-xxs);
-		}
-
+		margin-top: var(--padding-xxs);
 	}
 
 	&-button {
-		margin-top: var(--padding-xxs);
 		background-color: var(--main-black);
 		color: var(--main-white);
-		padding: var(--padding-xs) var(--padding-sm);
-		border-radius: var(--radius-sm);
-		gap: var(--gap-xxs);
+		padding: var(--padding-sm);
+	}
 
-		&-span {
-			width: 16px;
-			height: 16px;
-			border-radius: var(--radius-md);
+	&-last {
+		margin-top: var(--padding-xs);
+		background-color: var(--main-black);
+		color: var(--main-white);
+		padding: var(--padding-sm) var(--padding-md);
+		border-radius: var(--radius-sm);
+
+		&-link {
+			gap: var(--gap-xxs);
 		}
 	}
 }
