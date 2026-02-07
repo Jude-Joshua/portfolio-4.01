@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon,BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon,AsteriskIcon, EnvelopeIcon, ArrowRightIcon, LineVerticalIcon, DotIcon, MinusIcon } from '@phosphor-icons/react';
+import {ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon,BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon,AsteriskIcon, EnvelopeOpenIcon, ArrowRightIcon, LineVerticalIcon, DotIcon, MinusIcon } from '@phosphor-icons/react';
 import { useState } from "react";
 
 
@@ -398,7 +398,9 @@ const Home = () => {
                  {/* Green Header Strip */}
              <div className="footer-start flex justify-center ">
                  {/* Decorative Icon */}
+                 <div className="footer-start-icon flex items-center justify-center">
               <AsteriskIcon  weight='bold' size={42} />
+              </div>
               <h2 className="footer-start-decor h1 tracking-wide">
                             LET'S BUILD SOMETHING
              </h2>
@@ -459,18 +461,17 @@ const Home = () => {
             <section className="cta relative flex flex-col items-center justify-center text-center ">
   
                     {/* Main Heading */}
-              <h1 className="cta-main h6 tracking-tight leading-tight">
+              <h1 className="cta-main h5 tracking-tight leading-tight">
                  Add me to your <br />
-                 Dream Team
-               <span className="cta-main-span h6 relative inline-block">
-                Shortlist*
+                 Dream Team 
+               <span className="cta-main-span h5 relative inline-block">
+                  Shortlist*
               {/* Underline effect */}
-              <span className="cta-main-effect absolute "></span>
              </span>
              </h1>
 
                      {/* Subtext */}
-                <p className="cta-subtext t-copy">
+                <p className="cta-subtext t-button">
                    If your team needs a thoughtful builder who values <br />
                    time like they do ideas, we might click.
                 </p>
@@ -478,10 +479,12 @@ const Home = () => {
                 {/* Call-to-Action Button */}
               <button className="cta-button t-copy flex items-center justify-center">
                      Send a note
+                     <div className="cta-button-effect flex items-center justify-center">
                  <span className="flex items-center justify-center ">
                       {/* Envelope Icon */}
-                <EnvelopeIcon weight='regular' size={20} />
+                <EnvelopeOpenIcon weight='regular' size={25} />
                 </span>
+                </div>
               </button>
 
                                                {/* Footer */}

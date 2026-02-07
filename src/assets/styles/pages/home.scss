@@ -507,7 +507,10 @@
 
 		&-decor {
 			color: var(--main-black);
-			font-weight: 50;
+		}
+
+		&-icon {
+			color: var(--main-black);
 		}
 	}
 
@@ -555,11 +558,8 @@
 
 		 &-span {
 			color: var(--main-highlight);
-		 }
-
-		 &-effect {
-			border-bottom: 1px solid var(--main-highlight);
-			height: 5px;
+			margin: var(--padding-xxs);
+			border-bottom: 5px solid var(--main-highlight);
 		 }
 	}
 
@@ -569,13 +569,22 @@
 	}
 
 	&-button {
+		margin-top: var(--padding-sm);
 		background-color: var(--main-black);
 		color: var(--main-white);
-		padding: var(--padding-sm);
+		padding: var(--padding-xs);
+		border-radius: var(--radius-xl);
+
+		&-effect {
+			background-color: var(--main-dark-grey);
+			border-radius: var(--radius-lg);
+			padding: var(--padding-xxs);
+			margin-left: var(--padding-xxs);
+		}
 	}
 
 	&-last {
-		margin-top: var(--padding-xs);
+		margin-top: var(--padding-md);
 		background-color: var(--main-black);
 		color: var(--main-white);
 		padding: var(--padding-sm) var(--padding-md);
