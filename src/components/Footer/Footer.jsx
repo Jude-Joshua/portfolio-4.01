@@ -25,7 +25,7 @@ export default function Footer() {
                         If your team needs a thoughtful builder who values time like they do ideas, we might click.
                     </p>
                 </div>
-                <Button hierarchy={'primary'} type={'link'} link={'mailto:work@judejoshua.com'}>
+                <Button target={''} hierarchy={'primary'} type={'link'} link={'mailto:work@judejoshua.com'}>
                     <span>Send a note</span>
                     <span className="icon-round flex items-center justify-center">
                         <EnvelopeOpenIcon weight={'bold'} fontSize={'32'} />

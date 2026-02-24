@@ -87,7 +87,7 @@
 		padding: var(--padding-lg) var(--padding-lg) var(--padding-xl);
 		background-color: var(--main-light-grey);
 		border-radius: var(--radius-md);
-		gap: var(--gap-3xl);
+		gap: var(--gap-2xl);
 		box-shadow: 8px 15px 16px var(--bx-shadows);
 		z-index: 3;
 		left: 5%;
@@ -182,7 +182,7 @@
 			& svg {
 				position: absolute;
 				top: 0;
-				opacity: 0.8;
+				opacity: 0.6;
 				left: -32%;
 				transform: rotate(-36.46deg);
 				animation: bounce 28s ease-out infinite;
@@ -264,10 +264,10 @@
 				border-radius: var(--radius-md);
 				padding: var(--padding-2xl) var(--padding-xl) var(--padding-xl);
 				background-color: var(--main-light-grey);
-				gap: var(--gap-xl);
+				gap: var(--gap-lg);
 
 				&-paragraphs {
-					gap: var(--gap-md);
+					gap: var(--gap-sm);
 				}
 
 				&-label {

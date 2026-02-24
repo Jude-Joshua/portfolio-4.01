@@ -80,7 +80,7 @@ const Home = () => {
                                 in ways that support long-term growth.
                             </p>
                         </div>
-                        <Button hierarchy={'tertiary'} type={'link'} link={'#process'}>
+                        <Button target={''} hierarchy={'tertiary'} type={'link'} link={'#projects'}>
                             <span>See sample work</span>
                             <ArrowDownIcon weight={'bold'} fontSize={'24'} />
                         </Button>
@@ -88,7 +88,7 @@ const Home = () => {
                 </article>
             </section>
 
-            <section className="projects w-full flex flex-col">
+            <section className="projects w-full flex flex-col" id='projects'>
                 <article className="projects-inner flex flex-col items-center w-full">
                     <ProjectCard />
                 </article>
@@ -125,10 +125,7 @@ const Home = () => {
                         <div className="archetype-body-info-left col-span-4 flex flex-col items-start justify-start">
                             <div className="archetype-body-info-left-paragraphs flex flex-col items-start justify-start">
                                 <p className="t-copy">
-                                    I enjoy finding new ways to make stuff work. This has always been my MO for my career, school and life in general.
-                                </p>
-                                <p className="t-copy">
-                                    Whether it's figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
+                                    I enjoy finding new ways to make stuff work. Whether it's figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
                                 </p>
                                 <p className="t-copy">
                                     I'm interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
@@ -174,7 +171,7 @@ const Home = () => {
                     <div className="archetype-body-footer flex flex-row items-start justify-center w-full">
                         <div className="archetype-body-footer-card flex flex-col items-center">
                             <p className="t-highlights">Currently watching…</p>
-                            <Button hierarchy={'tertiary'} type={'link'} link={''}>
+                            <Button target={'_blank'} hierarchy={'tertiary'} type={'link'} link={'https://www.netflix.com/ng/title/80057281'}>
                                 <FilmSlateIcon weight={'bold'} fontSize={'24'} />
                                 <span>Stranger Things S05</span>
                                 <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
@@ -183,7 +180,7 @@ const Home = () => {
                         <div className="divider vertical" />
                         <div className="archetype-body-footer-card flex flex-col items-center">
                             <p className="t-highlights">Currently reading…</p>
-                            <Button hierarchy={'tertiary'} type={'link'} link={''}>
+                            <Button target={'_blank'} hierarchy={'tertiary'} type={'link'} link={'https://www.amazon.com/Am-My-Brand-Without-Apology/dp/1635579961'}>
                                 <BookOpenTextIcon weight={'bold'} fontSize={'24'} />
                                 <span>When Sorry Isn't Enough</span>
                                 <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
