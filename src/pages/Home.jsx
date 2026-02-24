@@ -7,10 +7,7 @@ import Button from "../components/Button/Button.jsx";
 import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 
 import HelloImage from '../assets/images/Greeting.svg?react';
-import Bulb from '../assets/images/bulb.svg?react';
 import Animark from '../assets/images/animark.svg?react';
-import BriefCase from '../assets/images/briefcase.svg?react';
-import ProjectsDown from '../assets/images/projects-down.svg?react';
 import CatImage from '../assets/images/cat-image.png';
 
 import ProfileImage from '../assets/images/profile-image.webp'
@@ -76,13 +73,6 @@ const Home = () => {
 
             <section className="projects w-full flex flex-col">
                 <article className="projects-inner flex flex-col items-center w-full">
-                    {/* <div className={'projects-inner-title flex flex-row justify-center items-start w-full'}>
-                        <p className="t-highlights">SELECTED PAST PROJECTS</p>
-                        <BriefCase />
-                        <div className={'projects-inner-title-down flex flex-row'}>
-                            <ProjectsDown />
-                        </div>
-                    </div> */}
                     <ProjectCard />
                 </article>
             </section>
@@ -99,11 +89,6 @@ const Home = () => {
                     </div>
 
                     <div className="philosophy-card-data flex flex-col items-start justify-start">
-                        {/* <div className="philosophy-card-data-title flex flex-row items-center justify-start">
-                            <h2 className='t-highlights'>MY DESIGN PHILOSOPHY</h2>
-                            <span><Bulb /></span>
-                        </div> */}
-
                         <div className="philosophy-card-data-text flex flex-col items-start justify-start">
                             <p className="h2">At the heart of every great brand and product is a clear and cohesive identity.</p>
                             <p className="t-copy">I believe good design is intentional: shaped by purpose, aligned with real goals, and consistent across every touchpoint. Whether working on product, web, or brand-led experiences, my focus is always on creating work that feels meaningful, usable, and grounded in clarity.</p>
