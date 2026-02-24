@@ -31,6 +31,13 @@
                 top: 2%;
             }
 
+            &-marker {
+                position: absolute;
+                left: 0;
+                top: 84%;
+                width: 100%;
+            }
+
             & p{
                 width: 80%;
             }
@@ -53,10 +60,10 @@
         }
 
         &-links {
-            gap: var(--gap-md);
+            gap: var(--gap-xs);
 
             a {
-                gap: var(--gap-md);
+                gap: var(--gap-xs);
                 align-items: center;
                 justify-content: center;
             }

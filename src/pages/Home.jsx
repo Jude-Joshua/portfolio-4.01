@@ -6,14 +6,33 @@ import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 
 import HelloImage from '../assets/images/Greeting.svg?react';
 import Animark from '../assets/images/animark.svg?react';
-import CatImage from '../assets/images/cat-image.png';
+import Pet from '../assets/images/pet.webp';
+import Photography from '../assets/images/photography.webp';
+import Sports from '../assets/images/sports.webp';
+import Outside from '../assets/images/outside.webp';
+import Speaker from '../assets/images/speaker.webp';
 
 import ProfileImage from '../assets/images/profile-image.webp'
 import ShowImage from '../assets/images/showcase.png'
 
+import { useState } from "react";
+
 const BARS = 10;
 
 const Home = () => {
+
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [fade, setFade] = useState(false);
+
+    const archImages = [Pet, Photography, Sports, Outside, Speaker];
+
+    const handleIndexChange = (index) => {
+        setFade(true);
+        setTimeout(() => {
+            setActiveIndex(index);
+            setFade(false);
+        }, 300); // Duration of the fade effect
+    };
 
     return (
         <main className={'flex flex-col items-start justify-start'}>
@@ -109,10 +128,10 @@ const Home = () => {
                                     I enjoy finding new ways to make stuff work. This has always been my MO for my career, school and life in general.
                                 </p>
                                 <p className="t-copy">
-                                    Whether it’s figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
+                                    Whether it's figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
                                 </p>
                                 <p className="t-copy">
-                                    I’m interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
+                                    I'm interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
                                 </p>
                             </div>
                             <div className="archetype-body-info-left-label flex flex-col items-start justify-start">
@@ -141,16 +160,14 @@ const Home = () => {
 
                         <div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
                             <div className="archetype-body-info-right-img">
-                                <ImageComponent src={CatImage} className={'archetype-img'} alt={''} />
+                                <ImageComponent src={archImages[activeIndex]} className={'archetype-img'} alt={''} />
                             </div>
-                            <div className="archetype-body-info-right-navigation flex items-center justify-between">
-                                <div className="archetype-body-info-right-navigation flex items-center justify-between ">
-                                    <span className="archetype-body-info-right-navigation-icon"><PawPrintIcon weight={'regular'} size={32} /></span>
-                                    <span className="archetype-body-info-right-navigation-icon"><CameraIcon weight={'regular'} size={32} /></span>
-                                    <span className="archetype-body-info-right-navigation-icon active"><SneakerMoveIcon weight={'regular'} size={32} /></span>
-                                    <span className="archetype-body-info-right-navigation-icon"><RainbowCloudIcon weight={'regular'} size={32} /></span>
-                                    <span className="archetype-body-info-right-navigation-icon"><MicrophoneStageIcon weight={'regular'} size={32} /></span>
-                                </div>
+                            <div className="archetype-body-info-right-navigation flex items-center justify-between ">
+                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 0 ? 'active' : ''}`} onClick={() => handleIndexChange(0)}><PawPrintIcon weight={'regular'} size={32} /></span>
+                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 1 ? 'active' : ''}`} onClick={() => handleIndexChange(1)}><CameraIcon weight={'regular'} size={32} /></span>
+                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 2 ? 'active' : ''}`} onClick={() => handleIndexChange(2)}><SneakerMoveIcon weight={'regular'} size={32} /></span>
+                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 3 ? 'active' : ''}`} onClick={() => handleIndexChange(3)}><RainbowCloudIcon weight={'regular'} size={32} /></span>
+                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 4 ? 'active' : ''}`} onClick={() => handleIndexChange(4)}><MicrophoneStageIcon weight={'regular'} size={32} /></span>
                             </div>
                         </div>
                     </div>
@@ -163,7 +180,7 @@ const Home = () => {
                                 <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
                             </Button>
                         </div>
-                        <div className="divider vertical"/>
+                        <div className="divider vertical" />
                         <div className="archetype-body-footer-card flex flex-col items-center">
                             <p className="t-highlights">Currently reading…</p>
                             <Button hierarchy={'tertiary'} type={'link'} link={''}>

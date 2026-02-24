@@ -308,14 +308,16 @@
 					top: unset;
 					bottom: 5%;
 					left: 7%;
-					background-color: var(--overlay-white);
+					background-color: var(--overlay-black);
 					padding: var(--padding-xs);
 					border-radius: var(--radius-md);
-					backdrop-filter: blur(4px);
+					backdrop-filter: blur(6px);
 
 					&-icon {
 						padding: var(--padding-sm);
 						background-color: var(--main-white);
+						transition: 0.3s linear;
+						cursor: pointer;
 
 						&:has(~ .archetype-body-info-right-navigation-icon.active) {
 							&:first-child {
