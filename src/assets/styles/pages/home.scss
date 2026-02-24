@@ -30,10 +30,6 @@
 				top: 0;
 				transition: 0.4s linear;
 
-				&:hover {
-					top: -16px;
-				}
-
 				&.arrow {
 					background-color: var(--accents-highlight);
 					color: var(--main-white);
@@ -60,6 +56,25 @@
 				& svg {
 					width: 48px;
 					height: 48px;
+				}
+			}
+		}
+
+		& h1:hover {
+			& .hero-title-icons {
+				& span {
+					&.arrow {
+						top: 4px;
+						left: -2px;
+					}
+					
+					&.clock {
+						top: -16px;
+					}
+
+					&.calendar {
+						left: -1px;
+					}
 				}
 			}
 		}
@@ -167,7 +182,7 @@
 			& svg {
 				position: absolute;
 				top: 0;
-				opacity: 0.5;
+				opacity: 0.8;
 				left: -32%;
 				transform: rotate(-36.46deg);
 				animation: bounce 28s ease-out infinite;
@@ -226,27 +241,8 @@
 	}
 }
 
-.black {
-	width: 100%;
-	background-color: var(--main-black);
-	height: auto;
-	margin-block: var(--padding-2xl);
-
-	&-text {
-		color: var(--main-white);
-
-		&-1 {
-			padding: var(--padding-lg);
-		}
-
-		&-2 {
-			padding: var(--padding-lg);
-		}
-	}
-}
-
 .archetype {
-	gap: var(--gap-2xl);
+	gap: var(--gap-xl);
 
 	&-title {
 		width: 64%;

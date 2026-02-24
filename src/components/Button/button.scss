@@ -2,8 +2,23 @@
 @use "../../assets/styles/tokens/colors";
 @use "../../assets/styles/mixins/spacings" as *;
 
-.button{
-	&.tertiary{
+.button {
+
+	&.tertiary {
 		color: var(--main-secondary);
+	}
+
+	&.primary {
+		background-color: var(--main-black);
+		color: var(--main-white);
+		padding: var(--padding-xs) var(--padding-xs) var(--padding-xs) var(--padding-md);
+		border-radius: var(--radius-xl);
+		gap: var(--gap-xs);
+
+		& .icon-round {
+			background: var(--linear-gradient);
+			border-radius: var(--radius-lg);
+			padding: var(--padding-xs);
+		}
 	}
 }

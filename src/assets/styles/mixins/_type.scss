@@ -205,9 +205,9 @@
 
 // Buttons / Links
 @mixin t-buttons {
-	font-weight: var(--font-weight-highlights);
+	font-weight: var(--font-weight-highlights) !important;
 	line-height: 180%;
-	font-size: fs.rem(fs.$t-buttons);
+	font-size: fs.rem(fs.$t-buttons) !important;
 
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-t-buttons);

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";

@@ -1,60 +1,71 @@
 .footer {
-	overflow: hidden;
-    padding: var(--padding-2xl) var(--padding-2xl) var(--padding-lg);
-    gap: var(--padding-lg);
+    overflow: hidden;
+    padding: var(--padding-2xl) var(--padding-2xl) var(--padding-md);
+    gap: var(--gap-lg);
 
-	&-main {
-	     color: var(--main-black);
+    &-top {
+        width: 100%;
+        gap: var(--gap-lg);
 
-		 &-span {
-			color: var(--main-highlight);
-			margin: var(--padding-xxs);
-			border-bottom: 5px solid var(--main-highlight);
-		 }
-	}
+        &-title {
+            gap: var(--gap-xs);
+            text-align: center;
+            width: 50%;
 
-	&-subtext {
-		color: var(--main-black);
-		margin-top: var(--padding-xxs);
-	}
+            &-arrow {
+                position: absolute;
+                top: 20%;
+                left: unset;
+                right: 7%;
+            }
 
-	&-button {
-		margin-top: var(--padding-sm);
-		background-color: var(--main-black);
-		color: var(--main-white);
-		padding: var(--padding-xs);
-		border-radius: var(--radius-xl);
+            &-highlights {
+                color: var(--main-primary);
+            }
 
-		&-effect {
-			background-color: var(--main-dark-grey);
-			border-radius: var(--radius-lg);
-			padding: var(--padding-xxs);
-			margin-left: var(--padding-xxs);
-		}
-	}
+            &-star {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                left: 106%;
+                top: 2%;
+            }
 
-	&-copyright {
-		background-color: var(--main-black);
-		color: var(--main-white);
-		padding: var(--padding-md);
-		border-radius: var(--radius-md);
+            & p{
+                width: 80%;
+            }
+        }
+
+    }
+
+    &-copyright {
+        background-color: var(--main-black);
+        color: var(--main-white);
+        padding: var(--padding-md);
+        border-radius: var(--radius-md);
         gap: var(--gap-md);
         width: 100%;
 
-        &-divider{
+        &-divider {
             height: var(--border);
             width: 24px;
             background-color: var(--main-white) !important;
         }
 
-		&-links {
-			gap: var(--gap-md);
+        &-links {
+            gap: var(--gap-md);
 
             a {
-			    gap: var(--gap-md);
+                gap: var(--gap-md);
                 align-items: center;
                 justify-content: center;
             }
-		}
-	}
+        }
+
+        &-star{
+            left: 16%;
+            width: 48px;
+            height: 48px
+        }
+    }
 }

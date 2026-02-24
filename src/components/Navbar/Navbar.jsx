@@ -18,10 +18,10 @@ export default function Navbar() {
 			<div className="navbar-links flex flex-row items-center justify-center">
 				<NavbarLink navLinks={Links}/>
 				<div className="divider navbar-links-navigation-divider"></div>
-				<Url href='mailto:thejudejoshua@gmail.com' className="navbar-links-navigation-mailer"
+				<Url href='mailto:work@judejoshua.com' className="navbar-links-navigation-mailer"
 				     isNavigationLink={true}>
                     <span>
-                        thejudejoshua@gmail.com
+                        work@judejoshua.com
                     </span>
 				</Url>
 			</div>
