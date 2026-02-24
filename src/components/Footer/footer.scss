@@ -1,0 +1,60 @@
+.footer {
+	overflow: hidden;
+    padding: var(--padding-2xl) var(--padding-2xl) var(--padding-lg);
+    gap: var(--padding-lg);
+
+	&-main {
+	     color: var(--main-black);
+
+		 &-span {
+			color: var(--main-highlight);
+			margin: var(--padding-xxs);
+			border-bottom: 5px solid var(--main-highlight);
+		 }
+	}
+
+	&-subtext {
+		color: var(--main-black);
+		margin-top: var(--padding-xxs);
+	}
+
+	&-button {
+		margin-top: var(--padding-sm);
+		background-color: var(--main-black);
+		color: var(--main-white);
+		padding: var(--padding-xs);
+		border-radius: var(--radius-xl);
+
+		&-effect {
+			background-color: var(--main-dark-grey);
+			border-radius: var(--radius-lg);
+			padding: var(--padding-xxs);
+			margin-left: var(--padding-xxs);
+		}
+	}
+
+	&-copyright {
+		background-color: var(--main-black);
+		color: var(--main-white);
+		padding: var(--padding-md);
+		border-radius: var(--radius-md);
+        gap: var(--gap-md);
+        width: 100%;
+
+        &-divider{
+            height: var(--border);
+            width: 24px;
+            background-color: var(--main-white) !important;
+        }
+
+		&-links {
+			gap: var(--gap-md);
+
+            a {
+			    gap: var(--gap-md);
+                align-items: center;
+                justify-content: center;
+            }
+		}
+	}
+}

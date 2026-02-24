@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar.jsx";
-// import Footer from "./components/Footer.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 import Home from './pages/Home.jsx';
 
@@ -22,7 +22,7 @@ function App() {
                 <Route path="/" element={<Home/>}/>
             </Routes>
             
-            {/*<Footer/>*/}
+            <Footer/>
         </>
     );
 }

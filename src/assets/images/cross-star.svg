@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="star_inner" data-figma-trr="r7u0-0f">
+<rect x="29.2905" y="0.11499" width="5.41873" height="63.7702" fill="#009559"/>
+</g>
+<use xlink:href="#star_inner" transform="translate(37.0669 -12.9703) rotate(51.4286)"/>
+<use xlink:href="#star_inner" transform="translate(70.3183 7.92299) rotate(102.857)"/>
+<use xlink:href="#star_inner" transform="translate(74.7152 46.9467) rotate(154.286)"/>
+<use xlink:href="#star_inner" transform="translate(46.9467 74.7153) rotate(-154.286)"/>
+<use xlink:href="#star_inner" transform="translate(7.92296 70.3183) rotate(-102.857)"/>
+<use xlink:href="#star_inner" transform="translate(-12.9703 37.0669) rotate(-51.4286)"/>
+</svg>
