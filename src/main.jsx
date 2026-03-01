@@ -9,7 +9,7 @@ import './assets/styles/index.css'
 
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
-        <Cursor />
+        {/* <Cursor /> */}
         <App />
     </BrowserRouter>,
 )

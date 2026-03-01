@@ -194,16 +194,17 @@
 			left: 0;
 			top: 0;
 			z-index: 1;
+			overflow: hidden;
 
 			& svg {
 				position: absolute;
 				top: 0;
-				opacity: 0.6;
+				opacity: 0.45;
 				left: -32%;
 				transform: rotate(-36.46deg);
 				animation: bounce 28s ease-out infinite;
 				animation-delay: 0s;
-				filter: blur(16px);
+				filter: blur(40px);
 			}
 
 			&-rect {
@@ -300,7 +301,6 @@
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
-						filter: grayscale(1);
 					}
 				}
 
