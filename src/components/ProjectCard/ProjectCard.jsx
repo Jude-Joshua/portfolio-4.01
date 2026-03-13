@@ -2,7 +2,7 @@ import './projectCard.scss';
 
 import {ArrowRightIcon} from '@phosphor-icons/react';
 
-import SampleImage from '../../assets/images/sample-image.png'
+import SampleImage from '../../assets/images/fmta-screen.webp'
 
 import ImageComponent from "../ImageComponent/ImageComponent.jsx";
 import Button from "../Button/Button.jsx";
@@ -23,10 +23,10 @@ const ProjectCard = () => {
                 <div className="project-details-text flex flex-col items-start justify-start">
                     <div className="project-details-text-holder flex flex-col items-start justify-start">
                         <h6 className="h6">
-                            B2B and B2C web app for healthcare providers and seekers needing streamlined access to medical supplies.
+                            Redesigning a unified B2B and B2C web app for healthcare providers and seekers.
                         </h6>
                         <p className="t-copy-small">
-                            How might we simplify the process of getting medical supplies for healthcare seekers and providers?
+                            How might we reduce cognitive load and make ordering medical supplies feel immediate, controlled, and trustworthy?
                         </p>
                     </div>
                     <Button hierarchy={'tertiary'} type={'link'} link={'#'}>
