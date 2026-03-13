@@ -3,7 +3,7 @@
 @use "../../assets/styles/mixins/spacings" as *;
 
 .project{
-    gap: var(--gap-xxs);
+    gap: var(--gap-xs);
 
     &-image{
         border-radius: var(--radius-md);

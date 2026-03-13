@@ -1,38 +1,19 @@
-import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon, CameraIcon, SneakerMoveIcon, PawPrintIcon, MicrophoneStageIcon, RainbowCloudIcon } from '@phosphor-icons/react';
+import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
 import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
+import ImageSlider from "../components/ImageSlider/ImageSlider.jsx";
 
 import HelloImage from '../assets/images/Greeting.svg?react';
 import Animark from '../assets/images/animark.svg?react';
-import Pet from '../assets/images/pet.webp';
-import Photography from '../assets/images/photography.webp';
-import Sports from '../assets/images/sports.webp';
-import Outside from '../assets/images/outside.webp';
-import Speaker from '../assets/images/speaker.webp';
 
 import ProfileImage from '../assets/images/profile-image.webp'
 import ShowImage from '../assets/images/showcase.png'
 
-import { useState } from "react";
-
 const BARS = 10;
 
 const Home = () => {
-
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [fade, setFade] = useState(false);
-
-    const archImages = [Pet, Photography, Sports, Outside, Speaker];
-
-    const handleIndexChange = (index) => {
-        setFade(true);
-        setTimeout(() => {
-            setActiveIndex(index);
-            setFade(false);
-        }, 300); // Duration of the fade effect
-    };
 
     return (
         <main className={'flex flex-col items-start justify-start'}>
@@ -125,14 +106,14 @@ const Home = () => {
                         <div className="archetype-body-info-left col-span-4 flex flex-col items-start justify-start">
                             <div className="archetype-body-info-left-paragraphs flex flex-col items-start justify-start">
                                 <p className="t-copy">
-                                    I enjoy finding new ways to make stuff work. Whether it's figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
+                                    I enjoy finding new ways to make stuff work: Whether it's figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
                                 </p>
                                 <p className="t-copy">
                                     I'm interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
                                 </p>
                             </div>
                             <div className="archetype-body-info-left-label flex flex-col items-start justify-start">
-                                <p className="t-highlights">I LOVE…</p>
+                                <p className="t-highlights">INTERESTS</p>
                                 <div className="archetype-body-info-left-label-list flex flex-row flex-wrap items-start justify-start">
                                     {[
                                         "Books",
@@ -156,16 +137,7 @@ const Home = () => {
                         </div>
 
                         <div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
-                            <div className="archetype-body-info-right-img">
-                                <ImageComponent src={archImages[activeIndex]} className={'archetype-img'} alt={''} />
-                            </div>
-                            <div className="archetype-body-info-right-navigation flex items-center justify-between ">
-                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 0 ? 'active' : ''}`} onClick={() => handleIndexChange(0)}><PawPrintIcon weight={'regular'} size={32} /></span>
-                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 1 ? 'active' : ''}`} onClick={() => handleIndexChange(1)}><CameraIcon weight={'regular'} size={32} /></span>
-                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 2 ? 'active' : ''}`} onClick={() => handleIndexChange(2)}><SneakerMoveIcon weight={'regular'} size={32} /></span>
-                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 3 ? 'active' : ''}`} onClick={() => handleIndexChange(3)}><RainbowCloudIcon weight={'regular'} size={32} /></span>
-                                <span className={`archetype-body-info-right-navigation-icon ${activeIndex === 4 ? 'active' : ''}`} onClick={() => handleIndexChange(4)}><MicrophoneStageIcon weight={'regular'} size={32} /></span>
-                            </div>
+                            <ImageSlider />
                         </div>
                     </div>
                     <div className="archetype-body-footer flex flex-row items-start justify-center w-full">
