@@ -24,6 +24,10 @@
 	line-height: 100%;
 	font-size: fs.rem(fs.$s0);
 
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-s0);
+	}
+
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-s0);
 	}
@@ -38,6 +42,10 @@
 	line-height: 100%;
 	font-size: fs.rem(fs.$s1);
 
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-s1);
+	}
+
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-s1);
 	}
@@ -51,6 +59,10 @@
 	font-weight: var(--font-weight-headings);
 	line-height: 140%;
 	font-size: fs.rem(fs.$s2);
+	
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-s2);
+	}
 
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-s2);
@@ -66,6 +78,10 @@
 	line-height: 130%;
 	font-size: fs.rem(fs.$h1);
 
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-h1);
+	}
+
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-h1);
 	}
@@ -79,6 +95,10 @@
 	font-weight: var(--font-weight-headings);
 	line-height: 130%;
 	font-size: fs.rem(fs.$h2);
+
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-h2);
+	}
 
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-h2);
@@ -94,6 +114,10 @@
 	line-height: 150%;
 	font-size: fs.rem(fs.$h3);
 
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-h3);
+	}
+
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-h3);
 	}
@@ -107,6 +131,10 @@
 	font-weight: var(--font-weight-headings);
 	line-height: 110%;
 	font-size: fs.rem(fs.$h4);
+
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-h4);
+	}
 
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-h4);
@@ -122,6 +150,10 @@
 	line-height: 120%;
 	font-size: fs.rem(fs.$h5);
 
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-h5);
+	}
+
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-h5);
 	}
@@ -135,6 +167,10 @@
 	font-weight: var(--font-weight-headings);
 	line-height: 150%;
 	font-size: fs.rem(fs.$h6);
+
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-h6);
+	}
 
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-h6);
@@ -151,6 +187,10 @@
 	line-height: 190%;
 	font-size: fs.rem(fs.$t-copy);
 
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-t-copy);
+	}
+
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-t-copy);
 	}
@@ -165,6 +205,10 @@
 	line-height: 170%;
 	font-size: fs.rem(fs.$t-copy-small);
 
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-t-copy-small);
+	}
+
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-t-copy-small);
 	}
@@ -178,6 +222,10 @@
 	font-weight: var(--font-weight-paragraphs);
 	line-height: 160%;
 	font-size: fs.rem(fs.$t-caption);
+
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-t-caption);
+	}
 
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-t-caption);
@@ -194,6 +242,10 @@
 	font-size: fs.rem(fs.$t-highlights);
 	text-transform: uppercase;
 
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-t-highlights);
+	}
+
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-t-highlights);
 	}
@@ -209,6 +261,10 @@
 	line-height: 180%;
 	font-size: fs.rem(fs.$t-buttons) !important;
 
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-t-buttons);
+	}
+
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-t-buttons);
 	}
@@ -222,6 +278,10 @@
 	font-weight: 500;
 	line-height: 180%;
 	font-size: fs.rem(fs.$t-links);
+
+	@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-t-links);
+	}
 
 	@include respond-to("tablet") {
 		font-size: fs.rem(fs.$tablet-t-links);

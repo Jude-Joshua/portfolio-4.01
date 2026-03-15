@@ -10,6 +10,22 @@
 			position: relative;
 			overflow: hidden;
 
+			&-info{
+				gap: var(--gap-xxs);
+				position: absolute;
+				left: 4%;
+				top: 4%;
+				background-color: var(--lights-main-complimentary);
+				padding: var(--padding-xxs) var(--padding-xs);
+				z-index: 2;
+				max-width: 70%;
+				border-radius: var(--radius-md);
+
+				& svg{
+					color: var(--main-dark-grey);
+				}
+			}
+
 			& img {
 				width: 100%;
 				height: 100%;

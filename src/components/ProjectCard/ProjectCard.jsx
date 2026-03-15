@@ -29,7 +29,7 @@ const ProjectCard = () => {
                             How might we reduce cognitive load and make ordering medical supplies feel immediate, controlled, and trustworthy?
                         </p>
                     </div>
-                    <Button hierarchy={'tertiary'} type={'link'} link={'#'}>
+                    <Button hierarchy={'tertiary'} type={'link'} link={'/projects/firstmedtrade'}>
                         <span>View case study</span>
                         <ArrowRightIcon weight={'bold'} fontSize={'24'}/>
                     </Button>

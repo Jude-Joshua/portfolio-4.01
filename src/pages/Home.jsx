@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon } from '@phosphor-icons/react';
+import { ArrowUpRightIcon, ArrowRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
@@ -112,28 +112,10 @@ const Home = () => {
                                     I'm interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
                                 </p>
                             </div>
-                            <div className="archetype-body-info-left-label flex flex-col items-start justify-start">
-                                <p className="t-highlights">INTERESTS</p>
-                                <div className="archetype-body-info-left-label-list flex flex-row flex-wrap items-start justify-start">
-                                    {[
-                                        "Books",
-                                        "Photography",
-                                        "Poetry",
-                                        "Art",
-                                        "Music",
-                                        "Nature",
-                                        "Mentoring",
-                                        "Black & White",
-                                    ].map((item) => (
-                                        <span
-                                            key={item}
-                                            className="archetype-body-info-left-label-list-item t-copy-small"
-                                        >
-                                            {item}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
+                            <Button target={''} hierarchy={'tertiary'} type={'link'} link={'about'}>
+                                <span>Read my brand story</span>
+                                <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
+                            </Button>
                         </div>
 
                         <div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">

@@ -8,6 +8,22 @@ $base-font-size: 16px !default;
 	@return calc($px / $base-font-size) * 1rem;
 }
 
+$desktop-lg-h6: 33.6px;
+$desktop-lg-h5: 40.32px;
+$desktop-lg-h4: 48.38px;
+$desktop-lg-h3: 58.06px;
+$desktop-lg-h2: 69.67px;
+$desktop-lg-h1: 83.6px;
+$desktop-lg-s2: 100.32px;
+$desktop-lg-s1: 120.38px;
+$desktop-lg-s0: 144.46px;
+$desktop-lg-t-copy: 28px;
+$desktop-lg-t-copy-small: 23.33px;
+$desktop-lg-t-caption: 19.44px;
+$desktop-lg-t-highlights: 28px;
+$desktop-lg-t-buttons: 23px;
+$desktop-lg-t-links: 23.33px;
+
 $s0: 103.19px;
 $s1: 85.99px;
 $s2: 71.66px;

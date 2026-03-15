@@ -51,7 +51,8 @@ canvas {
 	background: var(--main-highlight);
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+	/* Code for Firefox */
 	color: var(--main-white);
 	background: var(--main-primary);
 }
@@ -61,36 +62,39 @@ canvas {
 	background: var(--main-primary);
 }
 
-#root, html, body {
+html,
+body {
 	font-size: var(--font-size);
 	font-family: var(--font-family), sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	scroll-behavior: smooth;
 	min-height: 100vh;
-	height: 100%;
+
 	background-color: var(--main-accent);
 	color: var(--main-black);
-	max-width: var(--responsiveness-container-width);
-	width: 100%;
-	margin: 0 auto;
+
 	overflow-x: hidden;
 }
 
-#root{
+#root {
 	background-color: var(--main-white);
 	position: relative;
+
+	max-width: var(--responsiveness-container-width);
+	width: 100%;
+	margin: 0 auto;
 }
 
-.s0{
+.s0 {
 	@include type.s0
 }
 
-.s1{
+.s1 {
 	@include type.s1;
 }
 
-.s2{
+.s2 {
 	@include type.s2;
 }
 
@@ -142,16 +146,16 @@ canvas {
 	@include type.t-links;
 }
 
-.t-error{
+.t-error {
 	color: var(--accents-highlight);
 	font-style: italic;
 }
 
-.t-pending{
+.t-pending {
 	color: var(--accents-primary);
 }
 
-.t-disabled{
+.t-disabled {
 	color: var(--main-dark-grey);
 }
 

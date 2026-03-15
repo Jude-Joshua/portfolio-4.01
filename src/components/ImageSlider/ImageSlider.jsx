@@ -11,11 +11,14 @@ import Sports from '../../assets/images/sports.webp';
 import Outside from '../../assets/images/outside.webp';
 import Speaker from '../../assets/images/speaker.webp';
 
-const slides = [{ image: Pet }, { image: Photography }, { image: Sports }, { image: Outside }, { image: Speaker }];
+const slides = [{ image: Pet, info: "Me letting the cat out of the bag" }, { image: Photography, info: "Me at African Startup Festival 2024" }, { image: Sports, info: "My favourite sports to play is badminton" }, { image: Outside, info: "Me taking a walk under the rain" }, { image: Speaker, info: "Me speaking at a Notion community event" }];
 
 function SlideContent({ slide }) {
 	return (
-		<ImageComponent alt={''} className={'content-image'} src={slide.image} />
+		<>
+			<span className="t-caption content-info flex flex-row justify-center items-center">{slide.info}</span>
+			<ImageComponent alt={''} className={'content-image'} src={slide.image} />
+		</>
 	);
 }
 
