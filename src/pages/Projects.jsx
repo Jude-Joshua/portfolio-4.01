@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Projects() {
 	return (
 		// Projects
@@ -9,7 +11,7 @@ export default function Projects() {
 				</div>
 
 				<div className="border-t border-gray-200">
-					<a href="#" class="group flex flex-col md:flex-row items-start md:items-center justify-between py-12 border-b border-gray-200 transition-colors hover:bg-gray-50/50">
+					<Link to="/projects/1" className="group flex flex-col md:flex-row items-start md:items-center justify-between py-12 border-b border-gray-200 transition-colors hover:bg-gray-50/50">
 						<div className="w-full md:w-1/3 mb-4 md:mb-0">
 							<h4 className="text-xl font-bold text-gray-900">Project Name</h4>
 						</div>
@@ -21,9 +23,9 @@ export default function Projects() {
 						<div className="hidden md:block">
 							<span className="text-2xl text-gray-400 group-hover:text-gray-900 transition-transform group-hover:translate-x-2 inline-block">→</span>
 						</div>
-					</a>
+					</Link>
 
-					<a href="#" className="group flex flex-col md:flex-row items-start md:items-center justify-between py-12 border-b border-gray-200 transition-colors hover:bg-gray-50/50">
+					<Link to="/projects/2" className="group flex flex-col md:flex-row items-start md:items-center justify-between py-12 border-b border-gray-200 transition-colors hover:bg-gray-50/50">
 						<div className="w-full md:w-1/3 mb-4 md:mb-0">
 							<h4 className="text-xl font-bold text-gray-900">Project Name</h4>
 						</div>
@@ -35,7 +37,7 @@ export default function Projects() {
 						<div className="hidden md:block">
 							<span className="text-2xl text-gray-400 group-hover:text-gray-900 transition-transform group-hover:translate-x-2 inline-block">→</span>
 						</div>
-					</a>
+					</Link>
 
 				</div>
 			</div>
