@@ -6,8 +6,13 @@ export default function NavbarLink ({navLinks}) {
 	return(
 		<div className='navbar-links flex flex-row'>
 			{navLinks.map((link, index) => {
-				const isActive = location.pathname === `/${link === 'home' ? '' : link}`;
-				
+				const isActive = link === 'home'
+					? location.pathname === '/'
+					: link === 'projects'
+						? location.pathname === '/projects' || location.pathname.startsWith('/projects/')
+						: location.pathname === `/${link}`;
+
+						
 				return(
 					<Link
 						data-cursor='link'
