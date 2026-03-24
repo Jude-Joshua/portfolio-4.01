@@ -1,5 +1,69 @@
+.casestudy {
+    padding-bottom: var(--padding-lg);
+
+    &-archives {
+        color: var(--main-secondary);
+        font-size: bold;
+        margin: var(--padding-lg);
+    }
+
+    &-header {
+        color: var(--main-black);
+        font-size: bold;
+        margin: 0 auto;
+        line-height: 0.9;
+
+        &-span {
+            color: var(--main-secondary);
+            right: var(--padding-xs);
+        }
+    }
+
+    &-box {
+        background-color: var(--main-light-grey);
+        margin-top: var(--padding-2xl);
+        border-radius: var(--radius-sm);
+        padding: var(--padding-xs);
+
+        &-inner {
+            gap: var(--gap-xxs);
+            width: 100%;
+        }
+    }
+
+    &-grid {
+        gap: var(--gap-md);
+        background-color: var(--main-white);
+        border-radius: var(--radius-sm);
+        padding: var(--padding-md) var(--padding-sm);
+    }
+
+    &-border {
+        border-left: 1px solid var(--main-dark-grey);
+        padding: 0 var(--padding-sm);
+
+        &-none {
+            border-left: none;
+        }
+    }
+
+    &-par {
+        text-transform: uppercase;
+        bottom: var(--padding-xxs);
+        color: var(--main-black);
+        letter-spacing: normal;
+        padding: 0 var(--padding-xl);
+
+        &-1 {
+            color: var(--main-black);
+        }
+    }
+}
+
+
 .context {
     margin-top: var(--padding-md);
+    gap: var(--gap-xxs);
 
     &-header {
         margin-top: var(--padding-sm);
@@ -9,15 +73,12 @@
         background-color: var(--main-light-grey);
         border-radius: var(--radius-xs);
         margin-top: var(--padding-lg);
-        width: 100%;
-        height: 50%;
-        margin-bottom: var(--padding-lg);
+        margin-bottom: var(--padding-2xl);
+        padding: var(--padding-xs);
+
 
         &-extra {
             background-color: var(--main-white);
-            width: 95%;
-            height: 50%;
-            margin: var(--padding-xs) auto;
             border-radius: var(--radius-xs);
             
             &-par {
@@ -30,56 +91,24 @@
             }
         }
     }
-}
 
-.flow {
-        padding:var(--padding-lg);
-
-        &-row {
-            margin-bottom: var(--padding-lg);
-            gap: var(--gap-lg);
-        }
-
-        &-bottom {
-              gap: var(--gap-sm);
-        }
-
-    &-container {
-        padding:var(--padding-xxs) var(--padding-xl);
-        border-radius:  var(--radius-sm);
-        color: var(--main-white);
-    
-    &-start {
-        background: #f4d06f;
-        color: var(--main-black);
-    }
-    &-search {
-        background: #1e73be;
-    }
-    &-screenshot {
-        background: #c47a00;
-    }
-    &-result {
-        background: #1e73be;
-    }
-    &-drop {
-        background: #e53935;
-    }
-}
-
-&-arrow {
-    width: 100px;
-    height: 2px;
-    border-top: 2px dashed var(--main-highlight);
-    position: relative;
-
-
-&::after {
-    content: ">";
-    right: -9px;
-    top: -12px;
-    position: absolute;
-    color: var(--main-highlight);
+    &-diagram {
+    top: var(--padding-lg);
 }
 }
+
+
+.tension {
+     margin-top: var(--padding-md);
+     gap: var(--gap-xxs);
+
+      &-header {
+        margin-top: var(--padding-sm);
+        margin-bottom: var(--padding-xl);
+    }
+
+    &-image {
+        width: 55%;
+        gap: var(--gap-xs);
+    }
 }
