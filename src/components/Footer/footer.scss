@@ -75,4 +75,12 @@
             height: 48px
         }
     }
+
+    &--notfound{
+        & .footer{
+            &-top{
+                display: none;
+            }
+        }
+    }
 }

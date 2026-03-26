@@ -1,6 +1,8 @@
-import { EnvelopeOpenIcon } from '@phosphor-icons/react';
+import { useMemo } from "react";
 
 import "./footer.scss";
+
+import { EnvelopeOpenIcon } from '@phosphor-icons/react';
 
 import Spacer from '../../assets/images/copyright-spacer.svg?react';
 import ArrowMoveDown from '../../assets/images/arrow-move.svg?react';
@@ -10,10 +12,14 @@ import Marker from '../../assets/images/marker-2.svg?react';
 import Url from "../Links/Link.jsx";
 import Button from "../Button/Button.jsx";
 
-export default function Footer() {
+export default function Footer({ variant = "default" }) {
+    const footerClass = useMemo(() => {
+        if (variant === "notfound") return "footer footer--notfound";
+        return "footer";
+    }, [variant]);
 
     return (
-        <footer className="footer relative flex flex-col items-start justify-center">
+        <footer className={footerClass + " relative flex flex-col items-start justify-center"}>
             <div className='footer-top flex flex-col items-center justify-center'>
                 <div className='footer-top-title flex flex-col items-center justify-center'>
                     <h2 className="h2">

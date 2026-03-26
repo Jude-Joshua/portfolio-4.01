@@ -1,34 +1,31 @@
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import Layout from "./components/Layout/Layout.jsx";
 
 import Home from './pages/Home.jsx';
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import CaseStudy from "./pages/Casestudy.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
-import {BodyClass} from "./hooks/bodyClass.jsx";
+import { BodyClass } from "./hooks/bodyClass.jsx";
 import ScrollToTop from "./hooks/ScrollToTop.jsx";
 
 
 function App() {
     BodyClass()
-    
+
     return (
         <>
             <ScrollToTop />
-            
-            <Navbar/>
-            
+
             <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/about" element={<About/>}/>
-                <Route path="/projects" element={<Projects/>}/>
-                <Route path="/projects/:id" element={<CaseStudy />} />
+                <Route path="/" element={<Layout><Home /></Layout>} />
+                <Route path="/about" element={<Layout><About /></Layout>} />
+                <Route path="/projects" element={<Layout><Projects /></Layout>} />
+                <Route path="/projects/:id" element={<Layout><CaseStudy /></Layout>} />
+                <Route path="*" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NotFound /></Layout>} />
             </Routes>
-            
-            <Footer/>
         </>
     );
 }

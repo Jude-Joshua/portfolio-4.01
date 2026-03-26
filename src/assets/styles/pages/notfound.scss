@@ -1,0 +1,44 @@
+.notfound {
+    & .hero {
+        &-title {
+            width: 60%;
+
+            & p {
+                & svg {
+                    position: absolute;
+                    right: 9.8%;
+                    top: 62%;
+                    width: 44%;
+                }
+            }
+        }
+    }
+
+    & .links {
+        gap: var(--gap-xl);
+
+        & .linkcard {
+            transition: 0.6s;
+
+            &:nth-child(1) {
+                transform: rotate(-4.96deg);
+            }
+
+            &:nth-child(2) {
+                transform: rotate(7.75deg);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-3.81deg);
+            }
+
+            &:hover {
+                transform: rotate(0);
+
+                & a {
+                    color: var(--main-complimentary) !important;
+                }
+            }
+        }
+    }
+}

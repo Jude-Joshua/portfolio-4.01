@@ -20,7 +20,7 @@ const Home = () => {
 
             <section className="hero flex flex-col justify-center items-center">
                 <article className="hero-title flex flex-col items-center justify-center">
-                    <div className="hero-title-role flex flex-row justify-center align-center">
+                    <div className="hero-title-role flex flex-row justify-center items-center">
                         <p className="t-caption text-center text-secondary">Digital designer</p>
                         <p className="t-caption text-center text-secondary">(person, noun)</p>
                     </div>
@@ -71,7 +71,7 @@ const Home = () => {
 
             <section className="projects w-full flex flex-col" id='projects'>
                 <article className="projects-inner flex flex-col items-center w-full">
-                    <ProjectCard />
+                    <ProjectCard variant={'long'}/>
                 </article>
             </section>
 
