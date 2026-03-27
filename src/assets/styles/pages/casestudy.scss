@@ -156,6 +156,8 @@
                         gap: var(--gap-md);
 
                         &-inner {
+                            gap: var(--gap-xxs);
+
                             & .t-highlights {
                                 color: var(--main-primary);
                             }

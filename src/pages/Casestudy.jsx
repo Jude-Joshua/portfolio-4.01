@@ -151,7 +151,7 @@ export default function CaseStudy() {
 							>
 								<div className="persona-hero flex items-center">
 									<ImageComponent
-										src={`../src/assets/images/fmta/${person.meta.avatar}`}
+										src={`/assets/images/fmta/${person.meta.avatar}`}
 										alt={person.meta.name}
 										className="persona-hero-image"
 									/>
