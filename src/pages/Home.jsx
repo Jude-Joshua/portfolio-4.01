@@ -60,7 +60,7 @@ const Home = () => {
                                 </p>
                             </div>
                             <Button target={''} hierarchy={'tertiary'} type={'link'} link={'#projects'}>
-                                <span>See sample work</span>
+                                <span>See featured work</span>
                                 <ArrowDownIcon weight={'bold'} fontSize={'24'} />
                             </Button>
                         </div>

@@ -3,6 +3,19 @@
     &-section {
         &-title {
             gap: var(--gap-xxs);
+            width: 72%;
+
+            & .t-highlights {
+                gap: var(--gap-xxs);
+
+                & svg {
+                    width: 20px;
+                }
+            }
+        }
+
+        &-info {
+            width: 80%;
         }
     }
 
@@ -82,13 +95,11 @@
 
     }
 
-    .context {
-
+    & .context {
         &-info {
             background-color: var(--main-light-grey);
             border-radius: var(--radius-md);
             padding: var(--padding-xs);
-            width: 80%;
 
 
             &-inner {
@@ -99,11 +110,62 @@
             }
 
         }
+    }
 
-        &-diagram {
-            top: var(--padding-lg);
+    & .tension {
+        &-info {
+            width: 100%;
+
+            &-inner {
+                gap: var(--gap-xs);
+
+                & .persona {
+                    width: 44%;
+                    background-color: var(--main-light-grey);
+                    padding: var(--padding-lg);
+                    border-radius: var(--radius-md);
+                    gap: var(--gap-xl);
+
+                    &-hero {
+                        gap: var(--gap-xs);
+
+                        &-image {
+                            width: 100px;
+                            height: 100px;
+                            border-radius: var(--radius-xl);
+                            overflow: hidden;
+                        }
+
+                        &-data {
+                            gap: var(--gap-xxs);
+
+                            & .taglabel {
+                                padding: var(--padding-xxs) var(--padding-xs);
+                                display: inline;
+                                width: fit-content;
+                                border-radius: var(--radius-xs);
+                            }
+
+                            & .namer {
+                                gap: var(--gap-xxs);
+                            }
+                        }
+                    }
+
+                    &-bio {
+                        gap: var(--gap-md);
+
+                        &-inner {
+                            & .t-highlights {
+                                color: var(--main-primary);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
+
 }
 
 

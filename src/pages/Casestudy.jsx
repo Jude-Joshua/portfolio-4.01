@@ -2,19 +2,54 @@ import { ArrowLeftIcon, X } from "@phosphor-icons/react"
 
 import Button from "../components/Button/Button.jsx";
 
+import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import HmwMarker from '../assets/images/hmw-marker.svg?react';
 import RoleIconEm from '../assets/images/role.svg?react';
 import ScopeIconEm from '../assets/images/scope.svg?react';
 import FocusIconEm from '../assets/images/focus.svg?react';
 import ContextIconEm from '../assets/images/context.svg?react';
+import TensionIconEm from '../assets/images/tension.svg?react';
 
 import caseStudyImage from '../assets/images/fmta-screen.webp';
+import diagramImage from '../assets/images/diagram.png';
 
-import imageOkafor from '../assets/images/Okafor.png';
-import imageSarah from '../assets/images/Sarah.png';
-import crossImage from '../assets/images/wrong.png';
-import diagramImage from '../assets/images/diagram.png'
-import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
+
+const personas = [
+	{
+		id: 1,
+		meta: {
+			role: "Sample Doctor",
+			name: "Dr. Ibrahim Okafor",
+			age: 45,
+			avatar: "persona-doctor.png",
+			tagStyle: {
+				bg: "bg-blue-100",
+				text: "text-blue-600"
+			}
+		},
+		content: {
+			bio: "Dr. Ibrahim runs a busy neighborhood clinic. He treats between 30–40 patients daily and is responsible for ensuring the clinic always has the medical supplies needed for treatment.",
+			quote: "When I’m ordering supplies, I don’t want to browse. I want to find what I need and complete the order immediately."
+		}
+	},
+	{
+		id: 2,
+		meta: {
+			role: "Sample Buyer",
+			name: "Sarah Adeyemi",
+			age: 32,
+			avatar: "persona-buyer.png",
+			tagStyle: {
+				bg: "bg-orange-100",
+				text: "text-orange-600"
+			}
+		},
+		content: {
+			bio: "Sarah occasionally buys medical supplies for personal use and for family members. She is not a medical professional, so she relies heavily on product descriptions and platform guidance when choosing the right items.",
+			quote: "I need to understand what I’m buying before I add it to my cart."
+		}
+	}
+];
 
 
 export default function CaseStudy() {
@@ -75,48 +110,87 @@ export default function CaseStudy() {
 					<h3 className="h3">Users are not buying from the website.</h3>
 				</article>
 
-				<article className="context-info flex flex-col items-center justify-center">
+				<article className="context-info casestudy-section-info flex flex-col items-center justify-center">
 					<div className="context-info-inner flex flex-col items-start justify-start">
 						<p className="t-copy"> FirstMedtrade is an online marketplace connecting healthcare providers and individuals to verified medical supplies. The platform offered a wide catalogue of products, but the buying experience did not match the urgency and precision required in healthcare procurement.</p>
 
-						<p className="t-copy">I was responsible for rethinking the product experience from discovery to checkout,<b> with the goal of understanding why users were not buying from the platform.</b>
+						<p className="t-copy">I was responsible for rethinking the product experience from discovery to checkout, with <b>the goal of reducing user drop-off rates at checkout.</b>
 						</p>
 					</div>
 				</article>
-
-				{/*Diagram*/}
-				<div className="context-header max-w-3xl text-center leading-tight">
-					<h3 className="h4 font-bold">The users pattern after monitoring the website for a month was something like this:</h3>
-				</div>
-
-				<div className="context-diagram">
-					<img src={diagramImage} alt="image" />
-				</div>
-
 			</section>
 
-			{/*Tension section*/}
-			<section className="tension flex flex-col justify-center items-center">
-				<article className="w-full max-w-3xl">
-					<div className="tension flex justify-center items-center ">
-						<h6 className="h6">TENSION</h6>
-						<img src={crossImage} alt="Wrong" className="w-5 h-5" />
+			<section className="monitor flex flex-col casestudy-section items-center justify-center">
+				<article className="monitor-title casestudy-section-title flex flex-col items-center justify-center text-center">
+					<h3 className="h3">The user pattern after monitoring the website for a month looked like this:</h3>
+				</article>
+
+				<article className="monitor-info  casestudy-section-info">
+					<div className="monitor-info-inner flex flex-col items-start justify-start">
+						<ImageComponent src={diagramImage} alt={"monitor-image"} />
 					</div>
-
-					<div className="tension-header max-w-3xl text-center leading-tight">
-						<h3 className="h4 font-bold">Buyers operate under pressure.They do not browse casually.
-							They browse with intent.
-						</h3>
-					</div>
-
-					<div className="tension-image flex">
-						<img src={imageOkafor} alt="okafor" />
-						<img src={imageSarah} alt="sarah" />
-					</div>
-
-
 				</article>
 			</section>
+
+			<section className="">
+				<article className="divider"/>
+			</section>
+
+			<section className="tension flex flex-col casestudy-section items-center justify-center">
+				<article className="tension-title casestudy-section-title flex flex-col items-center justify-center text-center">
+					<p className="t-highlights flex flex-row justify-center items-center">TENSION <TensionIconEm /> </p>
+					<h3 className="h3">Buyers on the platform are under pressure. They do not browse for products casually.</h3>
+				</article>
+
+				<article className="tension-info casestudy-section-info flex flex-col items-center justify-center">
+					<div className="tension-info-inner flex items-center justify-center">
+						{personas.map((person) => (
+							<div
+								key={person.id}
+								className="persona flex flex-col items-start justify-start"
+							>
+								<div className="persona-hero flex items-center">
+									<ImageComponent
+										src={`../src/assets/images/fmta/${person.meta.avatar}`}
+										alt={person.meta.name}
+										className="persona-hero-image"
+									/>
+
+									<div className="persona-hero-data flex flex-col">
+										<span className={`t-caption taglabel ${person.meta.tagStyle.bg}`}>
+											{person.meta.role}
+										</span>
+
+										<h6 className="h6 namer flex items-center justify-start">
+											{person.meta.name}
+											<span className="t-highlights">
+												({person.meta.age}yrs)
+											</span>
+										</h6>
+									</div>
+								</div>
+								<div className="persona-bio flex flex-col items-start justify-start">
+									<div className="persona-bio-inner flex flex-col items-start justify-start">
+										<p className="t-highlights">BIO</p>
+										<p className="t-copy">
+											{person.content.bio}
+										</p>
+									</div>
+
+									<div className="persona-bio-inner flex flex-col items-start justify-start">
+										<p className="t-highlights">QUOTE</p>
+										<p className="t-copy">
+											{person.content.quote}
+										</p>
+									</div>
+								</div>
+							</div>
+						))}
+					</div>
+				</article>
+			</section>
+
+
 
 		</main>
 	)
