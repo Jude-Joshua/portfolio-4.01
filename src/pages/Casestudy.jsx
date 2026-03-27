@@ -23,8 +23,7 @@ const personas = [
 			age: 45,
 			avatar: "persona-doctor.png",
 			tagStyle: {
-				bg: "bg-blue-100",
-				text: "text-blue-600"
+				backgroundColor: "#c2ddf2"
 			}
 		},
 		content: {
@@ -40,8 +39,7 @@ const personas = [
 			age: 32,
 			avatar: "persona-buyer.png",
 			tagStyle: {
-				bg: "bg-orange-100",
-				text: "text-orange-600"
+				backgroundColor: "#f4beaf"
 			}
 		},
 		content: {
@@ -157,7 +155,7 @@ export default function CaseStudy() {
 									/>
 
 									<div className="persona-hero-data flex flex-col">
-										<span className={`t-caption taglabel ${person.meta.tagStyle.bg}`}>
+										<span style={person.meta.tagStyle} className={`t-caption taglabel`}>
 											{person.meta.role}
 										</span>
 
