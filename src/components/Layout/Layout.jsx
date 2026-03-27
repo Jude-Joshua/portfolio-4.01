@@ -5,7 +5,7 @@ export default function Layout({ navbarVariant = "default", footerVariant = "def
     return (
         <>
             <Navbar variant={navbarVariant} />
-            <main>{children}</main>
+            {children}
             <Footer variant={footerVariant}/>
         </>
     );

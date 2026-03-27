@@ -1,11 +1,11 @@
 .footer {
     overflow: hidden;
-    padding: var(--padding-2xl) var(--padding-2xl) var(--padding-md);
-    gap: var(--gap-lg);
+    padding: var(--padding-5xl) var(--padding-2xl) var(--padding-md);
+    gap: var(--gap-md);
 
     &-top {
         width: 100%;
-        gap: var(--gap-lg);
+        gap: var(--gap-md);
 
         &-title {
             gap: var(--gap-xs);

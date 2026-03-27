@@ -31,47 +31,46 @@ const Home = () => {
                             <span className={'calendar'} data-cursor='hover'><CalendarDotsIcon /></span>
                         </span>roadmap goals for teams and founders.</h1>
                 </article>
-            </section>
-
-            <section className="hello flex flex-row-reverse justify-center items-center">
-                <article
-                    className="hello-showcase flex flex-col justify-center items-center"
-                    data-cursor='none'
-                >
-                    <div className="hello-showcase-image">
-                        <ImageComponent src={ShowImage} className={''} alt={'A playground design I made in 2024 to show what a digital card-holder would look like.'} />
-                    </div>
-                </article>
-                <article className="hello-card flex flex-col items-start justify-start">
-                    <div className={'hello-card-title flex flex-row justify-between items-center w-full'}>
-                        <div className={'hello-card-title-content flex flex-row'}>
-                            <p className="t-highlights">HELLO</p>
-                            <HelloImage />
+                <article className="hello flex flex-row-reverse justify-center items-center">
+                    <article
+                        className="hello-showcase flex flex-col justify-center items-center"
+                        data-cursor='none'
+                    >
+                        <div className="hello-showcase-image">
+                            <ImageComponent src={ShowImage} className={''} alt={'A playground design I made in 2024 to show what a digital card-holder would look like.'} />
                         </div>
-                        <ImageComponent src={ProfileImage} className={'hello-card-title-image'} alt={''} />
-                    </div>
-                    <div className={'hello-card-content flex flex-col items-start justify-start'}>
-                        <div className={'hello-card-content-text flex flex-col items-start justify-start'}>
-                            <p className="t-copy">
-                                I am a digital designer with over a decade of experience collaboarting with content and design teams, and start up founders,
-                                to deliver clear, scalable, digital experiences.
-                            </p>
-                            <p className="t-copy">
-                                From product interfaces to brand and web platforms, I work closely with teams to connect user needs, content strategy, and design execution
-                                in ways that support long-term growth.
-                            </p>
+                    </article>
+                    <article className="hello-card flex flex-col items-start justify-start">
+                        <div className={'hello-card-title flex flex-row justify-between items-center w-full'}>
+                            <div className={'hello-card-title-content flex flex-row'}>
+                                <p className="t-highlights">HELLO</p>
+                                <HelloImage />
+                            </div>
+                            <ImageComponent src={ProfileImage} className={'hello-card-title-image'} alt={''} />
                         </div>
-                        <Button target={''} hierarchy={'tertiary'} type={'link'} link={'#projects'}>
-                            <span>See sample work</span>
-                            <ArrowDownIcon weight={'bold'} fontSize={'24'} />
-                        </Button>
-                    </div>
+                        <div className={'hello-card-content flex flex-col items-start justify-start'}>
+                            <div className={'hello-card-content-text flex flex-col items-start justify-start'}>
+                                <p className="t-copy">
+                                    I am a digital designer with over a decade of experience collaboarting with content and design teams, and start up founders,
+                                    to deliver clear, scalable, digital experiences.
+                                </p>
+                                <p className="t-copy">
+                                    From product interfaces to brand and web platforms, I work closely with teams to connect user needs, content strategy, and design execution
+                                    in ways that support long-term growth.
+                                </p>
+                            </div>
+                            <Button target={''} hierarchy={'tertiary'} type={'link'} link={'#projects'}>
+                                <span>See sample work</span>
+                                <ArrowDownIcon weight={'bold'} fontSize={'24'} />
+                            </Button>
+                        </div>
+                    </article>
                 </article>
             </section>
 
             <section className="projects w-full flex flex-col" id='projects'>
                 <article className="projects-inner flex flex-col items-center w-full">
-                    <ProjectCard variant={'long'}/>
+                    <ProjectCard variant={'long'} />
                 </article>
             </section>
 

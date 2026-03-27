@@ -13,11 +13,11 @@ const ProjectCard = ( { variant } ) => {
     switch (variant) {
         case 'long':
             return (
-                <div className="project long grid grid-cols-4 justify-start items-center">
-                    <div className="project-image col-span-2">
+                <div className="project long grid grid-cols-8 justify-start items-center">
+                    <div className="project-image col-span-5">
                         <ImageComponent src={SampleImage} className={''} alt={'sample project image'} />
                     </div>
-                    <div className="project-details col-span-2 flex flex-col justify-center">
+                    <div className="project-details col-span-3 flex flex-col justify-center">
                         <div className="project-details-labels flex flex-row">
                             <span className="t-caption">UI/UX</span>
                         </div>
