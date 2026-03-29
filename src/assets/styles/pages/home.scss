@@ -1,5 +1,5 @@
 .hero {
-	padding-bottom: var(--padding-lg);
+	gap: var(--gap-2xl);
 
 	&-title {
 		width: 80%;
@@ -67,7 +67,7 @@
 						top: 4px;
 						left: -2px;
 					}
-					
+
 					&.clock {
 						top: -16px;
 					}
@@ -166,8 +166,6 @@
 }
 
 .projects {
-	gap: var(--padding-lg);
-
 	&-inner {
 		gap: var(--padding-md);
 
@@ -243,8 +241,6 @@
 }
 
 .archetype {
-	gap: var(--gap-xl);
-
 	&-title {
 		width: 64%;
 		gap: var(--gap-xxs);
@@ -306,11 +302,6 @@
 				& .t-highlights {
 					text-transform: unset;
 				}
-			}
-
-			& .divider {
-				height: 80px;
-				width: var(--border);
 			}
 		}
 	}

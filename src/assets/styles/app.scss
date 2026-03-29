@@ -6,6 +6,7 @@
 
 @use "pages/home";
 @use "pages/casestudy";
+@use "pages/notfound";
 
 @use "global";
 
@@ -35,21 +36,21 @@ canvas {
 }
 
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 10px;
 	height: 0;
 }
 
 ::-webkit-scrollbar-track {
-	background: var(--main-light-grey);
+	background: var(--main-dark-grey);
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--main-primary);
+	background: var(--main-highlight);
 	border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--main-highlight);
+	background: var(--main-complimentary);
 }
 
 ::-moz-selection {
@@ -161,7 +162,12 @@ body {
 }
 
 .divider {
-	background-color: var(--main-black);
+	background-color: var(--border-color);
 	height: var(--border);
 	border-radius: var(--radius-lg);
+
+	&.vertical {
+		height: 80px;
+		width: var(--border);
+	}
 }

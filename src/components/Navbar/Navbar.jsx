@@ -1,17 +1,22 @@
-import NavbarLink from "./NavbarLink.jsx";
+import { useMemo } from "react";
 
-import Url from "../Links/Link.jsx";
 import "./navbar.scss";
+
+import NavbarLink from "./NavbarLink.jsx";
+import Url from "../Links/Link.jsx";
 
 import Logo from "../../assets/images/logo.svg?react";
 
 const Links = ["home", "projects", "mentoring", "speaking"];
 
-export default function Navbar() {
-	
+export default function Navbar({ variant = "default" }) {
+	const navClass = useMemo(() => {
+		if (variant === "notfound") return "navbar navbar--notfound";
+		return "navbar";
+	}, [variant]);
+
 	return (
-	
-		<nav className="navbar flex flex-row justify-between align-center">
+		<nav className={navClass + " flex flex-row justify-between align-center"}>
 			<div className="navbar-logo">
 				<Logo />
 			</div>

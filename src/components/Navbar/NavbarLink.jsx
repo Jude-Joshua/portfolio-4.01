@@ -4,7 +4,7 @@ export default function NavbarLink ({navLinks}) {
 	const location = useLocation();
 	
 	return(
-		<div className='navbar-links flex flex-row'>
+		<div className='navbar-links-list flex flex-row'>
 			{navLinks.map((link, index) => {
 				const isActive = link === 'home'
 					? location.pathname === '/'

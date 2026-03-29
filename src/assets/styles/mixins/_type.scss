@@ -110,7 +110,7 @@
 }
 
 @mixin h3 {
-	font-weight: var(--font-weight-semi-headings);
+	font-weight: var(--font-weight-headings);
 	line-height: 150%;
 	font-size: fs.rem(fs.$h3);
 

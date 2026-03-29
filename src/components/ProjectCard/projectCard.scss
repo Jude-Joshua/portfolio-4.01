@@ -2,29 +2,27 @@
 @use "../../assets/styles/tokens/colors";
 @use "../../assets/styles/mixins/spacings" as *;
 
-.project{
-    gap: var(--gap-xs);
+.project {
 
-    &-image{
-        border-radius: var(--radius-md);
+    &-image {
+        border-radius: var(--radius-sm);
         overflow: hidden;
         height: 100%;
 
-        & img{
+        & img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: 50% 50%;
+            transition: 0.6s;
         }
     }
 
-    &-details{
-        background-color: var(--main-light-grey);
-        padding: var(--padding-lg) var(--padding-lg);
-        border-radius: var(--radius-md);
+    &-details {
+        padding: var(--padding-xs) 0;
         gap: var(--gap-4xl);
 
-        &-labels{
+        &-labels {
             gap: var(--gap-xxs);
 
             & span {
@@ -34,17 +32,35 @@
                 display: inline-block;
                 width: fit-content;
 
-                &:last-child{
+                &:last-child {
                     background-color: var(--lights-accents-primary);
                 }
             }
         }
 
-        &-text{
+        &-text {
             gap: var(--gap-md);
 
-            &-holder{
+            &-holder {
                 gap: var(--gap-xxs);
+            }
+        }
+    }
+
+    &.long {
+        gap: var(--gap-md);
+        background-color: var(--main-light-grey);
+        border-radius: var(--radius-md);
+        @include p(var(--padding-xs), var(--padding-lg), var(--padding-xs), var(--padding-xs));
+
+        &:hover {
+            & .project {
+                &-image {
+                    & img {
+                        object-position: -30% 0%;
+                        transform: scale(1.05);
+                    }
+                }
             }
         }
     }

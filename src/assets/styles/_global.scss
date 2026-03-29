@@ -1,8 +1,15 @@
 main{
 	background-color: var(--main-white);
+	gap: var(--gap-4xl);
+	padding-top: var(--padding-3xl);
 
 	section{
-		padding: var(--padding-2xl);
+		padding: 0 var(--padding-2xl);
+		gap: var(--gap-lg);
 		width: 100%;
+
+		& article{
+			width: 100%;
+		}
 	}
 }

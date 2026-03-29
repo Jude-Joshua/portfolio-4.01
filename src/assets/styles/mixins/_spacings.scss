@@ -8,6 +8,10 @@
 	padding-bottom: $value;
 }
 
-@mixin p($x, $y: $x) {
-	padding: $y $x;
+@mixin pxy($vertical, $horizontal) {
+	padding: $vertical $horizontal;
+}
+
+@mixin p($top, $right, $bottom, $left) {
+	padding: $top $right $bottom $left;
 }

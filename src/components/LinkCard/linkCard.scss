@@ -1,0 +1,33 @@
+.linkcard {
+    width: 272px;
+    height: 272px;
+    border-radius: var(--radius-md);
+    padding: var(--padding-sm);
+    color: var(--main-white);
+    gap: var(--gap-xxs);
+    overflow: hidden;
+    box-shadow: 8px 15px 16px var(--bx-shadows);
+
+    &-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: var(--overlay-black-bold);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    & a {
+        color: var(--main-highlight) !important;
+    }
+}

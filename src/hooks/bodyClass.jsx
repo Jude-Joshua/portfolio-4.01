@@ -9,7 +9,7 @@ export function BodyClass() {
 		document.body.className = "";
 		
 		// Get the current path and convert to a class-friendly string
-		let routeClass = location.pathname === "/" ? "home" : location.pathname.startsWith("/projects/") ? "caseStudy" : location.pathname.slice(1);
+		let routeClass = location.pathname === "/" ? "home" : location.pathname.startsWith("/projects/") ? "casestudy" : location.pathname.slice(1);
 		
 		document.body.classList.add(routeClass);
 		
