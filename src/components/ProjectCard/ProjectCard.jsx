@@ -40,6 +40,11 @@ const ProjectCard = ( { variant } ) => {
                 </div>
             );
 
+        case 'playful':
+            return (
+                'This is where the playful card section will show up.'
+            );
+
         default:
             return null;
     }
