@@ -68,10 +68,10 @@ const Home = () => {
                 </article>
             </section>
 
-            <section>
-                <article className="projects flex  items-start justify-start" id={'projects'}>
-                    <ProjectCard />
-                    </article>
+            <section className="projects w-full flex flex-col" id='projects'>
+                <article className="projects-inner flex flex-col items-center w-full">
+                    <ProjectCard variant={'long'} />
+                </article>
             </section>
 
             <section className="philosophy flex items-center justify-center">
