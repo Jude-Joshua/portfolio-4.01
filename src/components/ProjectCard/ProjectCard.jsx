@@ -8,7 +8,7 @@ import ImageComponent from "../ImageComponent/ImageComponent.jsx";
 import Button from "../Button/Button.jsx";
 
 
-const ProjectCard = ( { variant } ) => {
+const ProjectCard = ( { variant, theme } ) => {
 
     switch (variant) {
         case 'long':
@@ -42,7 +42,29 @@ const ProjectCard = ( { variant } ) => {
 
         case 'playful':
             return (
-                'This is where the playful card section will show up.'
+                <div className={`project playful ${theme}`}>
+                    <div className='project-top-shape'></div>
+                        {/* shape 1*/}
+                        <div className='project-box-1'>
+                            <p className='t-caption'>UI/UX</p>
+                        </div>
+                        {/* details */}
+                        <div className='project-content'>
+                            <h6 className='h6 '>Redesigning a unified B2B and B2C web app for healthcare providers and seekers.</h6>
+                        </div>
+                        {/* shape 2 */}
+                        <div className='project-box-2  '>
+                            <p className='t-copy-small '>How might we reduce cognitive load and make ordering medical supplies feel immediate, controlled, and trustworthy?</p>
+                        </div>
+
+                </div>
+
+                
+                
+                        
+                    
+                
+
             );
 
         default:
