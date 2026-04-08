@@ -52,9 +52,11 @@ const ProjectCard = ({ variant, theme }) => {
                             <p className='t-caption'>UI/UX</p>
                         </div>
                         <div className="project-card-details flex flex-col items-start justify-start">
-                            <h6 className="h6">
-                                Redesigning a unified B2B and B2C web app for healthcare providers and seekers.
-                            </h6>
+                            <div className='project-card-details-title'>
+                                <h6 className="h6">
+                                    Redesigning a unified B2B and B2C web app for healthcare providers and seekers.
+                                </h6>
+                            </div>
                             <div className='project-card-details-hmw'>
                                 <p className="t-copy-small">
                                     How might we reduce cognitive load and make ordering medical supplies feel immediate, controlled, and trustworthy?

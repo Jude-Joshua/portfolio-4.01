@@ -166,6 +166,8 @@
 }
 
 .projects {
+	z-index: 3;
+
 	&-inner {
 		gap: var(--padding-sm);
 
@@ -304,5 +306,11 @@
 				}
 			}
 		}
+	}
+}
+
+.home {
+	& .hero {
+		padding-bottom: var(--padding-lg);
 	}
 }

@@ -20,6 +20,7 @@
 				z-index: 2;
 				max-width: 70%;
 				border-radius: var(--radius-md);
+				display: none;
 
 				& svg{
 					color: var(--main-dark-grey);
@@ -59,11 +60,11 @@
 			top: unset;
 			bottom: 3%;
 			z-index: 5;
-			background-color: var(--overlay-white);
-			padding: var(--padding-xs);
+			// background-color: var(--overlay-white);
+			// padding: var(--padding-xs);
 			border-radius: var(--radius-md);
 			align-self: center;
-			backdrop-filter: blur(4px);
+			// backdrop-filter: blur(4px);
 
 			&-icon {
 				padding: var(--padding-xs);
@@ -93,7 +94,7 @@
 				&:has(+ .pagination-icon.active) {
 					border-top-right-radius: var(--radius-lg);
 					border-bottom-right-radius: var(--radius-lg);
-					margin-right: var(--gap-xs);
+					margin-right: var(--gap-xxs);
 				}
 
 				&:last-child {
@@ -113,7 +114,7 @@
 					&+* {
 						border-top-left-radius: var(--radius-lg);
 						border-bottom-left-radius: var(--radius-lg);
-						margin-left: var(--gap-xs);
+						margin-left: var(--gap-xxs);
 					}
 				}
 			}

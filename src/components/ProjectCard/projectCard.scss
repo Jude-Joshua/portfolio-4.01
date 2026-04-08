@@ -71,7 +71,7 @@
                 position: absolute;
                 top: 20px;
                 left: 50%;
-                transition: 0.4s ease;
+                transition: 0.6s ease-in-out;
                 width: 90%;
                 height: auto;
                 transform: translateX(-50%);
@@ -86,7 +86,7 @@
                 gap: var(--gap-xl);
                 padding-top: var(--padding-xl);
                 clip-path: path("M0,40 Q0, 0 40, 0 L80, 0 Q100, 0 112, 40 Q8, 6 116, 40 L270, 40 Q280, 40 290, 20 Q300, 0 320, 0 L440, 0 Q480, 0 480, 40 L480, 560 Q480, 560 0, 560 Z");
-                transition: 0.4s ease;
+                transition: 0.6s ease-in-out;
                 top: 0;
 
                 &.blue {
@@ -102,7 +102,7 @@
                 }
 
                 &-label {
-                    background-color: var(--main-complimentary);
+                    background-color: var(--lights-main-complimentary);
                     border-radius: var(--radius-xs);
                     padding: var(--padding-xxs) var(--padding-xs);
                     display: inline;
@@ -111,8 +111,12 @@
                 }
 
                 &-details {
-                    gap: var(--gap-sm);
+                    gap: var(--gap-xs);
                     padding: var(--padding-none);
+
+                    &-title {
+                        padding: 0 var(--padding-xs);
+                    }
 
                     &-hmw {
                         background-color: var(--main-white);
@@ -126,7 +130,7 @@
         &:hover {
             & .project {
                 &-image {
-                    top: -50px;
+                    top: -15%;
                 }
 
                 &-card {
