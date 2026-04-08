@@ -69,13 +69,10 @@ const Home = () => {
             </section>
 
             <section className="projects w-full flex flex-col" id='projects'>
-                <article className="projects-inner flex flex-col items-center w-full">
-                    <ProjectCard variant={'long'} />
-                    <div className="projects-playful grid grid-cols-3 gap-4 justify-start items-start w-full">
+                <article className="projects-inner grid grid-cols-3 justify-start items-start w-full">
                     <ProjectCard variant={'playful'} theme={'blue'} />
                     <ProjectCard variant={'playful'} theme={'beige'} />
                     <ProjectCard variant={'playful'} theme={'green'} />
-                    </div>
                 </article>
             </section>
 

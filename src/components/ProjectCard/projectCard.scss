@@ -66,81 +66,73 @@
     }
 
     &.playful {
-        border-radius: var(--radius-sm);
-        padding: var(--padding-md);
-        position: relative;
+        & .project {
+            &-image {
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                transition: 0.4s ease;
+                width: 90%;
+                height: auto;
+                transform: translateX(-50%);
+                border-radius: var(--radius-sm);
+                overflow: hidden;
+            }
 
-        &::before {
-       content: "";
-       position: absolute;
-       width: 60px;
-       height: 50px;
-       background-color: inherit;
-       border-radius: var(--radius-lg);
-       left: 1px;
-       top: -10px;
-       z-index: 1;
-}
-         &::after {
-         content: "";
-         position: absolute;
-         width: 70px;
-         height: 50px;
-         background-color: inherit;
-         border-radius: var(--radius-lg);
-         right: 1px;
-         top: -10px;
-    }
-    }
+            &-card {
+                border-radius: var(--radius-md);
+                padding: var(--padding-xs);
+                height: 480px;
+                gap: var(--gap-xl);
+                padding-top: var(--padding-xl);
+                clip-path: path("M0,40 Q0, 0 40, 0 L80, 0 Q100, 0 112, 40 Q8, 6 116, 40 L270, 40 Q280, 40 290, 20 Q300, 0 320, 0 L440, 0 Q480, 0 480, 40 L480, 560 Q480, 560 0, 560 Z");
+                transition: 0.4s ease;
+                top: 0;
 
-    &-top-shape {
-       position: absolute;
-       top: 0;
-       left: 50%;
-       transform: translateX(-50%);
-       width: 70%;
-       height: 15px;
-       background: linear-gradient(to left,#dd3406, #c17e03);
-       border-bottom-left-radius: var(--radius-xl);
-       border-bottom-right-radius: var(--radius-xl);
+                &.blue {
+                    background: var(--lights-accents-complimentary);
+                }
 
-       
-}
+                &.beige {
+                    background: var(--lights-accents-primary);
+                }
 
-     &-box-1 {
-        position: absolute;
-        top: 45px;
-        left: 20px;
-        background-color: var(--main-complimentary);
-        border-radius: var(--radius-xs);
-        padding: var(--padding-xxs) var(--padding-xs);
-        color: var(--main-black);
-     }
+                &.green {
+                    background: var(--lights-main-primary);
+                }
 
-     &-content {
-        margin-top: var(--padding-2xl);
-        color: var(--main-black);
-     }
+                &-label {
+                    background-color: var(--main-complimentary);
+                    border-radius: var(--radius-xs);
+                    padding: var(--padding-xxs) var(--padding-xs);
+                    display: inline;
+                    width: fit-content;
+                    flex: 0;
+                }
 
-     &-box-2 {
-        background-color: var(--main-white);
-        border-radius: var(--radius-md);
-        padding: var(--padding-xs);
-        color: var(--main-black);
-        margin: 0 auto;
-        top: var(--padding-sm);
+                &-details {
+                    gap: var(--gap-sm);
+                    padding: var(--padding-none);
 
-     }
+                    &-hmw {
+                        background-color: var(--main-white);
+                        border-radius: var(--radius-sm);
+                        padding: var(--padding-xs);
+                    }
+                }
+            }
+        }
 
-     &.playful.blue {
-        background: var(--lights-accents-complimentary);
-    }
+        &:hover {
+            & .project {
+                &-image {
+                    top: -50px;
+                }
 
-    &.playful.beige {
-        background: var(--lights-accents-primary);
-    }
-
-    &.playful.green {
-        background: var(--lights-main-primary);
+                &-card {
+                    top: 50px;
+                }
+            }
+        }
     }
 }

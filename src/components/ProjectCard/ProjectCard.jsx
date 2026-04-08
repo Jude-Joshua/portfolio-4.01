@@ -6,9 +6,10 @@ import SampleImage from '../../assets/images/fmta-screen.webp'
 
 import ImageComponent from "../ImageComponent/ImageComponent.jsx";
 import Button from "../Button/Button.jsx";
+import Url from '../Links/Link.jsx';
 
 
-const ProjectCard = ( { variant, theme } ) => {
+const ProjectCard = ({ variant, theme }) => {
 
     switch (variant) {
         case 'long':
@@ -42,28 +43,33 @@ const ProjectCard = ( { variant, theme } ) => {
 
         case 'playful':
             return (
-                <div className={`project playful ${theme}`}>
-                    <div className='project-top-shape'></div>
-                        {/* shape 1*/}
-                        <div className='project-box-1'>
+                <Url isNavigationLink={'body-link'} href={'/projects/firstmedtrade'} className={"project playful flex flex-col justify-between"}>
+                    <div className='project-image'>
+                        <ImageComponent src={SampleImage} className={''} alt={'sample project image'} />
+                    </div>
+                    <div className={`project-card flex flex-col justify-between ${theme}`}>
+                        <div className="project-card-label">
                             <p className='t-caption'>UI/UX</p>
                         </div>
-                        {/* details */}
-                        <div className='project-content'>
-                            <h6 className='h6 '>Redesigning a unified B2B and B2C web app for healthcare providers and seekers.</h6>
+                        <div className="project-card-details flex flex-col items-start justify-start">
+                            <h6 className="h6">
+                                Redesigning a unified B2B and B2C web app for healthcare providers and seekers.
+                            </h6>
+                            <div className='project-card-details-hmw'>
+                                <p className="t-copy-small">
+                                    How might we reduce cognitive load and make ordering medical supplies feel immediate, controlled, and trustworthy?
+                                </p>
+                            </div>
                         </div>
-                        {/* shape 2 */}
-                        <div className='project-box-2  '>
-                            <p className='t-copy-small '>How might we reduce cognitive load and make ordering medical supplies feel immediate, controlled, and trustworthy?</p>
-                        </div>
+                    </div>
+                </Url>
 
-                </div>
 
-                
-                
-                        
-                    
-                
+
+
+
+
+
 
             );
 
