@@ -187,3 +187,34 @@
         gap: var(--gap-xs);
     }
 }
+
+.begin {
+    margin-top: var(--padding-md);
+
+    &-title {
+        gap: var(--gap-xxs);
+    
+    &-image {
+        height: 50%;
+        width: 50%;
+    }
+}
+
+    &-box-1 {
+         background-color: var(--lights-accents-secondary);
+        border-radius: var(--radius-sm);
+        padding: var(--padding-md);
+    }
+
+    &-box-2 {
+        background-color: var(--main-dark-grey);
+        border-radius: var(--radius-sm);
+        padding: var(--padding-xxs);
+        width: 70%;
+        margin: var(--padding-xs) 0;
+
+        &-image {
+            border-radius: var(--radius-sm);
+        }
+}
+}

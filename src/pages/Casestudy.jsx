@@ -9,6 +9,9 @@ import ScopeIconEm from '../assets/images/scope.svg?react';
 import FocusIconEm from '../assets/images/focus.svg?react';
 import ContextIconEm from '../assets/images/context.svg?react';
 import TensionIconEm from '../assets/images/tension.svg?react';
+import CopierImage from '../assets/images/copier.png';
+import IdeaImage from '../assets/images/fmt2.png';
+import SolutionImage from '../assets/images/fmt3.png';
 
 import caseStudyImage from '../assets/images/fmta-screen.webp';
 import diagramImage from '../assets/images/diagram.png';
@@ -186,6 +189,44 @@ export default function CaseStudy() {
 						))}
 					</div>
 				</article>
+			</section>
+
+			<section className="">
+				<article className="divider"/>
+			</section>
+
+             
+			{/*begin*/}
+			<section className="begin flex flex-col justify-center items-center">
+				<article className="begin-title justify-start">
+					<h6 className="begin-title flex items-center  h6">BEFORE WE BEGIN
+						<span >
+							<img src={CopierImage} alt="copier-image" className="begin-title-image" />
+						</span>
+					</h6>
+
+					<h5 className="h5">Here is what we already know ...</h5>
+					 </article>
+
+					 <article className="begin-box-1">
+						<h6 className="h6 max-w-2xl">Problem 1: Having an homepage with too much information at once might work 
+							for a normal e-commerce website but it'll fail for these set of  users .
+						</h6>
+						<div className="begin-box-2 justify-start">
+						<img src={IdeaImage} alt="idea-image" className="begin-box-2-image" />
+						</div>
+
+					 </article>
+
+					 <article className="begin-box-1">
+						<h6 className="h6 max-w-2xl">Problem 2: Too many registration points. The registration.
+						</h6>
+						<div className="begin-box-2 justify-start">
+						<img src={SolutionImage} alt="solution-image" className="begin-box-2-image" />
+						</div>
+
+					 </article>
+
 			</section>
 
 
