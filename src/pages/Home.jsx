@@ -1,9 +1,11 @@
-import { ArrowUpRightIcon, ArrowRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon } from '@phosphor-icons/react';
+import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
 import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
+import { projects } from '../components/ProjectCard/ProjectList.jsx';
 import ImageSlider from "../components/ImageSlider/ImageSlider.jsx";
+import DribbbleBadge from '../components/DribbbleBadge/DribbbleBadge.jsx';
 
 import HelloImage from '../assets/images/Greeting.svg?react';
 import Animark from '../assets/images/animark.svg?react';
@@ -70,14 +72,23 @@ const Home = () => {
 
             <section className="projects w-full flex flex-col" id='projects'>
                 <article className="projects-inner grid grid-cols-3 justify-start items-start w-full">
-                    <ProjectCard variant={'playful'} theme={'blue'} />
-                    <ProjectCard variant={'playful'} theme={'beige'} />
-                    <ProjectCard variant={'playful'} theme={'green'} />
+                    {projects.map((project, index) => {
+                        const themes = ['blue', 'beige', 'green'];
+
+                        return (
+                            <ProjectCard
+                                key={index}
+                                variant="playful"
+                                theme={themes[index % themes.length]}
+                                project={project}
+                            />
+                        );
+                    })}
                 </article>
             </section>
 
             <section className="philosophy flex items-center justify-center">
-                <article className='philosophy-card overflow-hidden flex flex-row items-center justify-center'>
+                <article className='philosophy-card overflow-hidden flex flex-col items-center justify-start'>
                     <div className="philosophy-card-glass flex flex-row items-center justify-center">
                         <Animark />
                         <div className="philosophy-card-glass-rect flex flex-row items-center justify-center">
@@ -87,12 +98,17 @@ const Home = () => {
                         </div>
                     </div>
 
+
                     <div className="philosophy-card-data flex flex-col items-start justify-start">
-                        <div className="philosophy-card-data-text flex flex-col items-start justify-start">
-                            <p className="h2">At the heart of every great brand and product is a clear and cohesive identity.</p>
-                            <p className="t-copy">I believe good design is intentional: shaped by purpose, aligned with real goals, and consistent across every touchpoint. Whether working on product, web, or brand-led experiences, my focus is always on creating work that feels meaningful, usable, and grounded in clarity.</p>
+                        <p className="h2">At the heart of every great brand and product is a clear and cohesive identity.</p>
+                        <div className="philosophy-card-data-text flex flex-row items-start justify-start">
+                            <div className='philosophy-card-data-text-block'>
+                                <p className="t-copy">I believe good design is intentional: shaped by purpose, aligned with real goals, and consistent across every touchpoint. Whether working on product, web, or brand-led experiences, my focus is always on creating work that feels meaningful, usable, and grounded in clarity.</p>
+                            </div>
+                            <DribbbleBadge />
                         </div>
                     </div>
+
                 </article>
             </section>
 
