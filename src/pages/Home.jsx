@@ -53,12 +53,10 @@ const Home = () => {
                         <div className={'hello-card-content flex flex-col items-start justify-start'}>
                             <div className={'hello-card-content-text flex flex-col items-start justify-start'}>
                                 <p className="t-copy">
-                                    I am a digital designer with over a decade of experience collaboarting with content and design teams, and start up founders,
-                                    to deliver clear, scalable, digital experiences.
+                                    I am a digital designer with over a decade of experience collaborating with content teams and start up founders to deliver clear, scalable digital experiences.
                                 </p>
                                 <p className="t-copy">
-                                    From product interfaces to brand and web platforms, I work closely with teams to connect user needs, content strategy, and design execution
-                                    in ways that support long-term growth.
+                                    From product interfaces to brand and web platforms, I work closely with teams to align user needs, content strategy, and design execution in ways that support long-term growth.
                                 </p>
                             </div>
                             <Button target={''} hierarchy={'tertiary'} type={'link'} link={'#projects'}>
