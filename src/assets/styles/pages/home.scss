@@ -184,8 +184,9 @@
 .philosophy {
 	&-card {
 		background-color: var(--main-black);
-		padding: var(--padding-4xl) var(--padding-3xl);
+		padding: var(--padding-md);
 		border-radius: var(--radius-lg);
+		gap: var(--gap-lg);
 
 		&-glass {
 			position: absolute;
@@ -195,6 +196,9 @@
 			top: 0;
 			z-index: 1;
 			overflow: hidden;
+
+			align-self: center;
+			justify-self: center;
 
 			& svg {
 				position: absolute;
@@ -223,22 +227,34 @@
 		}
 
 		&-data {
-			gap: var(--gap-4xl);
+			gap: var(--gap-sm);
 			z-index: 2;
+			color: var(--main-white);
 
-			&-title {
-				gap: var(--gap-xxs);
-
-				& .t-highlights {
-					color: var(--main-highlight);
-				}
+			& .h2 {
+				padding: var(--padding-2xl) var(--padding-lg);
+				border: var(--border) solid var(--main-dark-grey);
+				border-radius: var(--radius-md);
 			}
 
 			&-text {
-				gap: var(--gap-lg);
-				color: var(--main-white);
+				gap: var(--gap-sm);
+
+				&-block {
+					padding: var(--padding-lg);
+					border: var(--border) solid var(--main-dark-grey);
+					border-radius: var(--radius-md);
+				}
+
+				&-badge {
+					padding: var(--padding-sm) var(--padding-lg);
+					border: var(--border) solid var(--main-complimentary);
+					border-radius: var(--radius-md);
+				}
 			}
 		}
+
+
 	}
 }
 

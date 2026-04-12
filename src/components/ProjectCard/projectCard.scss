@@ -82,7 +82,7 @@
             &-card {
                 border-radius: var(--radius-md);
                 padding: var(--padding-xs);
-                height: 480px;
+                min-height: 464px;
                 gap: var(--gap-xl);
                 padding-top: var(--padding-xl);
                 clip-path: path("M0,40 Q0, 0 40, 0 L80, 0 Q100, 0 112, 40 Q8, 6 116, 40 L270, 40 Q280, 40 290, 20 Q300, 0 320, 0 L440, 0 Q480, 0 480, 40 L480, 560 Q480, 560 0, 560 Z");
@@ -90,19 +90,19 @@
                 top: 0;
 
                 &.blue {
-                    background: var(--lights-accents-complimentary);
-                }
-
-                &.beige {
                     background: var(--lights-accents-primary);
                 }
 
+                &.beige {
+                    background: var(--lights-accents-complimentary);
+                }
+
                 &.green {
-                    background: var(--lights-main-primary);
+                    background-color: var(--lights-main-primary);
                 }
 
                 &-label {
-                    background-color: var(--lights-main-complimentary);
+                    background-color: var(--main-accent);
                     border-radius: var(--radius-xs);
                     padding: var(--padding-xxs) var(--padding-xs);
                     display: inline;

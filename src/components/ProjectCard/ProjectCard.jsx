@@ -9,7 +9,7 @@ import Button from "../Button/Button.jsx";
 import Url from '../Links/Link.jsx';
 
 
-const ProjectCard = ({ variant, theme }) => {
+const ProjectCard = ({ variant, theme, project }) => {
 
     switch (variant) {
         case 'long':
@@ -43,36 +43,38 @@ const ProjectCard = ({ variant, theme }) => {
 
         case 'playful':
             return (
-                <Url isNavigationLink={'body-link'} href={'/projects/firstmedtrade'} className={"project playful flex flex-col justify-between"}>
-                    <div className='project-image'>
-                        <ImageComponent src={SampleImage} className={''} alt={'sample project image'} />
+                <Url
+                    isNavigationLink="body-link"
+                    href={project.link}
+                    className={`project ${variant} flex flex-col justify-between`}
+                >
+                    <div className="project-image">
+                        <ImageComponent
+                            src={SampleImage}
+                            alt={`${project.title} image`}
+                        />
                     </div>
+
                     <div className={`project-card flex flex-col justify-between ${theme}`}>
                         <div className="project-card-label">
-                            <p className='t-caption'>UI/UX</p>
+                            <p className="t-caption">{project.tag}</p>
                         </div>
+
                         <div className="project-card-details flex flex-col items-start justify-start">
-                            <div className='project-card-details-title'>
+                            <div className="project-card-details-title">
                                 <h6 className="h6">
-                                    Redesigning a unified B2B and B2C web app for healthcare providers and seekers.
+                                    {project.title}
                                 </h6>
                             </div>
-                            <div className='project-card-details-hmw'>
+
+                            <div className="project-card-details-hmw">
                                 <p className="t-copy-small">
-                                    How might we reduce cognitive load and make ordering medical supplies feel immediate, controlled, and trustworthy?
+                                    {project.hmw}
                                 </p>
                             </div>
                         </div>
                     </div>
                 </Url>
-
-
-
-
-
-
-
-
             );
 
         default:

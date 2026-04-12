@@ -62,7 +62,7 @@ export default function CaseStudy() {
 			<section className="hero flex flex-col justify-center items-center">
 				<article className="hero-title flex flex-col items-center justify-center">
 					<div className="hero-title-link flex flex-row justify-center items-center">
-						<Button target={''} hierarchy={'tertiary'} type={'link'} link={'/projects'}>
+						<Button target={''} hierarchy={'tertiary'} type={'link'} link={'/#projects'}>
 							<ArrowLeftIcon weight={'bold'} fontSize={'24'} />
 							<span>Back to projects </span>
 						</Button>
