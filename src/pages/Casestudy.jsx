@@ -10,8 +10,11 @@ import FocusIconEm from '../assets/images/focus.svg?react';
 import ContextIconEm from '../assets/images/context.svg?react';
 import TensionIconEm from '../assets/images/tension.svg?react';
 import CopierImage from '../assets/images/copier.png';
-import IdeaImage from '../assets/images/fmt2.png';
-import SolutionImage from '../assets/images/fmt3.png';
+import IdeaImage from '../assets/images/fmt2.webp';
+import SolutionImage from '../assets/images/fmt3.webp';
+import ArrowPointImage from '../assets/images/arrow-point.png';
+import ConstraintsImage from '../assets/images/constraints.png';
+import BoxImage from '../assets/images/box.png';
 
 import caseStudyImage from '../assets/images/fmta-screen.webp';
 import diagramImage from '../assets/images/diagram.png';
@@ -227,6 +230,95 @@ export default function CaseStudy() {
 
 					 </article>
 
+			</section>
+
+
+               {/*feature*/}
+			<section className="feature flex flex-col justify-center items-center">
+				<article className="feature-box-1 justify-center">
+					<div className=" justify-start">
+						<h6 className="h6 flex items-center feature-box-1-title ">THE GOAL
+						<span> <img src={ArrowPointImage} alt="target-image" className="feature-box-1-image" /></span>
+						</h6> 
+					</div>
+
+						<h5 className="feature-box-1-title-header h5">Simplify the shopping experience so users can easily buy on the 
+							platform.
+						</h5>
+
+						<p className="feature-box-1-par-1 t-copy">
+							Early conversations with stakeholders revealed a share priority. 
+                            The experience needed to become faster for users, but without introducing 
+                            complexity into the system or delaying implementation. Each 
+							stakeholder approached the problem from a differnt angle, raising 
+							practical concerns that shaped the direction of the designs.
+						</p>
+
+				</article>
+
+				<article className=" feature-grid justify-center grid grid-rows-3 ">
+					<div className="flex feature-grid-item">
+						<h6 className="h6">Product Owner</h6>
+                          {/* --- FIRST ---*/}
+						<p className="t-copy">
+							"We need to make ordering faster and more reliable for users, especially for healthcare 
+							providers who depend on this daily. But we cannot risk breaking the existing system."
+						</p>
+
+						<p className="t-copy">
+							"The redesign focused on improving clarity and speed without the current structure, 
+							avoiding changes that would require a full system overhaul."
+						</p>
+					</div>
+                      {/* --- SECOND ---*/}
+					<div className="flex feature-grid-item">
+						<h6 className="h6">Product Manager</h6>
+
+						<p className="t-copy">
+							"How do we reduce friction in the buying experience without increasing operatiional 
+							complexity for the business ? "						</p>
+
+						<p className="t-copy">
+							"Designs decisions had to balance user efficiency with business workflows, ensuring that improvements 
+							remained practical and scalable. "
+						</p>
+					</div>
+					  {/* --- THIRD ---*/}
+					<div className="flex feature-grid-item">
+						<h6 className="h6">Developer</h6>
+
+						<p className="t-copy">
+							"The checkout flow and product structure are already tighly connected to the backend. Major changes will take
+							time and may intoduce risk ."
+						</p>
+
+						<p className="t-copy">
+							"The solution prioritised frontend and interaction improvements, working with existing technical boundaries 
+							instead of restructuring the system ."
+						</p>
+					</div>
+				</article>
+
+				<article className="feature-box-2 justify-center">
+					<div>
+						<h6 className="h6 flex items-center feature-box-1-title">
+							CONSTRAINTS  
+							<span>
+								<img src={BoxImage} alt="constraints-image" className="feature-box-1-image" />
+							</span>
+						</h6>
+					</div>
+
+                    <section className="feature-border " >
+					<article className="divider"/>
+					</section>
+ 
+					<div>
+						<img src={ConstraintsImage} alt="constraints-image" className="" />
+					</div>
+
+
+				</article>
 			</section>
 
 
