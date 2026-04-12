@@ -219,7 +219,7 @@
 }
 }
 
-.feature {
+.goal {
 
     &-box-1{
         background-color: var(--main-light-grey);
@@ -269,4 +269,23 @@
             margin-left: 0;
             padding: 0;
         }
+}
+
+.decision {
+    &-par {
+        max-width: 45rem;
+    }
+
+    &-content {
+        border-top: 1px solid var(--border-color);
+        padding: var(--padding-md);
+
+        &-item {
+            gap: var(--gap-2xl);
+        }
+
+        &-list {
+            list-style: none;
+        }
+    }
 }

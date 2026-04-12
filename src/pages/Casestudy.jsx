@@ -15,6 +15,8 @@ import SolutionImage from '../assets/images/fmt3.webp';
 import ArrowPointImage from '../assets/images/arrow-point.png';
 import ConstraintsImage from '../assets/images/constraints.png';
 import BoxImage from '../assets/images/box.png';
+import DiceImage from '../assets/images/dice.png';
+import PaintImage from '../assets/images/paint.png';
 
 import caseStudyImage from '../assets/images/fmta-screen.webp';
 import diagramImage from '../assets/images/diagram.png';
@@ -233,20 +235,20 @@ export default function CaseStudy() {
 			</section>
 
 
-               {/*feature*/}
-			<section className="feature flex flex-col justify-center items-center">
-				<article className="feature-box-1 justify-center">
+               {/*goal*/}
+			<section className="goal flex flex-col justify-center items-center">
+				<article className="goal-box-1 justify-center">
 					<div className=" justify-start">
-						<h6 className="h6 flex items-center feature-box-1-title ">THE GOAL
-						<span> <img src={ArrowPointImage} alt="target-image" className="feature-box-1-image" /></span>
+						<h6 className="h6 flex items-center goal-box-1-title ">THE GOAL
+						<span> <img src={ArrowPointImage} alt="target-image" className="goal-box-1-image" /></span>
 						</h6> 
 					</div>
 
-						<h5 className="feature-box-1-title-header h5">Simplify the shopping experience so users can easily buy on the 
+						<h5 className="goal-box-1-title-header h5">Simplify the shopping experience so users can easily buy on the 
 							platform.
 						</h5>
 
-						<p className="feature-box-1-par-1 t-copy">
+						<p className="goal-box-1-par-1 t-copy">
 							Early conversations with stakeholders revealed a share priority. 
                             The experience needed to become faster for users, but without introducing 
                             complexity into the system or delaying implementation. Each 
@@ -256,8 +258,8 @@ export default function CaseStudy() {
 
 				</article>
 
-				<article className=" feature-grid justify-center grid grid-rows-3 ">
-					<div className="flex feature-grid-item">
+				<article className=" goal-grid justify-center grid grid-rows-3 ">
+					<div className="flex goal-grid-item">
 						<h6 className="h6">Product Owner</h6>
                           {/* --- FIRST ---*/}
 						<p className="t-copy">
@@ -271,7 +273,7 @@ export default function CaseStudy() {
 						</p>
 					</div>
                       {/* --- SECOND ---*/}
-					<div className="flex feature-grid-item">
+					<div className="flex goal-grid-item">
 						<h6 className="h6">Product Manager</h6>
 
 						<p className="t-copy">
@@ -284,7 +286,7 @@ export default function CaseStudy() {
 						</p>
 					</div>
 					  {/* --- THIRD ---*/}
-					<div className="flex feature-grid-item">
+					<div className="flex goal-grid-item">
 						<h6 className="h6">Developer</h6>
 
 						<p className="t-copy">
@@ -299,17 +301,17 @@ export default function CaseStudy() {
 					</div>
 				</article>
 
-				<article className="feature-box-2 justify-center">
+				<article className="goal-box-2 justify-center">
 					<div>
-						<h6 className="h6 flex items-center feature-box-1-title">
+						<h6 className="h6 flex items-center goal-box-1-title">
 							CONSTRAINTS  
 							<span>
-								<img src={BoxImage} alt="constraints-image" className="feature-box-1-image" />
+								<img src={BoxImage} alt="constraints-image" className="goal-box-1-image" />
 							</span>
 						</h6>
 					</div>
 
-                    <section className="feature-border " >
+                    <section className="goal-border " >
 					<article className="divider"/>
 					</section>
  
@@ -320,6 +322,122 @@ export default function CaseStudy() {
 
 				</article>
 			</section>
+
+			<section className="decision flex flex-col justify-center items-center">
+				<article>
+					<h6 className="h6 flex items-center goal-box-1-title">
+						 DECISIONS 
+						<span>
+							<img src={DiceImage} alt="dice-image" className="goal-box-1-image" />
+						</span>
+					</h6>
+					<p className="t-copy decision-par">
+						FirstMedtrade is an online market place connecting healthcare  providers and individuals 
+						 to verified medical supplies. 
+					</p>
+				</article>
+
+				<article className=" decision-content">
+					<div className="decision-content-item flex">
+						<h1 className="h6">Priority 1</h1>
+			
+						<ul className="t-copy decision-content-list">
+							<li>Guest checkout </li>
+							<li>Minimal home page</li>
+							<li>Cleaner secondary links for navigation</li>
+							<li>Improved search, filter and categories</li>
+							<li>Easier registration flow</li>
+							<li>Separate buyer and seller registration points</li>
+							<li>Cleaner error states</li>
+							<li>Error affordance for users </li>
+						</ul>
+					</div>
+
+                    {/* --- second ---*/}
+					<div className="decision-content-item decision-content flex">
+						<h1 className="h6">Priority 2</h1>
+			
+						<ul className="t-copy decision-content-list">
+							<li>Improved search and filter and categories </li>
+							<li>Add team-mate to dashboard</li>
+							<li>Send a list (improved request a quote)</li>
+						</ul>
+					</div>
+
+                     {/* --- third ---*/}
+					<div className="decision-content-item decision-content flex">
+						<h1 className="h6">Priority 3</h1>
+			
+						<ul className="t-copy decision-content-list">
+							<li>Personalised dashboard with easy chat access</li>
+							<li>Add team-mate to dashboard</li>
+							<li>Easier order tracking</li>
+						</ul>
+					</div>
+
+				</article>
+
+			</section>
+ 
+
+            <section className="decision flex flex-col justify-center items-center">
+				<article>
+					<h6 className="h6 flex items-center goal-box-1-title">
+						 VISUAL
+						<span>
+							<img src={PaintImage} alt="paint-image" className="goal-box-1-image" />
+						</span>
+					</h6>
+					<p className="t-copy decision-par">
+						FirstMedtrade is an online market place connecting healthcare  providers and individuals 
+						 to verified medical supplies. 
+					</p>
+				</article>
+
+				<article className=" decision-content">
+					<div className="decision-content-item flex">
+						<h1 className="h6">Priority 1</h1>
+			
+						<ul className="t-copy decision-content-list">
+							<li>Guest checkout </li>
+							<li>Minimal home page</li>
+							<li>Cleaner secondary links for navigation</li>
+							<li>Improved search, filter and categories</li>
+							<li>Easier registration flow</li>
+							<li>Separate buyer and seller registration points</li>
+							<li>Cleaner error states</li>
+							<li>Error affordance for users </li>
+						</ul>
+					</div>
+
+                    {/* --- second ---*/}
+					<div className="decision-content-item decision-content flex">
+						<h1 className="h6">Priority 2</h1>
+			
+						<ul className="t-copy decision-content-list">
+							<li>Improved search and filter and categories </li>
+							<li>Add team-mate to dashboard</li>
+							<li>Send a list (improved request a quote)</li>
+						</ul>
+					</div>
+
+                     {/* --- third ---*/}
+					<div className="decision-content-item decision-content flex">
+						<h1 className="h6">Priority 3</h1>
+			
+						<ul className="t-copy decision-content-list">
+							<li>Personalised dashboard with easy chat access</li>
+							<li>Add team-mate to dashboard</li>
+							<li>Easier order tracking</li>
+						</ul>
+					</div>
+
+				</article>
+
+			</section>
+
+
+
 
 
 
