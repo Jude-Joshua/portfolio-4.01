@@ -1,0 +1,27 @@
+.javascript {
+    margin: var(--padding-lg) ;
+
+    &-container {
+        background-color: var(--main-accent);
+        border-radius: var(--radius-lg);
+        width: fit-content;
+        padding: var(--padding-xxs) var(--padding-xs);
+
+        &-content {
+            color:var(--main-secondary);
+            gap: var(--gap-xxs);
+        }
+    }
+
+    &-title {
+        max-width: 500px;
+
+        &-text {
+        margin-top:-100px;
+        }
+
+        &-par {
+            margin-top: var(--padding-sm);
+        }
+    }
+}

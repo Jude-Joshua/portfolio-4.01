@@ -1,0 +1,57 @@
+.internet {
+    margin: var(--padding-lg) ;
+
+    &-container {
+        background-color: var(--main-accent);
+        border-radius: var(--radius-lg);
+        width: fit-content;
+        padding: var(--padding-xxs) var(--padding-xs);
+
+        &-content {
+            color:var(--main-secondary);
+            gap: var(--gap-xxs);
+        }
+    }
+
+    &-title {
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+
+        &-text {
+        margin-top:-100px;
+        }
+
+        &-par {
+            margin-top: var(--padding-sm);
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &-box {
+        background-color: var(--main-accent);
+        border-radius: var(--radius-sm);
+        padding: var(--padding-md) var(--padding-lg);
+        width: 50%;
+
+        &-btn {
+            background-color: var(--main-secondary);
+            color: var(--main-white);
+            border-radius: var(--radius-md);
+            padding: var(--padding-xxs) var(--padding-sm);
+        }
+
+        &-content {
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        &-par {
+            white-space: nowrap;
+        }
+    }
+
+}
