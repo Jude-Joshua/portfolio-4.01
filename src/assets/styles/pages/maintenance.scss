@@ -1,0 +1,100 @@
+.maintenance {
+    &-head {
+        background-color: var(--main-accent);
+        border-radius: var(--radius-lg);
+        padding: var(--padding-xs) var(--padding-md);
+        width: fit-content;
+
+        &-content {
+            color:var(--main-secondary);
+            gap: var(--gap-xxs);
+
+            &-img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &-body {
+        margin-top: -100px;
+
+        &-par {
+            margin-top: -20px;
+            max-width: 530px;
+        }
+
+        &-arrow {
+            margin-top: -20px;
+            width: 300px;
+            margin-left: 100px;
+        }
+    }
+
+    &-container {
+        background-color: var(--lights-accents-complimentary);
+        width: 400px;
+        height: 500px;
+        border-radius: var(--radius-sm);
+        position:relative;
+
+        &-inner {
+            position: absolute;
+            background: linear-gradient(to right,rgb(237, 166, 166),rgb(248, 61, 61));
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 20px;
+
+                   }
+
+                    &::before {
+                content: '';
+                position: absolute;
+                top: -18px;
+                left: 0;
+                width: 100px;
+                height: 50px;
+                background-color: inherit;
+                border-radius: var(--radius-xl);
+                z-index: 1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -18px;
+                right: 0;
+                width: 100px;
+                height: 50px;
+                background-color: inherit;
+                border-radius: var(--radius-xl);
+                z-index: 1;
+            }
+
+            &-box-1 {
+                position:absolute;
+                top: 50px;
+                left: 10px;
+                background-color: var(--lights-main-complimentary);
+                border-radius: var(--radius-xs); 
+                padding: 0 var(--padding-xxs);
+            }
+    }
+
+    &-title {
+        margin: var(--padding-lg);
+        margin-top: var(--padding-5xl);
+    }
+
+    &-box-2 {
+        background-color: var(--main-white);
+        color: var(--main-black);
+        border-radius: var(--radius-md);
+        margin: 0 var(--padding-xs);
+        height: 170px;  
+        padding:var(--padding-xxs) var(--padding-sm);
+    }
+
+}
