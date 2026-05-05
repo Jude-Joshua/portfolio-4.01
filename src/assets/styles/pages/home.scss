@@ -1,3 +1,5 @@
+@use "../mixins/type";
+
 .hero {
 	gap: var(--gap-2xl);
 
@@ -169,7 +171,7 @@
 	z-index: 3;
 
 	&-inner {
-		gap: var(--padding-sm);
+		gap: var(--padding-xs);
 
 		&-title {
 			gap: var(--gap-xs);
@@ -182,93 +184,154 @@
 }
 
 .philosophy {
-	&-card {
-		background-color: var(--main-black);
-		padding: var(--padding-md);
-		border-radius: var(--radius-lg);
-		gap: var(--gap-lg);
+	gap: var(--gap-xs);
 
-		&-glass {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-			z-index: 1;
+	&-title {
+		gap: var(--gap-xs);
+
+		&-card {
+			background-color: var(--main-black);
+			padding: var(--padding-2xl) var(--padding-2xl);
+			border-radius: var(--radius-md);
+			width: 70%;
 			overflow: hidden;
 
-			align-self: center;
-			justify-self: center;
-
-			& svg {
+			&-glass {
 				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
 				top: 0;
-				opacity: 0.45;
-				left: -32%;
-				transform: rotate(-36.46deg);
-				animation: bounce 28s ease-out infinite;
-				animation-delay: 0s;
-				filter: blur(40px);
+				z-index: 1;
+				overflow: hidden;
+
+				align-self: center;
+				justify-self: center;
+
+				& svg {
+					position: absolute;
+					top: 0;
+					opacity: 0.45;
+					left: -32%;
+					transform: rotate(-36.46deg);
+					animation: bounce 28s ease-out infinite;
+					animation-delay: 0s;
+					filter: blur(40px);
+				}
+
+				&-rect {
+					z-index: 1;
+					width: 120%;
+					height: 140%;
+					gap: 0px;
+
+					&-bar {
+						width: 20%;
+						height: 140%;
+						background: var(--overlay-black);
+						backdrop-filter: blur(24px);
+					}
+				}
 			}
 
-			&-rect {
-				z-index: 1;
-				width: 120%;
-				height: 140%;
-				gap: 0px;
+			&-content {
+				gap: var(--gap-5xl);
+				z-index: 2;
+				color: var(--main-white);
 
-				&-bar {
-					width: 20%;
-					height: 140%;
-					background: var(--overlay-black);
-					backdrop-filter: blur(24px);
+				&-title {
+					gap: var(--gap-xxs);
 				}
 			}
 		}
 
-		&-data {
-			gap: var(--gap-sm);
+		&-badge {
+			padding: var(--padding-xs);
+			border-radius: var(--radius-md);
+			width: 30%;
+			height: -webkit-fill-available;
+			background: url('../../images/dribble-honor.jpg');
+			background-size: cover;
+			background-position: center;
+
+			&-card {
+				padding: var(--padding-sm) var(--padding-sm);
+				background-color: var(--main-secondary);
+				color: var(--main-white);
+				height: 100%;
+				border-radius: var(--radius-md);
+				overflow: hidden;
+
+				&-img {
+					position: absolute;
+					width: 200%;
+					top: unset;
+					bottom: 2%;
+					left: -12%;
+					opacity: 0.2;
+				}
+
+				& .h4 {
+					text-align: right;
+
+					& a {
+						display: inline-flex;
+						@include type.h4;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	&-description {
+		gap: var(--gap-xs);
+
+		&-image {
+			background: url('../../images/description-image.jpg');
+			background-size: cover;
+			background-position: center;
+			width: 30%;
+			height: -webkit-fill-available;
+			border-radius: var(--radius-md);
+		}
+
+		&-block {
+			background-color: var(--accents-secondary);
+			padding: var(--padding-2xl);
+			border-radius: var(--radius-md);
+			width: 70%;
+		}
+	}
+
+	&-archetype {
+		background-color: var(--main-primary);
+		border-radius: var(--radius-md);
+		overflow: hidden;
+		padding: var(--padding-4xl) var(--padding-lg);
+
+		&-background {
+			position: absolute;
+			top: -60%;
+			width: 90%;
+		}
+
+		&-box {
 			z-index: 2;
+			width: 80%;
+			gap: var(--gap-xxs);
+			align-self: center;
 			color: var(--main-white);
 
-			& .h2 {
-				padding: var(--padding-2xl) var(--padding-lg);
-				border: var(--border) solid var(--main-dark-grey);
-				border-radius: var(--radius-md);
-			}
-
-			&-text {
-				gap: var(--gap-sm);
-
-				&-block {
-					padding: var(--padding-lg);
-					border: var(--border) solid var(--main-dark-grey);
-					border-radius: var(--radius-md);
-				}
-
-				&-badge {
-					padding: var(--padding-sm) var(--padding-lg);
-					border: var(--border) solid var(--main-complimentary);
-					border-radius: var(--radius-md);
-				}
+			&-highlights {
+				color: var(--main-white);
+				text-decoration: underline;
 			}
 		}
-
-
 	}
 }
 
 .archetype {
-	&-title {
-		width: 64%;
-		gap: var(--gap-xxs);
-		align-self: center;
-
-		&-highlights {
-			color: var(--main-primary);
-		}
-	}
-
 	&-body {
 		gap: var(--gap-xs);
 
@@ -305,23 +368,10 @@
 				border-radius: var(--radius-md);
 				height: 100%;
 				overflow: hidden;
-			}
-		}
-
-		&-footer {
-			background-color: var(--main-light-grey);
-			border-radius: var(--radius-md);
-			padding: var(--padding-xl) var(--padding-2xl);
-			gap: var(--gap-2xl);
-
-			&-card {
 				gap: var(--gap-xs);
-
-				& .t-highlights {
-					text-transform: unset;
-				}
 			}
 		}
+
 	}
 }
 

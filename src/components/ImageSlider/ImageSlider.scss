@@ -1,8 +1,9 @@
 .slider {
 	&-wrapper {
 		width: 100%;
-		height: 100%;
+		height: 560px;
 		overflow: hidden;
+		border-radius: var(--radius-md);
 
 		.content {
 			width: 100%;
@@ -10,7 +11,7 @@
 			position: relative;
 			overflow: hidden;
 
-			&-info{
+			&-info {
 				gap: var(--gap-xxs);
 				position: absolute;
 				left: 2%;
@@ -19,10 +20,9 @@
 				padding: var(--padding-xxs) var(--padding-xs);
 				z-index: 2;
 				max-width: 70%;
-				border-radius: var(--radius-md);
 				display: none;
 
-				& svg{
+				& svg {
 					color: var(--main-dark-grey);
 				}
 			}
@@ -60,11 +60,8 @@
 			top: unset;
 			bottom: 3%;
 			z-index: 5;
-			// background-color: var(--overlay-white);
-			// padding: var(--padding-xs);
 			border-radius: var(--radius-md);
 			align-self: center;
-			// backdrop-filter: blur(4px);
 
 			&-icon {
 				padding: var(--padding-xs);

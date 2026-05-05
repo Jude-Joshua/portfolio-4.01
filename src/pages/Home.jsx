@@ -8,7 +8,9 @@ import ImageSlider from "../components/ImageSlider/ImageSlider.jsx";
 import DribbbleBadge from '../components/DribbbleBadge/DribbbleBadge.jsx';
 
 import HelloImage from '../assets/images/Greeting.svg?react';
+import PhilosophyImage from '../assets/images/LightBulb.svg?react';
 import Animark from '../assets/images/animark.svg?react';
+import ArchetypeImage from '../assets/images/bio.svg?react';
 
 import ProfileImage from '../assets/images/profile-image.webp'
 import ShowImage from '../assets/images/showcase.png'
@@ -85,46 +87,53 @@ const Home = () => {
                 </article>
             </section>
 
-            <section className="philosophy flex items-center justify-center">
-                <article className='philosophy-card overflow-hidden flex flex-col items-center justify-start'>
-                    <div className="philosophy-card-glass flex flex-row items-center justify-center">
-                        <Animark />
-                        <div className="philosophy-card-glass-rect flex flex-row items-center justify-center">
-                            {Array.from({ length: BARS }).map((_, i) => (
-                                <div key={i} className="philosophy-card-glass-rect-bar" />
-                            ))}
-                        </div>
-                    </div>
-
-
-                    <div className="philosophy-card-data flex flex-col items-start justify-start">
-                        <p className="h2">At the heart of every great brand and product is a clear and cohesive identity.</p>
-                        <div className="philosophy-card-data-text flex flex-row items-start justify-start">
-                            <div className='philosophy-card-data-text-block'>
-                                <p className="t-copy">I believe good design is intentional: shaped by purpose, aligned with real goals, and consistent across every touchpoint. Whether working on product, web, or brand-led experiences, my focus is always on creating work that feels meaningful, usable, and grounded in clarity.</p>
+            <section className="philosophy flex flex-col items-center justify-center">
+                <article className="philosophy-title flex flex-row items-start justify-start">
+                    <div className="philosophy-title-card flex flex-col items-start justify-start">
+                        <div className="philosophy-title-card-glass flex flex-row items-center justify-center">
+                            <Animark />
+                            <div className="philosophy-title-card-glass-rect flex flex-row items-center justify-center">
+                                {Array.from({ length: BARS }).map((_, i) => (
+                                    <div key={i} className="philosophy-title-card-glass-rect-bar" />
+                                ))}
                             </div>
-                            <DribbbleBadge />
+                        </div>
+                        <div className="philosophy-title-card-content flex flex-col items-start justify-start">
+                            <div className={'philosophy-title-card-content-title flex flex-row'}>
+                                <p className="t-highlights">MY PHILOSOPHY</p>
+                                <PhilosophyImage />
+                            </div>
+                            <p className="h2">At the heart of every great brand and product is a clear and cohesive identity.</p>
                         </div>
                     </div>
-
+                    <DribbbleBadge />
                 </article>
-            </section>
-
-            <section className="archetype flex flex-col items-start justify-start">
-                <article className="archetype-title flex flex-col items-center justify-center text-center">
-                    <p className="t-highlights">My brand archetype would be…</p>
-                    <h2 className="h2">Sometimes, a <span className="archetype-title-highlights">Rebel</span>, often, an <span className="archetype-title-highlights">Explorer</span>, but always a <span className="archetype-title-highlights">Caregiver</span>.
-                    </h2>
+                <article className="philosophy-description flex flex-row items-start justify-start">
+                    <div className='philosophy-description-image' />
+                    <div className='philosophy-description-block'>
+                        <p className="t-copy">I believe good design is intentional: shaped by purpose, aligned with real goals, and consistent across every touchpoint. Whether working on product, web, or brand-led experiences, my focus is always on creating work that feels meaningful, usable, and grounded in clarity.</p>
+                    </div>
+                </article>
+                <article className="philosophy-archetype flex flex-col items-center justify-center text-center">
+                    <ArchetypeImage className="philosophy-archetype-background" />
+                    <div className='philosophy-archetype-box flex flex-col items-center justify-center text-center'>
+                        <p className="t-highlights">My brand archetype would be…</p>
+                        <h2 className="h2">Sometimes, a <span className="philosophy-archetype-box-highlights">Rebel</span>, often, an <span className="philosophy-archetype-box-highlights">Explorer</span>, but always a <span className="philosophy-archetype-box-highlights">Caregiver</span>.
+                        </h2>
+                    </div>
                 </article>
                 <article className="archetype-body flex flex-col items-start justify-start w-full">
-                    <div className="archetype-body-info grid grid-cols-7 justify-start items-start">
-                        <div className="archetype-body-info-left col-span-4 flex flex-col items-start justify-start">
+                    <div className="archetype-body-info grid grid-cols-8 justify-start items-start">
+                        <div className="archetype-body-info-left col-span-5 flex flex-col items-start justify-start">
                             <div className="archetype-body-info-left-paragraphs flex flex-col items-start justify-start">
                                 <p className="t-copy">
-                                    I enjoy finding new ways to make stuff work: Whether it's figuring out how to design digital products and brands that meets user needs, playing with photography, or figuring out how to fix a broken gadget at home; I like to explore different approaches until I find one that works.
+                                    I’ve always been drawn to understanding how things work. Not just how they look, but how they come together, how they’re used, and what makes them effective. That instinct has shaped how I approach design, branding, and product work.
                                 </p>
                                 <p className="t-copy">
-                                    I'm interested in figuring how things work, why people use them, and how small decisions shape everyday experiences.
+                                    Whether I’m building digital products, shaping brand systems, or working through an idea visually, I seek to explore different directions until something feels clear and intentional. The goal is not just to make things look good, but to make them make sense.
+                                </p>
+                                <p className="t-copy">
+                                    What drives my work is the thinking behind it. I’m interested in how things work, why people use them, and how small decisions shape everyday experiences.
                                 </p>
                             </div>
                             <Button target={''} hierarchy={'tertiary'} type={'link'} link={'about'}>
@@ -132,28 +141,8 @@ const Home = () => {
                                 <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
                             </Button>
                         </div>
-
                         <div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
                             <ImageSlider />
-                        </div>
-                    </div>
-                    <div className="archetype-body-footer flex flex-row items-start justify-center w-full">
-                        <div className="archetype-body-footer-card flex flex-col items-center">
-                            <p className="t-highlights">Currently watching…</p>
-                            <Button target={'_blank'} hierarchy={'tertiary'} type={'link'} link={'https://www.netflix.com/ng/title/80057281'}>
-                                <FilmSlateIcon weight={'bold'} fontSize={'24'} />
-                                <span>Stranger Things S05</span>
-                                <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
-                            </Button>
-                        </div>
-                        <div className="divider vertical" />
-                        <div className="archetype-body-footer-card flex flex-col items-center">
-                            <p className="t-highlights">Currently reading…</p>
-                            <Button target={'_blank'} hierarchy={'tertiary'} type={'link'} link={'https://www.amazon.com/Am-My-Brand-Without-Apology/dp/1635579961'}>
-                                <BookOpenTextIcon weight={'bold'} fontSize={'24'} />
-                                <span>When Sorry Isn't Enough</span>
-                                <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
-                            </Button>
                         </div>
                     </div>
                 </article>
