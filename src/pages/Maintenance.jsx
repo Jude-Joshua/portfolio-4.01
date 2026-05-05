@@ -17,8 +17,8 @@ export default function Maintenance() {
             </h6>
         </section>
 
-        <section className='maintenance-body flex flex-col justify-center items-center'> 
-            <h3 className='h3 '>This page is currently under maintenance.</h3>
+        <section className='maintenance-body flex flex-col justify-center items-center text-center'> 
+            <h3 className='s2'>This page is currently under maintenance.</h3>
             <p className='t-copy maintenance-body-par flex flex-col items-center '>Something strange happened and I had to make quick edits. 
                 In the meantime, you can view case study 
                 <span>

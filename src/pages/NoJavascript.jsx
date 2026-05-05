@@ -19,7 +19,7 @@ export default function NoJavascript() {
             </section>
 
             <article className='javascript-title-text' >
-                    <h5 className='h5 text-center javascript-title'>
+                    <h5 className='s2 text-center'>
                         Sadly,nothing works nowadays without JavaScript
                     </h5>
                     <p className='t-copy text-center javascript-title-par'>
