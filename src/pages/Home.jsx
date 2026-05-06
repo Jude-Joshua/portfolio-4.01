@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon, BookOpenTextIcon, FilmSlateIcon } from '@phosphor-icons/react';
+import { ArrowUpRightIcon, ClockCountdownIcon, CalendarDotsIcon, ArrowDownIcon } from '@phosphor-icons/react';
 
 import ImageComponent from "../components/ImageComponent/ImageComponent.jsx";
 import Button from "../components/Button/Button.jsx";
@@ -117,7 +117,7 @@ const Home = () => {
                 <article className="philosophy-archetype flex flex-col items-center justify-center text-center">
                     <ArchetypeImage className="philosophy-archetype-background" />
                     <div className='philosophy-archetype-box flex flex-col items-center justify-center text-center'>
-                        <p className="t-highlights">My brand archetype would be…</p>
+                        <p className="t-highlights">My brand archetypes would be…</p>
                         <h2 className="h2">Sometimes, a <span className="philosophy-archetype-box-highlights">Rebel</span>, often, an <span className="philosophy-archetype-box-highlights">Explorer</span>, but always a <span className="philosophy-archetype-box-highlights">Caregiver</span>.
                         </h2>
                     </div>

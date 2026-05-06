@@ -9,9 +9,7 @@ import CaseStudy from "./pages/Casestudy.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import NoJavascript from "./pages/NoJavascript.jsx";
 import NoInternet from "./pages/NoInternet.jsx";
-import Maintenance from "./pages/Maintenance.jsx";
-import UnderMaintenance from "./pages/UnderMaintenance.jsx"; 
-import WorkInProgress from "./pages/WorkInProgress.jsx";   
+import Maintenance from "./pages/Maintenance.jsx"; 
 
 import { BodyClass } from "./hooks/bodyClass.jsx";
 import ScrollToTop from "./hooks/ScrollToTop.jsx";
@@ -29,12 +27,12 @@ function App() {
                 <Route path="/about" element={<Layout><About /></Layout>} />
                 <Route path="/projects" element={<Layout><Projects /></Layout>} />
                 <Route path="/projects/:id" element={<Layout><CaseStudy /></Layout>} />
-                <Route path="/no-javascript" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NoJavascript /></Layout>} />
-                <Route path="/no-internet" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NoInternet /></Layout>} />
-                <Route path="/maintenance" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
-                <Route path="/under-maintenance" element={<Layout navbarVariant="notfound" footerVariant="notfound"><UnderMaintenance /></Layout>} />
-                <Route path="/work-in-progress" element={<Layout navbarVariant="notfound" ><WorkInProgress /></Layout>} />
                 <Route path="*" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NotFound /></Layout>} />
+                
+                <Route path="/no-javascript" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NoJavascript /></Layout>} />
+                <Route path="/maintenance" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
+                
+                <Route path="/no-internet" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NoInternet /></Layout>} />
             </Routes>
         </>
     );

@@ -1,56 +1,41 @@
-import MaintenanceImage from '../assets/images/sign.png';
-import NoFoundArrowDown from '../assets/images/nofound-arrow-down.svg';
+import MaintenanceImage from '../assets/images/sign.svg?react';
+import GoDown from '../assets/images/nofound-arrow-down.svg?react';
 
-
-
-
-
-
-
+import { projects } from '../components/ProjectCard/ProjectList.jsx';
+import ProjectCard from "../components/ProjectCard/ProjectCard.jsx";
 
 export default function Maintenance() {
-  return (
-    <main className={"maintenance flex flex-col items-center justify-center"}>
-        <section className='maintenance-head flex justify-center'>
-            <h6 className='maintenance-head-content flex items-center h6'>SORRY!
-                <img src={MaintenanceImage} alt="Sign"  className='maintenance-head-content-img'/>
-            </h6>
-        </section>
+    return (
+        <main className={"notfound maintenance flex flex-col items-center justify-center"}>
 
-        <section className='maintenance-body flex flex-col justify-center items-center text-center'> 
-            <h3 className='s2'>This page is currently under maintenance.</h3>
-            <p className='t-copy maintenance-body-par flex flex-col items-center '>Something strange happened and I had to make quick edits. 
-                In the meantime, you can view case study 
-                <span>
-                    <img src={NoFoundArrowDown} alt="Arrow pointing down" className='maintenance-body-arrow'/>
-                </span>
-            </p>
-            
-        </section>
+            <section className="hero flex flex-col justify-center items-center">
+                <article className="hero-title flex flex-col items-center justify-center">
+                    <div className="hero-title-role flex flex-row justify-center items-center">
+                        <p className="t-caption text-center text-secondary">SORRY!</p>
+                        <MaintenanceImage />
+                    </div>
+                    <h1 className="h1 text-center">This page is currently under maintenance.</h1>
+                    <p className="t-copy text-center">Something strange happened and I had to make quick edits. In the meantime, you can view case study<GoDown /></p>
+                </article>
+            </section>
 
-        <article className='maintenance-container'>
-            <div className='maintenance-container-inner'> </div>
-              <div className='maintenance-container-box-1 t-copy text-center'>
-                UI/UX
-                </div>  
+            <section className="projects w-full flex flex-col" id='projects'>
+                <article className="projects-inner flex justify-center items-center w-full">
+                    {projects.slice(0, 1).map((project, index) => {
+                        const themes = ['blue', 'beige', 'green'];
 
-                <div className='h6 maintenance-title'>
-                    <h6>
-                        Redesigning a unified  B2B and B2C web app for healthcare providers 
-                        and  seekers.
-                    </h6>
-                    </div>  
+                        return (
+                            <ProjectCard
+                                key={index}
+                                variant="playful"
+                                theme={themes[index % themes.length]}
+                                project={project}
+                            />
+                        );
+                    })}
+                </article>
+            </section>
 
-                    <div className='maintenance-box-2 leading-tight'>
-                        <p className='t-copy'>
-                            How might we reduce cognitive load and make ordering medical 
-                            supplies feel immediate, controlled and trustworthy?
-                        </p>
-                        </div>         
-                
-        </article>
-
-
-    </main>
-  );
+        </main>
+    );
 }
