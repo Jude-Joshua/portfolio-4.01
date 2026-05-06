@@ -6,6 +6,7 @@ import Home from './pages/Home.jsx';
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import CaseStudy from "./pages/Casestudy.jsx";
+
 import NotFound from "./pages/NotFound.jsx";
 import NoJavascript from "./pages/NoJavascript.jsx";
 import NoInternet from "./pages/NoInternet.jsx";
@@ -31,7 +32,6 @@ function App() {
                 
                 <Route path="/no-javascript" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NoJavascript /></Layout>} />
                 <Route path="/maintenance" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
-                
                 <Route path="/no-internet" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NoInternet /></Layout>} />
             </Routes>
         </>
