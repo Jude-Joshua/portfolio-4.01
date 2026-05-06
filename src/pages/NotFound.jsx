@@ -33,12 +33,12 @@ export default function NotFound() {
         <main className={'notfound flex flex-col items-start justify-start'}>
             <section className="hero flex flex-col justify-center items-center">
                 <article className="hero-title flex flex-col items-center justify-center">
-                    <div className="hero-title-role flex flex-row justify-center items-center">
+                    <div className="hero-title-role fade-section fade-section--delay-1 flex flex-row justify-center items-center">
                         <p className="t-caption text-center text-secondary">OOPS!</p>
                         <OopsImage />
                     </div>
-                    <h1 className="h1 text-center">The link you clicked doesn’t lead anywhere.</h1>
-                    <p className="t-copy text-center">Don’t panic, it’s probably a system error. I’ve been notified and I have some bots already checking it out. You can try these other links<GoDown /></p>
+                    <h1 className="h1 text-center fade-section fade-section--delay-2">The link you clicked doesn’t lead anywhere.</h1>
+                    <p className="t-copy text-center fade-section fade-section--delay-3">Don’t panic, it’s probably a system error. I’ve been notified and I have some bots already checking it out. You can try these other links<GoDown /></p>
                 </article>
             </section>
 

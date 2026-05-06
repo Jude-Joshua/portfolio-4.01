@@ -10,17 +10,17 @@ export default function Maintenance() {
 
             <section className="hero flex flex-col justify-center items-center">
                 <article className="hero-title flex flex-col items-center justify-center">
-                    <div className="hero-title-role flex flex-row justify-center items-center">
+                    <div className="hero-title-role fade-section fade-section--delay-1 flex flex-row justify-center items-center">
                         <p className="t-caption text-center text-secondary">SORRY!</p>
                         <MaintenanceImage />
                     </div>
-                    <h1 className="h1 text-center">This page is currently under maintenance.</h1>
-                    <p className="t-copy text-center">Something strange happened and I had to make quick edits. In the meantime, you can view case study<GoDown /></p>
+                    <h1 className="h1 fade-section fade-section--delay-2 text-center">This page is currently under maintenance.</h1>
+                    <p className="t-copy fade-section fade-section--delay-3 text-center">Something strange happened and I had to make quick edits. In the meantime, you can view case study<GoDown /></p>
                 </article>
             </section>
 
             <section className="projects w-full flex flex-col" id='projects'>
-                <article className="projects-inner flex justify-center items-center w-full">
+                <article className="projects-inner fade-section fade-section--delay-3 flex justify-center items-center w-full">
                     {projects.slice(0, 1).map((project, index) => {
                         const themes = ['blue', 'beige', 'green'];
 

@@ -5,7 +5,7 @@ import BackgroundRings from '../../assets/images/background-rings.svg?react';
 export default function DribbbleBadge() {
     return (
         <>
-            <div className="philosophy-title-badge">
+            <div className="philosophy-title-badge fade-section fade-section--delay-3">
                 <div className="philosophy-title-badge-card flex flex-col justify-between items-start">
                     <BackgroundRings className="philosophy-title-badge-card-img" />
                     <DribbbleLogoIcon size={56} weight="regular"/>

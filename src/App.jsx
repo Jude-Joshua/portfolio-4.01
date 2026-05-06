@@ -13,10 +13,12 @@ import NoInternet from "./pages/NoInternet.jsx";
 import Maintenance from "./pages/Maintenance.jsx"; 
 
 import { BodyClass } from "./hooks/bodyClass.jsx";
+import { FadeInClass } from "./hooks/fadeInClass.jsx";
 import ScrollToTop from "./hooks/ScrollToTop.jsx";
 
 
 function App() {
+    FadeInClass()
     BodyClass()
 
     return (

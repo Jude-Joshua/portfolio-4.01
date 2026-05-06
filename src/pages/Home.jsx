@@ -22,8 +22,8 @@ const Home = () => {
     return (
         <main className={'flex flex-col items-start justify-start'}>
 
-            <section className="hero flex flex-col justify-center items-center">
-                <article className="hero-title flex flex-col items-center justify-center">
+            <section className="hero fade-section flex flex-col justify-center items-center">
+                <article className="hero-title fade-section fade-section--delay-1 flex flex-col items-center justify-center">
                     <div className="hero-title-role flex flex-row justify-center items-center">
                         <p className="t-caption text-center text-secondary">Digital designer</p>
                         <p className="t-caption text-center text-secondary">(person, noun)</p>
@@ -35,11 +35,8 @@ const Home = () => {
                             <span className={'calendar'} data-cursor='hover'><CalendarDotsIcon /></span>
                         </span>roadmap goals for teams and founders.</h1>
                 </article>
-                <article className="hello flex flex-row-reverse justify-center items-center">
-                    <article
-                        className="hello-showcase flex flex-col justify-center items-center"
-                        data-cursor='none'
-                    >
+                <article className="hello fade-section fade-section--delay-2 flex flex-row-reverse justify-center items-center">
+                    <article className="hello-showcase  flex flex-col justify-center items-center" data-cursor='none' >
                         <div className="hello-showcase-image">
                             <ImageComponent src={ShowImage} className={''} alt={'A playground design I made in 2024 to show what a digital card-holder would look like.'} />
                         </div>
@@ -70,18 +67,20 @@ const Home = () => {
                 </article>
             </section>
 
-            <section className="projects w-full flex flex-col" id='projects'>
+            <section className="projects w-full flex flex-col fade-section" id='projects'>
                 <article className="projects-inner grid grid-cols-3 justify-start items-start w-full">
                     {projects.map((project, index) => {
                         const themes = ['blue', 'beige', 'green'];
+                        const delayClass = `fade-section--delay-${(index % 3) + 1}`;
 
                         return (
-                            <ProjectCard
-                                key={index}
-                                variant="playful"
-                                theme={themes[index % themes.length]}
-                                project={project}
-                            />
+                            <div key={index} className={`fade-section ${delayClass}`}>
+                                <ProjectCard
+                                    variant="playful"
+                                    theme={themes[index % themes.length]}
+                                    project={project}
+                                />
+                            </div>
                         );
                     })}
                 </article>
@@ -89,7 +88,7 @@ const Home = () => {
 
             <section className="philosophy flex flex-col items-center justify-center">
                 <article className="philosophy-title flex flex-row items-start justify-start">
-                    <div className="philosophy-title-card flex flex-col items-start justify-start">
+                    <div className="philosophy-title-card fade-section fade-section--delay-1 flex flex-col items-start justify-start">
                         <div className="philosophy-title-card-glass flex flex-row items-center justify-center">
                             <Animark />
                             <div className="philosophy-title-card-glass-rect flex flex-row items-center justify-center">
@@ -108,15 +107,15 @@ const Home = () => {
                     </div>
                     <DribbbleBadge />
                 </article>
-                <article className="philosophy-description flex flex-row items-start justify-start">
-                    <div className='philosophy-description-image' />
-                    <div className='philosophy-description-block'>
+                <article className="philosophy-description  flex flex-row items-start justify-start">
+                    <div className='philosophy-description-image fade-section fade-section--delay-1' />
+                    <div className='philosophy-description-block fade-section fade-section--delay-3'>
                         <p className="t-copy">I believe good design is intentional: shaped by purpose, aligned with real goals, and consistent across every touchpoint. Whether working on product, web, or brand-led experiences, my focus is always on creating work that feels meaningful, usable, and grounded in clarity.</p>
                     </div>
                 </article>
-                <article className="philosophy-archetype flex flex-col items-center justify-center text-center">
-                    <ArchetypeImage className="philosophy-archetype-background" />
-                    <div className='philosophy-archetype-box flex flex-col items-center justify-center text-center'>
+                <article className="philosophy-archetype fade-section fade-section--delay-1 flex flex-col items-center justify-center text-center">
+                    <ArchetypeImage className="philosophy-archetype-background fade-section fade-section--delay-2" />
+                    <div className='philosophy-archetype-box fade-section fade-section--delay-3 flex flex-col items-center justify-center text-center fade-section fade-section--delay-3'>
                         <p className="t-highlights">My brand archetypes would be…</p>
                         <h2 className="h2">Sometimes, a <span className="philosophy-archetype-box-highlights">Rebel</span>, often, an <span className="philosophy-archetype-box-highlights">Explorer</span>, but always a <span className="philosophy-archetype-box-highlights">Caregiver</span>.
                         </h2>
@@ -124,7 +123,7 @@ const Home = () => {
                 </article>
                 <article className="archetype-body flex flex-col items-start justify-start w-full">
                     <div className="archetype-body-info grid grid-cols-8 justify-start items-start">
-                        <div className="archetype-body-info-left col-span-5 flex flex-col items-start justify-start">
+                        <div className="archetype-body-info-left fade-section fade-section--delay-1 col-span-5 flex flex-col items-start justify-start">
                             <div className="archetype-body-info-left-paragraphs flex flex-col items-start justify-start">
                                 <p className="t-copy">
                                     I’ve always been drawn to understanding how things work. Not just how they look, but how they come together, how they’re used, and what makes them effective. That instinct has shaped how I approach design, branding, and product work.
@@ -141,7 +140,7 @@ const Home = () => {
                                 <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
                             </Button>
                         </div>
-                        <div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
+                        <div className="archetype-body-info-right fade-section fade-section--delay-3 col-span-3 flex flex-col items-start justify-start">
                             <ImageSlider />
                         </div>
                     </div>

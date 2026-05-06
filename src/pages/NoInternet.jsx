@@ -180,17 +180,17 @@ export default function NoInternet() {
             <main className={'notfound flex flex-col items-center justify-center'}>
                 <section className="hero flex flex-col justify-center items-center">
                     <article className="hero-title flex flex-col items-center justify-center">
-                        <div className="hero-title-role flex flex-row justify-center items-center">
+                        <div className="hero-title-role fade-section fade-section--delay-1 flex flex-row justify-center items-center">
                             <p className="t-caption text-center text-secondary">OOPS!</p>
                             <OopsImage />
                         </div>
-                        <h1 className="h1 text-center">You're not connected to the internet right now.</h1>
-                        <p className="t-copy text-center">Not much to show you right now. While you wait, how about a game?</p>
+                        <h1 className="h1 fade-section fade-section--delay-2 text-center">You're not connected to the internet right now.</h1>
+                        <p className="t-copy fade-section fade-section--delay-3 text-center">Not much to show you right now. While you wait, how about a game?</p>
                     </article>
                 </section>
 
                 <section className="internet-box flex items-center justify-center">
-                    <div className='internet-box-content'>
+                    <div className='internet-box-content fade-section fade-section--delay-2'>
                         <canvas ref={canvasRef} width={GAME_W} height={GAME_H} style={{ display: "block", width: "100%" }} />
 
                         {phase === "idle" && (

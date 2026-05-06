@@ -43,7 +43,7 @@
                 transform: rotate(0);
 
                 & a {
-                    color: var(--main-complimentary) !important;
+                    text-decoration: underline;
                 }
             }
         }
@@ -65,8 +65,6 @@
     }
 
     & .internet-box {
-
-
         &-content {
             padding: var(--padding-3xl) var(--padding-2xl);
             width: 64%;

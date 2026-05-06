@@ -22,16 +22,16 @@ export default function Footer({ variant = "default" }) {
         <footer className={footerClass + " relative flex flex-col items-start justify-center"}>
             <div className='footer-top flex flex-col items-center justify-center'>
                 <div className='footer-top-title flex flex-col items-center justify-center'>
-                    <h2 className="h2">
+                    <h2 className="h2 fade-section fade-section--delay-1">
                         Add me to your <ArrowMoveDown className="footer-top-title-arrow" /> <br />
                         Dream Team <span className='footer-top-title-highlights'>Shortlist<CrossStar className="footer-top-title-star" /><Marker className="footer-top-title-marker" /></span>.
                     </h2>
 
-                    <p className="t-copy">
+                    <p className="t-copy fade-section fade-section--delay-3">
                         If your team needs a thoughtful builder who values time like they do ideas, we might click.
                     </p>
                 </div>
-                <Button target={''} hierarchy={'primary'} type={'link'} link={'mailto:work@judejoshua.com'}>
+                <Button target={''} hierarchy={'primary'} type={'link'} link={'mailto:work@judejoshua.com'} className={'fade-section fade-section--delay-2'}>
                     <span>Send a note</span>
                     <span className="icon-round flex items-center justify-center">
                         <EnvelopeOpenIcon weight={'bold'} fontSize={'32'} />
@@ -39,9 +39,9 @@ export default function Footer({ variant = "default" }) {
                 </Button>
             </div>
 
-            <CrossStar className="footer-copyright-star" />
+            <CrossStar className="fade-section fade-section--delay-2 footer-copyright-star" />
 
-            <div className="footer-copyright flex justify-center items-center">
+            <div className="footer-copyright fade-section fade-section--delay-3 flex justify-center items-center">
                 <div className="footer-copyright-links flex items-center justify-center">
                     {[{
                         "LinkedIn": "https://linkedin.com/in/thejudejoshua",
