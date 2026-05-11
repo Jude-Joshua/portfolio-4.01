@@ -27,14 +27,14 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<Layout><Home /></Layout>} />
-                <Route path="/about" element={<Layout><About /></Layout>} />
-                <Route path="/projects" element={<Layout><Projects /></Layout>} />
-                <Route path="/projects/:id" element={<Layout><CaseStudy /></Layout>} />
-                <Route path="*" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NotFound /></Layout>} />
+                <Route path="/about" element={<Layout><Maintenance/></Layout>} />
+                <Route path="/projects" element={<Layout><Maintenance /></Layout>} />
+                <Route path="/projects/:id" element={<Layout><Maintenance /></Layout>} />
+                <Route path="*" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance/></Layout>} />
                 
-                <Route path="/no-javascript" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NoJavascript /></Layout>} />
+                <Route path="/no-javascript" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
                 <Route path="/maintenance" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
-                <Route path="/no-internet" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NoInternet /></Layout>} />
+                <Route path="/no-internet" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
             </Routes>
         </>
     );

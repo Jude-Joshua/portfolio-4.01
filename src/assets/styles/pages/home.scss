@@ -1,9 +1,23 @@
 @use "../mixins/type";
+@use "../mixins/media";
 
 .hero {
 	gap: var(--gap-2xl);
 
 	&-title {
+
+		@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-t-caption);
+	}
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-t-caption);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-t-caption);
+	}
+
 		width: 80%;
 		gap: var(--gap-xxs);
 
@@ -63,6 +77,18 @@
 		}
 
 		& h1:hover {
+
+			@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-h1);
+	}
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-h1);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-h1);
+	}
 			& .hero-title-icons {
 				& span {
 					&.arrow {
@@ -84,6 +110,33 @@
 }
 
 .hello {
+
+	@media (max-width: $mobile-max) {
+			@content;
+		}
+
+		@media (
+			min-width: $tablet-min
+		) and (
+			max-width: $tablet-max
+		) {
+			@content;
+		}
+
+		@media (min-width: $tablet-min) {
+			@content;
+		}
+
+		@media (min-width: $desktop-min) {
+			@content;
+		}
+
+		@media (min-width: $desktop-lg-min) {
+			@content;
+		}
+
+		@warn "Breakpoint `#{$type}` not found.";
+
 	&-card {
 		width: 47%;
 		padding: var(--padding-lg) var(--padding-lg) var(--padding-xl);
@@ -104,6 +157,19 @@
 		}
 
 		&-title {
+
+			@include respond-to("desktop-lg") {
+		font-size: fs.rem(fs.$desktop-lg-t-copy);
+	}
+
+	@include respond-to("tablet") {
+		font-size: fs.rem(fs.$tablet-t-copy);
+	}
+
+	@include respond-to("mobile") {
+		font-size: fs.rem(fs.$mobile-t-copy);
+	}
+	
 			&-content {
 				gap: var(--gap-xxs);
 			}
@@ -168,6 +234,33 @@
 }
 
 .projects {
+
+	@media (max-width: $mobile-max) {
+			@content;
+		}
+
+		@media (
+			min-width: $tablet-min
+		) and (
+			max-width: $tablet-max
+		) {
+			@content;
+		}
+
+		@media (min-width: $tablet-min) {
+			@content;
+		}
+
+		@media (min-width: $desktop-min) {
+			@content;
+		}
+
+		@media (min-width: $desktop-lg-min) {
+			@content;
+		}
+
+		@warn "Breakpoint `#{$type}` not found.";
+
 	z-index: 3;
 
 	&-inner {
