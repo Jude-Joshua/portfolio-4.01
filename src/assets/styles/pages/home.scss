@@ -205,10 +205,7 @@
 		}
 	}
 
-	@include respond-to("mobile") {
-		flex-direction: column;
-		height: 50%;
-	}
+	
 	
 }
 
