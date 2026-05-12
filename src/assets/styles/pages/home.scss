@@ -1,22 +1,11 @@
 @use "../mixins/type";
-@use "../mixins/media";
+@use '../mixins/media' as *;
+
 
 .hero {
 	gap: var(--gap-2xl);
 
 	&-title {
-
-		@include respond-to("desktop-lg") {
-		font-size: fs.rem(fs.$desktop-lg-t-caption);
-	}
-
-	@include respond-to("tablet") {
-		font-size: fs.rem(fs.$tablet-t-caption);
-	}
-
-	@include respond-to("mobile") {
-		font-size: fs.rem(fs.$mobile-t-caption);
-	}
 
 		width: 80%;
 		gap: var(--gap-xxs);
@@ -78,17 +67,6 @@
 
 		& h1:hover {
 
-			@include respond-to("desktop-lg") {
-		font-size: fs.rem(fs.$desktop-lg-h1);
-	}
-
-	@include respond-to("tablet") {
-		font-size: fs.rem(fs.$tablet-h1);
-	}
-
-	@include respond-to("mobile") {
-		font-size: fs.rem(fs.$mobile-h1);
-	}
 			& .hero-title-icons {
 				& span {
 					&.arrow {
@@ -110,32 +88,11 @@
 }
 
 .hello {
-
-	@media (max-width: $mobile-max) {
-			@content;
+	@include respond-to("mobile") {
+		flex-direction:column-reverse;
 		}
 
-		@media (
-			min-width: $tablet-min
-		) and (
-			max-width: $tablet-max
-		) {
-			@content;
-		}
 
-		@media (min-width: $tablet-min) {
-			@content;
-		}
-
-		@media (min-width: $desktop-min) {
-			@content;
-		}
-
-		@media (min-width: $desktop-lg-min) {
-			@content;
-		}
-
-		@warn "Breakpoint `#{$type}` not found.";
 
 	&-card {
 		width: 47%;
@@ -151,6 +108,10 @@
 		transition: 0.6s ease-in-out;
 		will-change: transform;
 
+		@include respond-to("mobile") {
+			width:100%;
+		}
+
 		&:hover {
 			transform: rotate(0);
 			top: -56px;
@@ -158,18 +119,6 @@
 
 		&-title {
 
-			@include respond-to("desktop-lg") {
-		font-size: fs.rem(fs.$desktop-lg-t-copy);
-	}
-
-	@include respond-to("tablet") {
-		font-size: fs.rem(fs.$tablet-t-copy);
-	}
-
-	@include respond-to("mobile") {
-		font-size: fs.rem(fs.$mobile-t-copy);
-	}
-	
 			&-content {
 				gap: var(--gap-xxs);
 			}
@@ -203,6 +152,13 @@
 		transition: 0.6s ease-in-out;
 		will-change: transform;
 
+        @include respond-to("mobile") {
+			width:100%;
+			height:400px;
+		}
+
+
+
 		&:hover {
 			transform: rotate(4.75deg);
 			box-shadow: -6px 15px 24px var(--bx-shadows);
@@ -235,32 +191,6 @@
 
 .projects {
 
-	@media (max-width: $mobile-max) {
-			@content;
-		}
-
-		@media (
-			min-width: $tablet-min
-		) and (
-			max-width: $tablet-max
-		) {
-			@content;
-		}
-
-		@media (min-width: $tablet-min) {
-			@content;
-		}
-
-		@media (min-width: $desktop-min) {
-			@content;
-		}
-
-		@media (min-width: $desktop-lg-min) {
-			@content;
-		}
-
-		@warn "Breakpoint `#{$type}` not found.";
-
 	z-index: 3;
 
 	&-inner {
@@ -274,6 +204,12 @@
 			}
 		}
 	}
+
+	@include respond-to("mobile") {
+		flex-direction: column;
+		height: 50%;
+	}
+	
 }
 
 .philosophy {
