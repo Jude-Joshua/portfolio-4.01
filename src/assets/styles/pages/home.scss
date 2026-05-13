@@ -397,6 +397,7 @@
 	                @include respond-to("tablet") {
 	                        flex-direction: column;
 							display: flex;
+							align-items: center;
 	             }
 		gap: var(--gap-xs);
 
