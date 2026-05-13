@@ -1,5 +1,6 @@
 @use "../mixins/type";
 @use '../mixins/media' as *;
+@use '../mixins/media';
 
 
 .hero {
@@ -196,7 +197,16 @@
 		@include respond-to("mobile") {
 			flex-direction: column;
 			display: flex;
+			gap: var(--gap-2xl);
 		}
+
+		@include respond-to("tablet") {
+			flex-direction: column;
+			display: flex;
+			gap: var(--gap-2xl);
+			align-items: center;
+		}
+
 
 		&-title {
 			gap: var(--gap-xs);
@@ -205,20 +215,23 @@
 				padding-top: var(--padding-xs);
 			}
 		}
-	}
-
-<<<<<<< HEAD
-	
-	
-=======
-
->>>>>>> f8a9c9df780d43a245577bf8cfb7f63c9b6f4126
+	}	
 }
 
 .philosophy {
 	gap: var(--gap-xs);
 
 	&-title {
+     @include respond-to("mobile") {
+		flex-direction: column;
+		width: 500px;
+		align-items: center;
+	}
+	@include respond-to("tablet") {
+		flex-direction: column;
+		align-items: center;
+	}
+
 		gap: var(--gap-xs);
 
 		&-card {
@@ -317,6 +330,16 @@
 	}
 
 	&-description {
+		@include respond-to("mobile") {
+		flex-direction: column;
+		align-items: center;
+		width: 400px;
+	}
+
+	@include respond-to("tablet") {
+		flex-direction: column;
+		align-items: center;
+	}
 		gap: var(--gap-xs);
 
 		&-image {
@@ -364,7 +387,17 @@
 }
 
 .archetype {
+
+
 	&-body {
+		@include respond-to("mobile") {
+		                   flex-direction: column;
+						   display: flex;
+	                 }
+	                @include respond-to("tablet") {
+	                        flex-direction: column;
+							display: flex;
+	             }
 		gap: var(--gap-xs);
 
 		&-info {

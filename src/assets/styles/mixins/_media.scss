@@ -21,12 +21,7 @@
 		}
 	}
 
-	@else if $type == tablet-up {
-		@media (min-width: $tablet-min) {
-			@content;
-		}
-	}
-
+	
 	@else if $type == desktop {
 		@media (min-width: $desktop-min) {
 			@content;
