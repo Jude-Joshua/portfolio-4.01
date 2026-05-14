@@ -226,6 +226,7 @@
 
             &:hover {
                 background-color: var(--main-accent);
+                padding-inline: var(--padding-md);
 
                 & .project-list-card {
                     &-image {

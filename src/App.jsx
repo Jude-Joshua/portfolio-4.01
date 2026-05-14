@@ -29,7 +29,7 @@ function App() {
                 <Route path="/" element={<Layout><Home /></Layout>} />
                 <Route path="/about" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance/></Layout>} />
                 <Route path="/projects" element={<Layout><Projects /></Layout>} />
-                <Route path="/projects/:id" element={<Layout><Maintenance /></Layout>} />
+                <Route path="/projects/:id" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
                 <Route path="*" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NotFound/></Layout>} />
                 
                 <Route path="/no-javascript" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
