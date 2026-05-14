@@ -101,16 +101,12 @@ export default function Projects() {
 						<div className="project-projects-holder flex flex-col w-full">
 							<div className="project-grid grid grid-cols-2">
 								{visibleProjects.map((project, index) => {
-
-									const delayClass = `fade-section fade-section--delay-${(index % 3) + 1}`;
-
 									return (
 										<ProjectCard
 											variant="grid"
 											theme={''}
 											project={project}
 											key={index}
-											className={`fade-section ${delayClass}`}
 										/>
 									);
 								})}
