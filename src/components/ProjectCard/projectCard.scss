@@ -67,8 +67,8 @@
 
     &.playful {
         max-width: 400px;
-        
-        & .project {            
+
+        & .project {
             &-image {
                 position: absolute;
                 top: 20px;
@@ -138,6 +138,139 @@
                 &-card {
                     top: 50px;
                 }
+            }
+        }
+    }
+
+    &-grid {
+        gap: var(--gap-xs);
+
+        &-card {
+            overflow: hidden;
+            padding: var(--padding-xs);
+            min-height: 456px;
+            border-radius: var(--radius-md);
+
+            &-click {
+                background: var(--main-primary);
+                color: var(--main-white);
+                padding: var(--padding-xs);
+                position: absolute;
+                z-index: 1;
+                border-radius: var(--radius-xl);
+                left: unset;
+                right: var(--padding-xs);
+                top: -20%;
+                transition: 0.6s ease-in-out;
+                will-change: transform;
+                box-shadow: 8px 15px 16px var(--bx-shadows);
+            }
+
+            &:hover {
+                box-shadow: 8px 15px 16px var(--bx-shadows);
+
+                & .project-grid-card-click {
+                    top: var(--padding-xs);
+                }
+
+                & .project-image {
+                    transform: scale(1.05);
+                    filter: grayscale(1);
+                }
+            }
+
+            & .project {
+                &-image {
+                    border-radius: unset;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    transition: 0.6s ease-in-out;
+                    ;
+                }
+
+                &-hmw {
+                    background-color: var(--overlay-white);
+                    backdrop-filter: blur(54px);
+                    padding: var(--padding-md);
+                    border-radius: var(--radius-md);
+                }
+            }
+        }
+    }
+
+    &-list {
+        padding: var(--padding-xs);
+        border-radius: var(--radius-md);
+        background-color: var(--main-light-grey);
+        width: 100%;
+
+        &-container {
+            background-color: var(--main-white);
+            padding: var(--padding-md);
+            border-radius: var(--radius-sm);
+        }
+
+        &-card {
+            padding: var(--padding-md) var(--padding-xs);
+            border-bottom: var(--border) solid var(--main-light-grey);
+            width: 100%;
+            border-radius: var(--radius-sm);
+            transition: 0.6s ease-in-out;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background-color: var(--main-accent);
+
+                & .project-list-card {
+                    &-image {
+                        top: -40px;
+                        opacity: 1;
+                    }
+                    &-name, &-title, &-tag, &-go {
+                        color: var(--main-primary);
+                    }
+                }
+            }
+
+            &-image {
+                position: absolute;
+                width: 304px;
+                will-change: transform;
+                top: 20px;
+                left: 20%;
+                opacity: 0;
+                transition: 0.6s ease-in-out;
+                box-shadow: 8px 15px 16px var(--bx-shadows);
+                z-index: 2;
+                border-radius: var(--radius-xs);
+                overflow: hidden;
+            }
+
+            &-name {
+                text-transform: uppercase;
+                width: 22%;
+                font-weight: 600 !important;
+                transition: 0.6s ease-in-out;
+            }
+
+            &-title {
+                width: 40%;
+                transition: 0.6s ease-in-out;
+            }
+
+            &-tag {
+                width: 16%;
+                transition: 0.6s ease-in-out;
+            }
+
+            &-go{
+                transition: 0.6s ease-in-out;
             }
         }
     }

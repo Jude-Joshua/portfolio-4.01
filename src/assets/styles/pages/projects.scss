@@ -1,0 +1,96 @@
+.project {
+    gap: var(--gap-4xl);
+
+    &-projects {
+        gap: var(--gap-lg);
+
+        &-filters {
+            width: 100%;
+
+            &-tags {
+                background-color: var(--main-light-grey);
+                border-radius: var(--radius-lg);
+                padding: var(--padding-xs);
+                gap: var(--gap-xxs);
+
+                &-tag {
+                    padding: var(--padding-xs) var(--padding-lg);
+                    border-radius: var(--radius-lg);
+                    cursor: pointer;
+                    background-color: var(--main-white);
+                    transition: 0.2s ease-in-out;
+
+                    &.active {
+                        color: var(--main-white);
+                        background-color: var(--main-black);
+                        cursor: default;
+                        font-weight: bold;
+
+                        &:hover {
+                            background-color: var(--main-black);
+                            color: var(--main-white);
+                        }
+                    }
+
+                    &:hover {
+                        background-color: var(--main-accent);
+                        color: var(--main-primary);
+                    }
+                }
+            }
+        }
+
+        &-count {
+            gap: var(--gap-xxs);
+        }
+
+        &-no {
+            padding: var(--padding-2xl) var(--padding-xs);
+            background-color: var(--main-light-grey);
+        }
+
+        &-holder {
+            gap: var(--gap-xs);
+
+            & .philosophy {
+                gap: var(--gap-xs);
+
+                &-title-card {
+                    width: 73%;
+                }
+
+                & a {
+                    width: 27%;
+                }
+
+                &-archetype {
+                    color: var(--main-white);
+                    width: 100%;
+
+                    &:hover {
+                        color: var(--main-complimentary);
+
+                        & .philosophy-archetype-background {
+                            top: -200px;
+                            width: 400%;
+                        }
+
+                        & .philosophy-archetype-icon {
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    &-background {
+                        width: 280%;
+                        transition: 0.6s ease-in-out;
+                    }
+
+                    &-icon{
+                        transition: 0.6s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+}

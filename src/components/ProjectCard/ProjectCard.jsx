@@ -9,12 +9,12 @@ import Button from "../Button/Button.jsx";
 import Url from '../Links/Link.jsx';
 
 
-const ProjectCard = ({ variant, theme, project }) => {
+const ProjectCard = ({ variant, theme, project, className }) => {
 
     switch (variant) {
         case 'long':
             return (
-                <div className="project long grid grid-cols-8 justify-start items-center">
+                <div className="project long grid grid-cols-8 justify-start items-center ${className}">
                     <div className="project-image col-span-5">
                         <ImageComponent src={SampleImage} className={''} alt={'sample project image'} />
                     </div>
@@ -46,7 +46,7 @@ const ProjectCard = ({ variant, theme, project }) => {
                 <Url
                     isNavigationLink="body-link"
                     href={project.link}
-                    className={`project ${variant} flex flex-col justify-between`}
+                    className={`project ${variant} flex flex-col justify-between ${className}`}
                 >
                     <div className="project-image">
                         <ImageComponent
@@ -74,6 +74,52 @@ const ProjectCard = ({ variant, theme, project }) => {
                             </div>
                         </div>
                     </div>
+                </Url>
+            );
+
+        case 'grid':
+            return (
+                <Url
+                    isNavigationLink="body-link"
+                    href={project.link}
+                    className={`project-${variant}-card flex flex-col justify-end items-end ${className}`}
+                >
+                    <div className='project-grid-card-click flex flex-row'>
+                        <ArrowRightIcon size={'32'} />
+                    </div>
+                    <div className="project-image">
+                        <ImageComponent
+                            src={SampleImage}
+                            alt={`${project.title} image`}
+                        />
+                    </div>
+                    <div className="project-hmw">
+                        <p className="t-copy">
+                            {project.hmw}
+                        </p>
+                    </div>
+                </Url>
+            );
+
+        case 'list':
+            return (
+
+                <Url
+                    isNavigationLink="body-link"
+                    href={project.link}
+                    className={`project-${variant}-card flex flex-row justify-between items-start ${className}`}
+
+                >
+                    <div className="project-list-card-image">
+                        <ImageComponent
+                            src={SampleImage}
+                            alt={`${project.title} image`}
+                        />
+                    </div>
+                    <h4 className="t-copy-small project-list-card-name">{project.name}</h4>
+                    <p className="t-copy-small project-list-card-title">{project.title}</p>
+                    <p className="t-copy-small project-list-card-tag">{project.tag}</p>
+                    <ArrowRightIcon size={'24'} weight='regular' className="project-list-card-go"/>
                 </Url>
             );
 
