@@ -22,12 +22,12 @@ const Home = () => {
     return (
         <main className={'flex flex-col items-start justify-start'}>
             <section className="hero fade-section flex flex-col justify-center items-center">
-                <article className="hero-title fade-section fade-section--delay-1 flex flex-col items-center justify-center">
-                    <div className="hero-title-role flex flex-row justify-center items-center">
+                <article className="hero-title flex flex-col items-center justify-center">
+                    <div className="hero-title-role flex flex-row justify-center fade-section fade-section--delay-1 items-center">
                         <p className="t-caption text-center text-secondary">Digital designer</p>
                         <p className="t-caption text-center text-secondary">(person, noun)</p>
                     </div>
-                    <h1 className="h1 text-center">Designing digital experiences that align with
+                    <h1 className="h1 text-center fade-section fade-section--delay-3">Designing digital experiences that align with
                         <span className={'hero-title-icons flex flex-row items-center justify-center'}>
                             <span className={'arrow'} data-cursor='hover'><ArrowUpRightIcon /></span>
                             <span className={'clock'} data-cursor='hover'><ClockCountdownIcon /></span>
@@ -35,18 +35,18 @@ const Home = () => {
                         </span>roadmap goals for teams and founders.</h1>
                 </article>
                 <article className="hello fade-section fade-section--delay-2 flex flex-row-reverse justify-center items-center">
-                    <article className="hello-showcase  flex flex-col justify-center items-center" data-cursor='none' >
-                        <div className="hello-showcase-image">
+                    <article className="hello-showcase flex flex-col justify-center items-center" data-cursor='none' >
+                        <div className="hello-showcase-image fade-section fade-section--delay-3">
                             <ImageComponent src={ShowImage} className={''} alt={'A playground design I made in 2024 to show what a digital card-holder would look like.'} />
                         </div>
                     </article>
                     <article className="hello-card flex flex-col items-start justify-start">
                         <div className={'hello-card-title flex flex-row justify-between items-center w-full'}>
-                            <div className={'hello-card-title-content flex flex-row'}>
+                            <div className={'hello-card-title-content fade-section fade-section--delay-1 flex flex-row'}>
                                 <p className="t-highlights">HELLO</p>
                                 <HelloImage />
                             </div>
-                            <ImageComponent src={ProfileImage} className={'hello-card-title-image'} alt={''} />
+                            <ImageComponent src={ProfileImage} className={'hello-card-title-image fade-section fade-section--delay-1'} alt={''} />
                         </div>
                         <div className={'hello-card-content flex flex-col items-start justify-start'}>
                             <div className={'hello-card-content-text flex flex-col items-start justify-start'}>
@@ -66,24 +66,25 @@ const Home = () => {
                 </article>
             </section>
 
-            <section className="projects w-full flex flex-col fade-section" id='projects'>
-                <article className="projects-inner grid grid-cols-3 justify-start items-start w-full">
-                    {projects.map((project, index) => {
-                        const themes = ['blue', 'beige', 'green'];
-                        const delayClass = `fade-section--delay-${(index % 3) + 1}`;
+            {projects.length > 0 && (
+                <section className="projects w-full flex flex-col" id='projects'>
+                    <article className="projects-inner grid grid-cols-3 justify-start items-start w-full">
+                        {projects.slice(0, 3).map((project, index) => {
+                            const themes = ['blue', 'beige', 'green'];
+                            const delayClass = `fade-section fade-section--delay-${(index % 3) + 1}`;
 
-                        return (
-                            <div key={index} className={`fade-section ${delayClass}`}>
+                            return (
                                 <ProjectCard
                                     variant="playful"
                                     theme={themes[index % themes.length]}
                                     project={project}
+                                    className={`fade-section ${delayClass}`}
                                 />
-                            </div>
-                        );
-                    })}
-                </article>
-            </section>
+                            );
+                        })}
+                    </article>
+                </section>
+            )}
 
             <section className="philosophy flex flex-col items-center justify-center">
                 <article className="philosophy-title flex flex-row items-start justify-start">
