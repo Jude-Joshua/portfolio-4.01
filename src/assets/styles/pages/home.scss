@@ -221,16 +221,14 @@
 	gap: var(--gap-xs);
 
 	&-title {
-     @include respond-to("mobile") {
+		 @include respond-to("mobile") {
 		flex-direction: column;
-		width: 500px;
-		align-items: center;
+		width: 100%;
 	}
 	@include respond-to("tablet") {
 		flex-direction: column;
-		align-items: center;
+		width: 100%;
 	}
-
 		gap: var(--gap-xs);
 
 		&-card {
@@ -239,6 +237,14 @@
 			border-radius: var(--radius-md);
 			width: 70%;
 			overflow: hidden;
+
+			@include respond-to("mobile") {
+                   width: 100%;
+	}
+
+	      @include respond-to("tablet") {
+		           width: 100%;
+	}
 
 			&-glass {
 				position: absolute;
@@ -298,6 +304,14 @@
 			background-size: cover;
 			background-position: center;
 
+			@include respond-to("mobile") {
+                   width: 100%;
+	}
+
+	      @include respond-to("tablet") {
+		           width: 100%;
+	}
+
 			&-card {
 				padding: var(--padding-sm) var(--padding-sm);
 				background-color: var(--main-secondary);
@@ -330,14 +344,13 @@
 
 	&-description {
 		@include respond-to("mobile") {
-		flex-direction: column;
-		align-items: center;
-		width: 400px;
+		    flex-direction: column;
+			width: 100%;
 	}
 
 	@include respond-to("tablet") {
-		flex-direction: column;
-		align-items: center;
+		    flex-direction: column;
+			width: 100%;
 	}
 		gap: var(--gap-xs);
 
@@ -348,6 +361,14 @@
 			width: 30%;
 			height: -webkit-fill-available;
 			border-radius: var(--radius-md);
+
+			@include respond-to("mobile") {
+                   width: 100%;
+	}
+
+	      @include respond-to("tablet") {
+		           width: 100%;
+	}
 		}
 
 		&-block {
@@ -355,6 +376,14 @@
 			padding: var(--padding-2xl);
 			border-radius: var(--radius-md);
 			width: 70%;
+
+			@include respond-to("mobile") {
+                   width: 100%;
+	}
+
+	      @include respond-to("tablet") {
+		           width: 100%;
+	}
 		}
 	}
 
@@ -389,18 +418,21 @@
 
 
 	&-body {
-		@include respond-to("mobile") {
-		                   flex-direction: column;
-						   display: flex;
-	                 }
-	                @include respond-to("tablet") {
-	                        flex-direction: column;
-							display: flex;
-							align-items: center;
-	             }
 		gap: var(--gap-xs);
 
 		&-info {
+			@include respond-to("mobile") {
+		                   display: grid;
+						   grid-template-columns: 1fr;
+						   gap: var(--gap-sm);
+						   width: 100%;
+	                 }
+	                @include respond-to("tablet") {
+	                        display: grid;
+							grid-template-columns: 1fr;
+							gap: var(--gap-sm);
+							width: 100%;
+	             }
 			gap: var(--gap-xs);
 
 			&-left {
