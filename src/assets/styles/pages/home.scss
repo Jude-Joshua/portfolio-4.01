@@ -154,6 +154,9 @@
 		@include respond-to("mobile") {
 			width: 100%;
 			height: 400px;
+			transform: none;
+			left: 0;
+			right: 0;
 		}
 
 		&:hover {
@@ -240,10 +243,14 @@
 
 			@include respond-to("mobile") {
                    width: 100%;
+				   border-radius: var(--radius-lg);
+				   height: 696px;
 	}
 
 	      @include respond-to("tablet") {
 		           width: 100%;
+				   border-radius: var(--radius-lg);
+				   height: 700px;
 	}
 
 			&-glass {
@@ -306,10 +313,16 @@
 
 			@include respond-to("mobile") {
                    width: 100%;
+				   height: 520px;
+				   border-radius: var(--radius-lg);
+				   padding: var(--padding-sm);
 	}
 
 	      @include respond-to("tablet") {
 		           width: 100%;
+				   height: 600px;
+				   border-radius: var(--radius-lg);
+				   padding: var(--padding-sm);
 	}
 
 			&-card {
@@ -319,6 +332,19 @@
 				height: 100%;
 				border-radius: var(--radius-md);
 				overflow: hidden;
+
+				@include respond-to("mobile") {
+                   width: 100%;
+				   height: 100%;
+				   border-radius: var(--radius-lg);
+	}
+
+	      @include respond-to("tablet") {
+		           width: 100%;
+				   height: 100%;
+				   border-radius: var(--radius-lg);
+	}
+
 
 				&-img {
 					position: absolute;
@@ -363,7 +389,9 @@
 			border-radius: var(--radius-md);
 
 			@include respond-to("mobile") {
-                   width: 100%;
+                   width: 350px;
+				   height: 250px;
+				   border-radius: var(--radius-lg);
 	}
 
 	      @include respond-to("tablet") {
@@ -379,6 +407,8 @@
 
 			@include respond-to("mobile") {
                    width: 100%;
+				   height: 416px;
+				   border-radius: var(--radius-lg);
 	}
 
 	      @include respond-to("tablet") {
@@ -393,6 +423,18 @@
 		overflow: hidden;
 		padding: var(--padding-4xl) var(--padding-lg);
 
+		@include respond-to("mobile") {
+                   width: 100%;
+				   height: 529px;
+				   border-radius: var(--radius-lg);
+	}
+
+	      @include respond-to("tablet") {
+		           width: 100%;
+	}
+
+
+
 		&-background {
 			position: absolute;
 			top: -60%;
@@ -406,6 +448,24 @@
 			align-self: center;
 			color: var(--main-white);
 
+			@include respond-to("mobile") {
+				   flex-direction: row-reverse;
+				   align-items: flex-start;
+                   width: 100%;
+				   padding: 0 var(--padding-2xl);
+				   p{
+					top: -80px;
+				   }
+				   h2{
+					align-content: stretch;
+					top: 80px;
+				   }
+	}
+
+	      @include respond-to("tablet") {
+		           width: 100%;
+	}
+
 			&-highlights {
 				color: var(--main-white);
 				text-decoration: underline;
@@ -416,31 +476,31 @@
 
 .archetype {
 
-
 	&-body {
 		gap: var(--gap-xs);
-
-		&-info {
-			@include respond-to("mobile") {
-		                   display: grid;
-						   grid-template-columns: 1fr;
+		@include respond-to("mobile") {
+						   flex-direction: column;
 						   gap: var(--gap-sm);
+						   border-radius: var(--radius-lg);
 						   width: 100%;
 	                 }
 	                @include respond-to("tablet") {
-	                        display: grid;
-							grid-template-columns: 1fr;
+	                        display: flex;
+							flex-direction: column;
 							gap: var(--gap-sm);
 							width: 100%;
 	             }
-			gap: var(--gap-xs);
 
+
+		&-info {
+			gap: var(--gap-xs);
+		
 			&-left {
 				border-radius: var(--radius-md);
 				padding: var(--padding-2xl) var(--padding-xl) var(--padding-xl);
 				background-color: var(--main-light-grey);
 				gap: var(--gap-lg);
-
+			
 				&-paragraphs {
 					gap: var(--gap-sm);
 				}
@@ -456,6 +516,7 @@
 							color: var(--main-black);
 							padding: var(--padding-xxs) var(--padding-xs);
 							border-radius: var(--radius-xs);
+
 						}
 					}
 				}
@@ -466,6 +527,19 @@
 				height: 80%;
 				overflow: hidden;
 				gap: var(--gap-xs);
+
+				@include respond-to("mobile") {
+                   width: 100%;
+				   height: 100%;
+				   border-radius: var(--radius-md);
+	}
+
+	      @include respond-to("tablet") {
+		           width: 100%;
+				   height: 100%;
+				   border-radius: var(--radius-md);
+	}
+
 			}
 		}
 
