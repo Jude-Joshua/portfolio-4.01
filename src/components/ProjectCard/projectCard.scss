@@ -66,80 +66,80 @@
     }
 
     &.playful {
-        max-width: 400px;
+        
+        &.project {
+            border-radius: var(--radius-md);
+            padding: var(--padding-xs);
+            min-height: 504px;
+            gap: var(--gap-xl);
+            padding-top: var(--padding-xl);
+            transition: 0.6s ease-in-out;
+            top: 0;
 
-        & .project {
-            &-image {
-                position: absolute;
-                top: 20px;
-                left: 50%;
-                transition: 0.6s ease-in-out;
-                width: 90%;
-                height: auto;
-                transform: translateX(-50%);
-                border-radius: var(--radius-sm);
-                overflow: hidden;
+            &.blue {
+                background: var(--accents-complimentary);
             }
 
-            &-card {
-                border-radius: var(--radius-md);
-                padding: var(--padding-xs);
-                min-height: 464px;
-                gap: var(--gap-xl);
-                padding-top: var(--padding-xl);
-                clip-path: path("M0,40 Q0, 0 40, 0 L80, 0 Q100, 0 112, 40 Q8, 6 116, 40 L270, 40 Q280, 40 290, 20 Q300, 0 320, 0 L440, 0 Q480, 0 480, 40 L480, 560 Q480, 560 0, 560 Z");
-                transition: 0.6s ease-in-out;
-                top: 0;
+            &.beige {
+                background: var(--accents-secondary);
+            }
 
-                &.blue {
-                    background: var(--lights-accents-primary);
-                }
+            & .project-card {
 
-                &.beige {
-                    background: var(--lights-accents-complimentary);
-                }
+                &-image {
+                    position: absolute;
+                    top: 0px;
+                    left: 50%;
+                    transition: 0.6s ease-in-out;
+                    width: 90%;
+                    height: 96%;
+                    transform: translateX(-50%);
+                    border-radius: var(--radius-sm);
+                    overflow: hidden;
+                    box-shadow: -6px 15px 24px 17px var(--bx-shadows);
 
-                &.green {
-                    background-color: var(--lights-main-primary);
-                }
-
-                &-label {
-                    background-color: var(--main-accent);
-                    border-radius: var(--radius-xs);
-                    padding: var(--padding-xxs) var(--padding-xs);
-                    display: inline;
-                    width: fit-content;
-                    flex: 0;
+                    & img{
+                        height: 100%;
+                        width: 100%;
+                    }
                 }
 
                 &-details {
-                    gap: var(--gap-xs);
-                    padding: var(--padding-none);
+                    box-shadow: -3px -10px 24px var(--bx-shadows);
+                    background-color: var(--main-white);
+                    border-radius: var(--radius-sm);
+                    padding: var(--padding-md) var(--padding-md);
+                    gap: var(--gap-xxs);
 
                     &-title {
-                        padding: 0 var(--padding-xs);
-                    }
+                        font-weight: 600;
+                        color: var(--main-secondary);
+                        gap: var(--gap-xxs);
 
-                    &-hmw {
-                        background-color: var(--main-white);
-                        border-radius: var(--radius-sm);
-                        padding: var(--padding-xs);
+                        &:before {
+                            content: '';
+                            display: inline-block;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: var(--radius-xl);
+                            background-color: var(--main-secondary);
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: -6px 15px 24px 17px var(--bx-shadows);
+
+                & .project-card {
+
+                    &-image {
+                        top: -32%;
                     }
                 }
             }
         }
 
-        &:hover {
-            & .project {
-                &-image {
-                    top: -15%;
-                }
-
-                &-card {
-                    top: 50px;
-                }
-            }
-        }
     }
 
     &-grid {
@@ -233,7 +233,11 @@
                         top: -40px;
                         opacity: 1;
                     }
-                    &-name, &-title, &-tag, &-go {
+
+                    &-name,
+                    &-title,
+                    &-tag,
+                    &-go {
                         color: var(--main-primary);
                     }
                 }
@@ -270,7 +274,7 @@
                 transition: 0.6s ease-in-out;
             }
 
-            &-go{
+            &-go {
                 transition: 0.6s ease-in-out;
             }
         }

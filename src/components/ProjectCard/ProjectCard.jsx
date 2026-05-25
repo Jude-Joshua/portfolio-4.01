@@ -46,32 +46,22 @@ const ProjectCard = ({ variant, theme, project, className }) => {
                 <Url
                     isNavigationLink="body-link"
                     href={project.link}
-                    className={`project ${variant} flex flex-col justify-between ${className}`}
+                    className={`project ${variant} flex flex-col justify-between ${theme} ${className}`}
                 >
-                    <div className="project-image">
-                        <ImageComponent
-                            src={SampleImage}
-                            alt={`${project.title} image`}
-                        />
-                    </div>
-
-                    <div className={`project-card flex flex-col justify-between ${theme}`}>
-                        <div className="project-card-label">
-                            <p className="t-caption">{project.tag}</p>
+                    <div className={`project-card flex flex-col justify-end`}>
+                        <div className="project-card-image">
+                            <ImageComponent
+                                src={`/assets/images/${project.slug}/${project.cover}`}
+                                alt={`${project.title} image`}
+                            />
                         </div>
-
                         <div className="project-card-details flex flex-col items-start justify-start">
-                            <div className="project-card-details-title">
-                                <h6 className="h6">
-                                    {project.title}
-                                </h6>
-                            </div>
-
-                            <div className="project-card-details-hmw">
-                                <p className="t-copy-small">
-                                    {project.hmw}
-                                </p>
-                            </div>
+                            <h6 className="t-caption project-card-details-title justify-center items-center flex">
+                                {project.name}
+                            </h6>
+                            <p className="t-copy">
+                                {project.hmw}
+                            </p>
                         </div>
                     </div>
                 </Url>
@@ -119,7 +109,7 @@ const ProjectCard = ({ variant, theme, project, className }) => {
                     <h4 className="t-copy-small project-list-card-name">{project.name}</h4>
                     <p className="t-copy-small project-list-card-title">{project.title}</p>
                     <p className="t-copy-small project-list-card-tag">{project.tag}</p>
-                    <ArrowRightIcon size={'24'} weight='regular' className="project-list-card-go"/>
+                    <ArrowRightIcon size={'24'} weight='regular' className="project-list-card-go" />
                 </Url>
             );
 

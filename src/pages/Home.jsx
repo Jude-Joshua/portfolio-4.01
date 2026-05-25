@@ -68,9 +68,9 @@ const Home = () => {
 
             {projects.length > 0 && (
                 <section className="projects w-full flex flex-col" id='projects'>
-                    <article className="projects-inner grid grid-cols-3 justify-start items-start w-full">
-                        {projects.slice(0, 3).map((project, index) => {
-                            const themes = ['blue', 'beige', 'green'];
+                    <article className="projects-inner grid grid-cols-2 justify-start items-start w-full">
+                        {projects.slice(0, 2).map((project, index) => {
+                            const themes = ['beige', 'blue'];
                             const delayClass = `fade-section fade-section--delay-${(index % 3) + 1}`;
 
                             return (

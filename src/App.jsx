@@ -5,7 +5,7 @@ import Layout from "./components/Layout/Layout.jsx";
 import Home from './pages/Home.jsx';
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
-import CaseStudy from "./pages/Casestudy.jsx";
+import ProjectRoute from "./pages/ProjectRoute.jsx";
 
 import NotFound from "./pages/NotFound.jsx";
 import NoJavascript from "./pages/NoJavascript.jsx";
@@ -29,7 +29,7 @@ function App() {
                 <Route path="/" element={<Layout><Home /></Layout>} />
                 <Route path="/about" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance/></Layout>} />
                 <Route path="/projects" element={<Layout><Projects /></Layout>} />
-                <Route path="/projects/:id" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
+                <Route path="/projects/:id" element={<ProjectRoute />} />
                 <Route path="*" element={<Layout navbarVariant="notfound" footerVariant="notfound"><NotFound/></Layout>} />
                 
                 <Route path="/no-javascript" element={<Layout navbarVariant="notfound" footerVariant="notfound"><Maintenance /></Layout>} />
