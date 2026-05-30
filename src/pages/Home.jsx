@@ -142,8 +142,12 @@ const Home = () => {
                                 <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
                             </Button>
                         </div>
-                        <div className="archetype-body-info-right fade-section fade-section--delay-3 col-span-3 flex flex-col items-start justify-start">
-                            <ImageSlider />
+                        <div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
+                            <div className="archetype-body-info-right-image fade-section fade-section--delay-3 flex w-full flex-col items-start justify-start">
+                                <ImageSlider />
+                            </div>
+                            <div className="archetype-body-info-right-fill fade-section fade-section--delay-1 w-full flex flex-col items-start justify-start">
+                            </div>
                         </div>
                     </div>
                 </article>
