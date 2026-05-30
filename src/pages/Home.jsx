@@ -27,12 +27,12 @@ const Home = () => {
                         <p className="t-caption text-center text-secondary">Digital designer</p>
                         <p className="t-caption text-center text-secondary">(person, noun)</p>
                     </div>
-                    <h1 className="h1 text-center fade-section fade-section--delay-3">Designing digital experiences that align with
+                    <h1 className="h1 text-center fade-section fade-section--delay-3">I help teams and founders scale their digital
                         <span className={'hero-title-icons flex flex-row items-center justify-center'}>
                             <span className={'arrow'} data-cursor='hover'><ArrowUpRightIcon /></span>
                             <span className={'clock'} data-cursor='hover'><ClockCountdownIcon /></span>
                             <span className={'calendar'} data-cursor='hover'><CalendarDotsIcon /></span>
-                        </span>roadmap goals for teams and founders.</h1>
+                        </span>experiences across product and brand.</h1>
                 </article>
                 <article className="hello fade-section fade-section--delay-2 flex flex-row-reverse justify-center items-center">
                     <article className="hello-showcase flex flex-col justify-center items-center" data-cursor='none' >
@@ -68,16 +68,17 @@ const Home = () => {
 
             {projects.length > 0 && (
                 <section className="projects w-full flex flex-col" id='projects'>
-                    <article className="projects-inner grid grid-cols-2 justify-start items-start w-full">
+                    <article className="projects-inner flex flex-col justify-center items-center w-full">
                         {projects.slice(0, 2).map((project, index) => {
                             const themes = ['beige', 'blue'];
                             const delayClass = `fade-section fade-section--delay-${(index % 3) + 1}`;
 
                             return (
                                 <ProjectCard
-                                    variant="playful"
+                                    variant="long"
                                     theme={themes[index % themes.length]}
                                     project={project}
+                                    index={index}
                                     className={`fade-section ${delayClass}`}
                                     key={index}
                                 />

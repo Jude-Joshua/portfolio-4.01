@@ -47,13 +47,56 @@
         }
     }
 
+    &-keeper {
+        gap: var(--gap-md);
+
+        &-counter {
+            padding: var(--padding-xs) var(--padding-5xl) var(--padding-lg);
+            background: var(--main-black);
+            transform: rotate(-90deg);
+            border-radius: var(--radius-sm);
+            position: absolute;
+            z-index: 1;
+            top: 41%;
+            left: -11%;
+            color: var(--main-white);
+            transition: 0.4s ease-in-out;
+
+            &:has(+ .project.long:hover) {
+                left: -8%;
+            }
+        }
+    }
+
     &.long {
         gap: var(--gap-md);
+        z-index: 2;
         background-color: var(--main-light-grey);
         border-radius: var(--radius-md);
-        @include p(var(--padding-xs), var(--padding-lg), var(--padding-xs), var(--padding-xs));
+        height: 504px;
+        @include p(var(--padding-xxs), var(--padding-xxs), var(--padding-xxs), var(--padding-lg));
+        overflow: hidden;
+        width: 88%;
+        transition: 0.6s ease-in-out;
+
+        & .project {
+            &-details {
+                height: 100%;
+                padding-block: var(--padding-md);
+            }
+
+            &-image {
+                border-radius: calc(var(--radius-md) - var(--padding-xxs));
+                overflow: hidden;
+                height: 100%;
+            }
+        }
 
         &:hover {
+            box-shadow: -6px 15px 24px 17px var(--bx-shadows);
+            transform: scale(1.01);
+            z-index: 3;
+
             & .project {
                 &-image {
                     & img {
@@ -66,7 +109,7 @@
     }
 
     &.playful {
-        
+
         &.project {
             border-radius: var(--radius-md);
             padding: var(--padding-xs);
@@ -98,7 +141,7 @@
                     overflow: hidden;
                     box-shadow: -6px 15px 24px 17px var(--bx-shadows);
 
-                    & img{
+                    & img {
                         height: 100%;
                         width: 100%;
                     }
@@ -147,8 +190,8 @@
 
         &-card {
             overflow: hidden;
-            padding: var(--padding-xs);
-            min-height: 456px;
+            padding: var(--padding-xxs);
+            min-height: 504px;
             border-radius: var(--radius-md);
 
             &-click {
@@ -167,7 +210,8 @@
             }
 
             &:hover {
-                box-shadow: 8px 15px 16px var(--bx-shadows);
+                box-shadow: -6px 15px 24px 17px var(--bx-shadows);
+                z-index: 2;
 
                 & .project-grid-card-click {
                     top: var(--padding-xs);
@@ -175,7 +219,7 @@
 
                 & .project-image {
                     transform: scale(1.05);
-                    filter: grayscale(1);
+                    // filter: grayscale(1);
                 }
             }
 
@@ -196,6 +240,7 @@
                     backdrop-filter: blur(54px);
                     padding: var(--padding-md);
                     border-radius: var(--radius-md);
+                    justify-self: flex-start;
                 }
             }
         }

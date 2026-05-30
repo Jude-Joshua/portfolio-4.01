@@ -27,7 +27,7 @@ export default function Maintenance() {
                         return (
                             <ProjectCard
                                 key={index}
-                                variant="playful"
+                                variant="grid"
                                 theme={themes[index % themes.length]}
                                 project={project}
                                 className={'col-span-2 col-start-2'}
