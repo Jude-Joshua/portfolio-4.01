@@ -47,13 +47,56 @@
         }
     }
 
+    &-keeper {
+        gap: var(--gap-md);
+
+        &-counter {
+            padding: var(--padding-xs) var(--padding-5xl) var(--padding-lg);
+            background: var(--main-black);
+            transform: rotate(-90deg);
+            border-radius: var(--radius-sm);
+            position: absolute;
+            z-index: 1;
+            top: 41%;
+            left: -11%;
+            color: var(--main-white);
+            transition: 0.4s ease-in-out;
+
+            &:has(+ .project.long:hover) {
+                left: -8%;
+            }
+        }
+    }
+
     &.long {
         gap: var(--gap-md);
+        z-index: 2;
         background-color: var(--main-light-grey);
         border-radius: var(--radius-md);
-        @include p(var(--padding-xs), var(--padding-lg), var(--padding-xs), var(--padding-xs));
+        height: 504px;
+        @include p(var(--padding-xxs), var(--padding-xxs), var(--padding-xxs), var(--padding-lg));
+        overflow: hidden;
+        width: 88%;
+        transition: 0.6s ease-in-out;
+
+        & .project {
+            &-details {
+                height: 100%;
+                padding-block: var(--padding-md);
+            }
+
+            &-image {
+                border-radius: calc(var(--radius-md) - var(--padding-xxs));
+                overflow: hidden;
+                height: 100%;
+            }
+        }
 
         &:hover {
+            box-shadow: -6px 15px 24px 17px var(--bx-shadows);
+            transform: scale(1.01);
+            z-index: 3;
+
             & .project {
                 &-image {
                     & img {
@@ -66,80 +109,80 @@
     }
 
     &.playful {
-        max-width: 400px;
 
-        & .project {
-            &-image {
-                position: absolute;
-                top: 20px;
-                left: 50%;
-                transition: 0.6s ease-in-out;
-                width: 90%;
-                height: auto;
-                transform: translateX(-50%);
-                border-radius: var(--radius-sm);
-                overflow: hidden;
+        &.project {
+            border-radius: var(--radius-md);
+            padding: var(--padding-xs);
+            min-height: 504px;
+            gap: var(--gap-xl);
+            padding-top: var(--padding-xl);
+            transition: 0.6s ease-in-out;
+            top: 0;
+
+            &.blue {
+                background: var(--accents-complimentary);
             }
 
-            &-card {
-                border-radius: var(--radius-md);
-                padding: var(--padding-xs);
-                min-height: 464px;
-                gap: var(--gap-xl);
-                padding-top: var(--padding-xl);
-                clip-path: path("M0,40 Q0, 0 40, 0 L80, 0 Q100, 0 112, 40 Q8, 6 116, 40 L270, 40 Q280, 40 290, 20 Q300, 0 320, 0 L440, 0 Q480, 0 480, 40 L480, 560 Q480, 560 0, 560 Z");
-                transition: 0.6s ease-in-out;
-                top: 0;
+            &.beige {
+                background: var(--accents-secondary);
+            }
 
-                &.blue {
-                    background: var(--lights-accents-primary);
-                }
+            & .project-card {
 
-                &.beige {
-                    background: var(--lights-accents-complimentary);
-                }
+                &-image {
+                    position: absolute;
+                    top: 0px;
+                    left: 50%;
+                    transition: 0.6s ease-in-out;
+                    width: 90%;
+                    height: 96%;
+                    transform: translateX(-50%);
+                    border-radius: var(--radius-sm);
+                    overflow: hidden;
+                    box-shadow: -6px 15px 24px 17px var(--bx-shadows);
 
-                &.green {
-                    background-color: var(--lights-main-primary);
-                }
-
-                &-label {
-                    background-color: var(--main-accent);
-                    border-radius: var(--radius-xs);
-                    padding: var(--padding-xxs) var(--padding-xs);
-                    display: inline;
-                    width: fit-content;
-                    flex: 0;
+                    & img {
+                        height: 100%;
+                        width: 100%;
+                    }
                 }
 
                 &-details {
-                    gap: var(--gap-xs);
-                    padding: var(--padding-none);
+                    box-shadow: -3px -10px 24px var(--bx-shadows);
+                    background-color: var(--main-white);
+                    border-radius: var(--radius-sm);
+                    padding: var(--padding-md) var(--padding-md);
+                    gap: var(--gap-xxs);
 
                     &-title {
-                        padding: 0 var(--padding-xs);
-                    }
+                        font-weight: 600;
+                        color: var(--main-secondary);
+                        gap: var(--gap-xxs);
 
-                    &-hmw {
-                        background-color: var(--main-white);
-                        border-radius: var(--radius-sm);
-                        padding: var(--padding-xs);
+                        &:before {
+                            content: '';
+                            display: inline-block;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: var(--radius-xl);
+                            background-color: var(--main-secondary);
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: -6px 15px 24px 17px var(--bx-shadows);
+
+                & .project-card {
+
+                    &-image {
+                        top: -32%;
                     }
                 }
             }
         }
 
-        &:hover {
-            & .project {
-                &-image {
-                    top: -15%;
-                }
-
-                &-card {
-                    top: 50px;
-                }
-            }
-        }
     }
 
     &-grid {
@@ -147,8 +190,8 @@
 
         &-card {
             overflow: hidden;
-            padding: var(--padding-xs);
-            min-height: 456px;
+            padding: var(--padding-xxs);
+            min-height: 504px;
             border-radius: var(--radius-md);
 
             &-click {
@@ -167,7 +210,8 @@
             }
 
             &:hover {
-                box-shadow: 8px 15px 16px var(--bx-shadows);
+                box-shadow: -6px 15px 24px 17px var(--bx-shadows);
+                z-index: 2;
 
                 & .project-grid-card-click {
                     top: var(--padding-xs);
@@ -175,7 +219,7 @@
 
                 & .project-image {
                     transform: scale(1.05);
-                    filter: grayscale(1);
+                    // filter: grayscale(1);
                 }
             }
 
@@ -192,10 +236,11 @@
                 }
 
                 &-hmw {
-                    background-color: var(--overlay-white);
+                    background-color: var(--main-white);
                     backdrop-filter: blur(54px);
                     padding: var(--padding-md);
                     border-radius: var(--radius-md);
+                    justify-self: flex-start;
                 }
             }
         }
@@ -233,7 +278,11 @@
                         top: -40px;
                         opacity: 1;
                     }
-                    &-name, &-title, &-tag, &-go {
+
+                    &-name,
+                    &-title,
+                    &-tag,
+                    &-go {
                         color: var(--main-primary);
                     }
                 }
@@ -270,7 +319,7 @@
                 transition: 0.6s ease-in-out;
             }
 
-            &-go{
+            &-go {
                 transition: 0.6s ease-in-out;
             }
         }

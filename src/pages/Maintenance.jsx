@@ -20,16 +20,17 @@ export default function Maintenance() {
             </section>
 
             <section className="projects w-full flex flex-col" id='projects'>
-                <article className="projects-inner fade-section fade-section--delay-3 flex justify-center items-center w-full">
+                <article className="projects-inner fade-section fade-section--delay-3 grid grid-cols-4 justify-center items-center w-full">
                     {projects.slice(0, 1).map((project, index) => {
                         const themes = ['blue', 'beige', 'green'];
 
                         return (
                             <ProjectCard
                                 key={index}
-                                variant="playful"
+                                variant="grid"
                                 theme={themes[index % themes.length]}
                                 project={project}
+                                className={'col-span-2 col-start-2'}
                             />
                         );
                     })}

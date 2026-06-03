@@ -27,12 +27,12 @@ const Home = () => {
                         <p className="t-caption text-center text-secondary">Digital designer</p>
                         <p className="t-caption text-center text-secondary">(person, noun)</p>
                     </div>
-                    <h1 className="h1 text-center fade-section fade-section--delay-3">Designing digital experiences that align with
+                    <h1 className="h1 text-center fade-section fade-section--delay-3">I help teams and founders scale their digital
                         <span className={'hero-title-icons flex flex-row items-center justify-center'}>
                             <span className={'arrow'} data-cursor='hover'><ArrowUpRightIcon /></span>
                             <span className={'clock'} data-cursor='hover'><ClockCountdownIcon /></span>
                             <span className={'calendar'} data-cursor='hover'><CalendarDotsIcon /></span>
-                        </span>roadmap goals for teams and founders.</h1>
+                        </span>experiences across product and brand.</h1>
                 </article>
                 <article className="hello fade-section fade-section--delay-2 flex flex-row-reverse justify-center items-center">
                     <article className="hello-showcase flex flex-col justify-center items-center" data-cursor='none' >
@@ -68,16 +68,17 @@ const Home = () => {
 
             {projects.length > 0 && (
                 <section className="projects w-full flex flex-col" id='projects'>
-                    <article className="projects-inner grid grid-cols-3 justify-start items-start w-full">
-                        {projects.slice(0, 3).map((project, index) => {
-                            const themes = ['blue', 'beige', 'green'];
+                    <article className="projects-inner flex flex-col justify-center items-center w-full">
+                        {projects.slice(0, 2).map((project, index) => {
+                            const themes = ['beige', 'blue'];
                             const delayClass = `fade-section fade-section--delay-${(index % 3) + 1}`;
 
                             return (
                                 <ProjectCard
-                                    variant="playful"
+                                    variant="long"
                                     theme={themes[index % themes.length]}
                                     project={project}
+                                    index={index}
                                     className={`fade-section ${delayClass}`}
                                     key={index}
                                 />
@@ -116,9 +117,9 @@ const Home = () => {
                 </article>
                 <article className="philosophy-archetype fade-section fade-section--delay-1 flex flex-col items-center justify-center text-center">
                     <ArchetypeImage className="philosophy-archetype-background fade-section fade-section--delay-2" />
-                    <div className='philosophy-archetype-box flex flex-col items-center justify-center text-center fade-section fade-section--delay-3'>
-                        <p className="t-highlights fade-section fade-section--delay-1">My brand archetypes would be…</p>
-                        <h2 className="h2 fade-section fade-section--delay-3">Sometimes, a <span className="philosophy-archetype-box-highlights">Rebel</span>. Often, an <span className="philosophy-archetype-box-highlights">Explorer</span>. But always a <span className="philosophy-archetype-box-highlights">Caregiver</span>.
+                    <div className='philosophy-archetype-box flex flex-col items-start justify-start text-center fade-section fade-section--delay-3'>
+                        {/* <p className="t-highlights fade-section fade-section--delay-1">My brand archetypes would be…</p> */}
+                        <h2 className="h2 fade-section fade-section--delay-3">Sometimes, a <span className="philosophy-archetype-box-highlights">Rebel.</span> Often, an <span className="philosophy-archetype-box-highlights">Explorer.</span> But always a <span className="philosophy-archetype-box-highlights">Caregiver.</span>
                         </h2>
                     </div>
                 </article>
@@ -141,8 +142,16 @@ const Home = () => {
                                 <ArrowUpRightIcon weight={'bold'} fontSize={'24'} />
                             </Button>
                         </div>
-                        <div className="archetype-body-info-right fade-section fade-section--delay-3 col-span-3 flex flex-col items-start justify-start">
-                            <ImageSlider />
+                        <div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
+                            <div className="archetype-body-info-right-image fade-section fade-section--delay-3 flex w-full flex-col items-start justify-start">
+                                <ImageSlider />
+                            </div>
+                            <div className="archetype-body-info-right-fill fade-section fade-section--delay-1 w-full flex flex-col items-start justify-start">
+                                <div className="s1 archetype-body-info-right-fill-scroll">
+                                    <span>Jude Joshua</span>
+                                    {/* <span>Jude Joshua</span> */}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>
