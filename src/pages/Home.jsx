@@ -117,9 +117,9 @@ const Home = () => {
                 </article>
                 <article className="philosophy-archetype fade-section fade-section--delay-1 flex flex-col items-center justify-center text-center">
                     <ArchetypeImage className="philosophy-archetype-background fade-section fade-section--delay-2" />
-                    <div className='philosophy-archetype-box flex flex-col items-center justify-center text-center fade-section fade-section--delay-3'>
-                        <p className="t-highlights fade-section fade-section--delay-1">My brand archetypes would be…</p>
-                        <h2 className="h2 fade-section fade-section--delay-3">Sometimes, a <span className="philosophy-archetype-box-highlights">Rebel</span>. Often, an <span className="philosophy-archetype-box-highlights">Explorer</span>. But always a <span className="philosophy-archetype-box-highlights">Caregiver</span>.
+                    <div className='philosophy-archetype-box flex flex-col items-start justify-start text-center fade-section fade-section--delay-3'>
+                        {/* <p className="t-highlights fade-section fade-section--delay-1">My brand archetypes would be…</p> */}
+                        <h2 className="h2 fade-section fade-section--delay-3">Sometimes, a <span className="philosophy-archetype-box-highlights">Rebel.</span> Often, an <span className="philosophy-archetype-box-highlights">Explorer.</span> But always a <span className="philosophy-archetype-box-highlights">Caregiver.</span>
                         </h2>
                     </div>
                 </article>
@@ -147,6 +147,10 @@ const Home = () => {
                                 <ImageSlider />
                             </div>
                             <div className="archetype-body-info-right-fill fade-section fade-section--delay-1 w-full flex flex-col items-start justify-start">
+                                <div className="s1 archetype-body-info-right-fill-scroll">
+                                    <span>Jude Joshua</span>
+                                    {/* <span>Jude Joshua</span> */}
+                                </div>
                             </div>
                         </div>
                     </div>
