@@ -7,7 +7,7 @@ import Url from "../Links/Link.jsx";
 
 import Logo from "../../assets/images/logo.svg?react";
 
-const Links = ["home", "projects", "mentoring", "speaking"];
+const Links = ["home", "projects"];
 
 export default function Navbar({ variant = "default" }) {
 	const navClass = useMemo(() => {

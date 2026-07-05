@@ -104,21 +104,12 @@
 		background-color: var(--main-light-grey);
 		border-radius: var(--radius-md);
 		gap: var(--gap-2xl);
-		box-shadow: 8px 15px 16px var(--bx-shadows);
+		box-shadow: 3px 10px 16px 11px var(--bx-shadows);
 		z-index: 3;
 		left: 5%;
-		top: 16px;
-		transform: rotate(-1.81deg);
-		transition: 0.6s ease-in-out;
-		will-change: transform;
 
 		@include respond-to("mobile") {
 			width: 100%;
-		}
-
-		&:hover {
-			transform: rotate(0);
-			top: -56px;
 		}
 
 		&-title {
@@ -144,14 +135,14 @@
 	}
 
 	&-showcase {
-		width: 40%;
-		height: 560px;
+		width: 36%;
+		height: 528px;
 		background-color: var(--main-primary);
 		padding: var(--padding-lg);
 		border-radius: var(--radius-md);
-		box-shadow: 8px 15px 16px var(--bx-shadows);
+		box-shadow: 8px 3px 16px var(--bx-shadows);
 		left: -56px;
-		top: -44px;
+		top: -64px;
 		transform: rotate(7.75deg) scale(1);
 		transition: 0.6s ease-in-out;
 		will-change: transform;
@@ -165,17 +156,12 @@
 		}
 
 		&:hover {
-			transform: rotate(4.75deg);
+			transform: rotate(16.75deg);
 			box-shadow: -6px 15px 24px var(--bx-shadows);
-
-			&~.hello-card {
-				transform: rotate(0);
-				top: -56px;
-			}
 		}
 
 		&:has(+ .hello-card:hover) {
-			transform: rotate(4.75deg);
+			transform: rotate(16.75deg);
 			box-shadow: -6px 15px 24px var(--bx-shadows);
 		}
 
@@ -444,6 +430,7 @@
 		&-background {
 			position: absolute;
 			top: -60%;
+			left: 16%;
 			width: 90%;
 		}
 
@@ -541,7 +528,7 @@
 
 				&-image {
 					border-radius: var(--radius-md);
-					height: 82%;
+					height: 100%;
 					overflow: hidden;
 					gap: var(--gap-xs);
 
@@ -561,7 +548,7 @@
 				&-fill {
 					height: 18%;
 					position: relative;
-					background-color: var(--main-secondary);
+					background-color: var(--main-black);
 					border-radius: var(--radius-md);
 					color: var(--main-white);
 					overflow: hidden;
@@ -588,13 +575,8 @@
 	0% {
 		transform: translateX(100%);
 	}
+
 	100% {
 		transform: translateX(-100%);
-	}
-}
-
-.home {
-	& .hero {
-		padding-bottom: var(--padding-lg);
 	}
 }

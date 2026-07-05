@@ -128,7 +128,7 @@ const Home = () => {
                         <div className="archetype-body-info-left fade-section fade-section--delay-1 col-span-5 flex flex-col items-start justify-start">
                             <div className="archetype-body-info-left-paragraphs flex flex-col items-start justify-start">
                                 <p className="t-copy">
-                                    I’ve always been drawn to understanding how things work. Not just how they look, but how they come together, how they’re used, and what makes them effective. That instinct has shaped how I approach design, branding, and product work.
+                                    I’ve always been drawn to understanding how things work. Not just how they look, but how they come together, how they’re used, and what makes them effective.
                                 </p>
                                 <p className="t-copy">
                                     Whether I’m building digital products, shaping brand systems, or working through an idea visually, I seek to explore different directions until something feels clear and intentional. The goal is not just to make things look good, but to make them make sense.
@@ -145,12 +145,6 @@ const Home = () => {
                         <div className="archetype-body-info-right col-span-3 flex flex-col items-start justify-start">
                             <div className="archetype-body-info-right-image fade-section fade-section--delay-3 flex w-full flex-col items-start justify-start">
                                 <ImageSlider />
-                            </div>
-                            <div className="archetype-body-info-right-fill fade-section fade-section--delay-1 w-full flex flex-col items-start justify-start">
-                                <div className="s1 archetype-body-info-right-fill-scroll">
-                                    <span>Jude Joshua</span>
-                                    {/* <span>Jude Joshua</span> */}
-                                </div>
                             </div>
                         </div>
                     </div>
